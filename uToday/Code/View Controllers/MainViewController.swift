@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainViewController: UITableViewController {
+class MainViewController: UITableViewController ,  CLLocationManagerDelegate {
 
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,15 @@ class MainViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.view.backgroundColor = .black
+        let weather = WeatherHandler()
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Located")
+        if let location = locations.first{
+            print(location.coordinate)
+            locationManager.stopUpdatingHeading()
+        }
     }
 
     // MARK: - Table view data source

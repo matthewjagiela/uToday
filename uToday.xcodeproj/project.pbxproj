@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223955787984F0B4DB4FF6D7 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
 		34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FD921F59236002004E2 /* Main.storyboard */; };
@@ -14,9 +15,11 @@
 		34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FDE21F59236002004E2 /* LaunchScreen.storyboard */; };
 		34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF321F64169002004E2 /* LocalDataHandler.swift */; };
 		34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */; };
+		34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE4FD521F59236002004E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,9 @@
 		34DE4FEF21F598AD002004E2 /* uToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = uToday.entitlements; sourceTree = "<group>"; };
 		34DE4FF321F64169002004E2 /* LocalDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataHandler.swift; sourceTree = "<group>"; };
 		34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataHandler.swift; sourceTree = "<group>"; };
+		34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHandler.swift; sourceTree = "<group>"; };
+		9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223955787984F0B4DB4FF6D7 /* Pods_uToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,7 @@
 				34DE4FD421F59236002004E2 /* uToday */,
 				34DE4FD321F59236002004E2 /* Products */,
 				34DE4FF021F598E1002004E2 /* Frameworks */,
+				BDD274B5859CC275C2EF55D5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +122,7 @@
 		34DE4FEC21F5970A002004E2 /* Handlers (Data) */ = {
 			isa = PBXGroup;
 			children = (
+				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
 				34DE4FF321F64169002004E2 /* LocalDataHandler.swift */,
 				34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */,
 			);
@@ -140,8 +149,18 @@
 		34DE4FF021F598E1002004E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDD274B5859CC275C2EF55D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */,
+				2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
 			buildPhases = (
+				C967C456FE938F101ECE6420 /* [CP] Check Pods Manifest.lock */,
 				34DE4FCE21F59236002004E2 /* Sources */,
 				34DE4FCF21F59236002004E2 /* Frameworks */,
 				34DE4FD021F59236002004E2 /* Resources */,
+				F2F515BCB12200DA42C2229B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +242,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C967C456FE938F101ECE6420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uToday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2F515BCB12200DA42C2229B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34DE4FCE21F59236002004E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,6 +288,7 @@
 			files = (
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
+				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,
 				3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */,
 			);
@@ -373,6 +434,7 @@
 		};
 		34DE4FE521F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
@@ -392,6 +454,7 @@
 		};
 		34DE4FE621F59237002004E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
