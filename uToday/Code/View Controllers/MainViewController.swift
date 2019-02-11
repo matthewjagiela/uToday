@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import CoreLocation
+import CoreLocation //This is going to be removed when we have a setup page
 
-class MainViewController: UITableViewController ,  CLLocationManagerDelegate {
-
+class MainViewController: UITableViewController{
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +20,12 @@ class MainViewController: UITableViewController ,  CLLocationManagerDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.view.backgroundColor = .black
+        locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
         let weather = WeatherHandler()
         
+        
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Located")
-        if let location = locations.first{
-            print(location.coordinate)
-            locationManager.stopUpdatingHeading()
-        }
-    }
+   
 
     // MARK: - Table view data source
 
