@@ -22,6 +22,7 @@ class MainViewController: UITableViewController{
         self.view.backgroundColor = .black
         locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
         let weather = WeatherHandler()
+        tableView.rowHeight = 185 //This is how tall the row is going to be... This can be the same across devices.
         
         
     }
@@ -31,7 +32,7 @@ class MainViewController: UITableViewController{
 
     override func numberOfSections(in tableView: UITableView) -> Int { //This is going to be actually returning the number of modules we are going to store.
         
-        return 5
+        return 2
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { //This is going to make the spacing between cards
         let headerView = UIView()
@@ -48,12 +49,12 @@ class MainViewController: UITableViewController{
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
-        let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath) as! ModuleTableViewCell
 
         // Configure the cell... : This is going to change because there is going to be a custom cell for modules, this is to test the table
-        cell.backgroundColor = .black
-        cell.textLabel?.textColor = .white
-        cell.textLabel!.text = "Hello world"
+        cell.layer.cornerRadius = 5
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.white.cgColor
 
         return cell
     }

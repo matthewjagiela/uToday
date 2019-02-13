@@ -9,6 +9,6 @@
 
 import UIKit
 
-class CloudDataHandler: NSObject {
+class CloudDataHandler: NSObject { //This may never be used for v1
 
 }

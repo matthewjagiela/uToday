@@ -20,8 +20,56 @@ class LocalDataHandler: NSObject {
     
     //Setters:
     
+    //Weather Setters:
+    func setWeatherFeelsLikeTemperature(temperature: Int){
+        defaults.set(temperature, forKey: "weatherFeelsTemperature")
+    }
+    func setWeatherHighTemperature(temperature: Int){
+        defaults.set(temperature, forKey: "weatherHighTemperature")
+    }
+    func setWeatherDaySummary(summary: String){
+        defaults.set(summary, forKey: "weatherDailySummary")
+    }
+    func setWeatherCurrentCondition(condition:String){
+        defaults.set(condition, forKey: "weatherCondition")
+    }
+    func setWeatherTemperature(temperature:Int){
+        defaults.set(temperature, forKey: "weatherTemperature")
+    }
+    func setWeatherLowTemperature(temperature:Int){
+        defaults.set(temperature, forKey: "weatherLowTemperature")
+    }
+    func setWeatherIcon(icon: String){
+        defaults.set(icon, forKey: "weatherImagePointer")
+    }
+    
     
     //Getters:
+    
+    //Weather:
+    func getWeatherFeelsLikeTemperature() ->Int{
+        return defaults.integer(forKey: "weatherFeelsTemperature")
+    }
+    func getWeatherHighTemperature() ->Int{
+        return defaults.integer(forKey: "weatherHighTemperature")
+    }
+    func getWeatherDaySumarray() -> String{
+        return defaults.string(forKey: "weatherDailySummary")!
+    }
+    func getWeatherCurrentCondition() ->String{
+        return defaults.string(forKey: "weatherCondition")!
+    }
+    func getWeatherTemperature() -> Int{
+        return defaults.integer(forKey: "weatherTemperature")
+    }
+    func getWeatherLowTemperature() ->Int{
+        return defaults.integer(forKey: "weatherLowTemperature")
+    }
+    func getWeatherIcon() -> String{
+        return defaults.string(forKey: "weatherImagePointer")!
+    }
+    
+    
     
 
 }

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		223955787984F0B4DB4FF6D7 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */; };
+		3419F2EE2211FE4E00EC49E8 /* Snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2E62211FE4E00EC49E8 /* Snow.png */; };
+		3419F2EF2211FE4E00EC49E8 /* Lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2E72211FE4E00EC49E8 /* Lightning.png */; };
+		3419F2F02211FE4E00EC49E8 /* Partly Cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2E82211FE4E00EC49E8 /* Partly Cloudy.png */; };
+		3419F2F12211FE4E00EC49E8 /* Cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2E92211FE4E00EC49E8 /* Cloudy.png */; };
+		3419F2F22211FE4E00EC49E8 /* Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2EA2211FE4E00EC49E8 /* Moon.png */; };
+		3419F2F32211FE4E00EC49E8 /* Rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2EB2211FE4E00EC49E8 /* Rain.png */; };
+		3419F2F42211FE4E00EC49E8 /* NightCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2EC2211FE4E00EC49E8 /* NightCloudy.png */; };
+		3419F2F52211FE4E00EC49E8 /* Sunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3419F2ED2211FE4E00EC49E8 /* Sunny.png */; };
+		34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF422122EBB00229F0D /* WeatherViewController.swift */; };
+		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
+		34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
 		34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FD921F59236002004E2 /* Main.storyboard */; };
@@ -20,6 +31,17 @@
 
 /* Begin PBXFileReference section */
 		2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
+		3419F2E62211FE4E00EC49E8 /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snow.png; sourceTree = "<group>"; };
+		3419F2E72211FE4E00EC49E8 /* Lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lightning.png; sourceTree = "<group>"; };
+		3419F2E82211FE4E00EC49E8 /* Partly Cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Partly Cloudy.png"; sourceTree = "<group>"; };
+		3419F2E92211FE4E00EC49E8 /* Cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloudy.png; sourceTree = "<group>"; };
+		3419F2EA2211FE4E00EC49E8 /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
+		3419F2EB2211FE4E00EC49E8 /* Rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rain.png; sourceTree = "<group>"; };
+		3419F2EC2211FE4E00EC49E8 /* NightCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightCloudy.png; sourceTree = "<group>"; };
+		3419F2ED2211FE4E00EC49E8 /* Sunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sunny.png; sourceTree = "<group>"; };
+		34393DF422122EBB00229F0D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
+		34393DF82213E6AC00229F0D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE4FD521F59236002004E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3419F2E52211FE3500EC49E8 /* Weather Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3419F2E92211FE4E00EC49E8 /* Cloudy.png */,
+				3419F2E72211FE4E00EC49E8 /* Lightning.png */,
+				3419F2EA2211FE4E00EC49E8 /* Moon.png */,
+				3419F2EC2211FE4E00EC49E8 /* NightCloudy.png */,
+				3419F2E82211FE4E00EC49E8 /* Partly Cloudy.png */,
+				3419F2EB2211FE4E00EC49E8 /* Rain.png */,
+				3419F2E62211FE4E00EC49E8 /* Snow.png */,
+				3419F2ED2211FE4E00EC49E8 /* Sunny.png */,
+			);
+			path = "Weather Icons";
+			sourceTree = "<group>";
+		};
 		34DE4FC921F59236002004E2 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +127,7 @@
 		34DE4FE821F59682002004E2 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				3419F2E52211FE3500EC49E8 /* Weather Icons */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -115,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3474741C220A0D7900A82B2D /* MainViewController.swift */,
+				34393DF422122EBB00229F0D /* WeatherViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -125,6 +164,7 @@
 				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
 				34DE4FF321F64169002004E2 /* LocalDataHandler.swift */,
 				34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */,
+				34393DF82213E6AC00229F0D /* ServiceHandler.swift */,
 			);
 			path = "Handlers (Data)";
 			sourceTree = "<group>";
@@ -133,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				34DE4FD521F59236002004E2 /* AppDelegate.swift */,
+				34393DF6221388D200229F0D /* ModuleTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -234,8 +275,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3419F2F42211FE4E00EC49E8 /* NightCloudy.png in Resources */,
+				3419F2F52211FE4E00EC49E8 /* Sunny.png in Resources */,
+				3419F2F32211FE4E00EC49E8 /* Rain.png in Resources */,
+				3419F2F02211FE4E00EC49E8 /* Partly Cloudy.png in Resources */,
 				34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */,
+				3419F2EF2211FE4E00EC49E8 /* Lightning.png in Resources */,
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
+				3419F2F22211FE4E00EC49E8 /* Moon.png in Resources */,
+				3419F2F12211FE4E00EC49E8 /* Cloudy.png in Resources */,
+				3419F2EE2211FE4E00EC49E8 /* Snow.png in Resources */,
 				34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,9 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
+				34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
+				34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */,
 				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,
+				34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */,
 				3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
