@@ -22,6 +22,7 @@ class MainViewController: UITableViewController{
         self.view.backgroundColor = .black
         locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
         let weather = WeatherHandler()
+        
         tableView.rowHeight = 185 //This is how tall the row is going to be... This can be the same across devices.
         
         

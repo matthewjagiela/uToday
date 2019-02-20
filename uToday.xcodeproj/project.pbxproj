@@ -20,6 +20,8 @@
 		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
 		34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
+		34A53E7A221CFB0A001C640D /* TrafficHanlder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHanlder.swift */; };
+		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
 		34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FD921F59236002004E2 /* Main.storyboard */; };
 		34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FDC21F59236002004E2 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF82213E6AC00229F0D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		34A53E79221CFB0A001C640D /* TrafficHanlder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHanlder.swift; sourceTree = "<group>"; };
+		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE4FD521F59236002004E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE4FDA21F59236002004E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +86,25 @@
 				3419F2ED2211FE4E00EC49E8 /* Sunny.png */,
 			);
 			path = "Weather Icons";
+			sourceTree = "<group>";
+		};
+		34A53E77221CFAE3001C640D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
+				34A53E79221CFB0A001C640D /* TrafficHanlder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34A53E78221CFAEE001C640D /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				34393DF82213E6AC00229F0D /* ServiceHandler.swift */,
+				34DE4FF321F64169002004E2 /* LocalDataHandler.swift */,
+				34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */,
+			);
+			path = Functionality;
 			sourceTree = "<group>";
 		};
 		34DE4FC921F59236002004E2 = {
@@ -154,6 +177,7 @@
 			children = (
 				3474741C220A0D7900A82B2D /* MainViewController.swift */,
 				34393DF422122EBB00229F0D /* WeatherViewController.swift */,
+				34A53E7B221D0483001C640D /* TrafficViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -161,10 +185,8 @@
 		34DE4FEC21F5970A002004E2 /* Handlers (Data) */ = {
 			isa = PBXGroup;
 			children = (
-				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
-				34DE4FF321F64169002004E2 /* LocalDataHandler.swift */,
-				34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */,
-				34393DF82213E6AC00229F0D /* ServiceHandler.swift */,
+				34A53E78221CFAEE001C640D /* Functionality */,
+				34A53E77221CFAE3001C640D /* Services */,
 			);
 			path = "Handlers (Data)";
 			sourceTree = "<group>";
@@ -337,7 +359,9 @@
 			files = (
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
 				34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */,
+				34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
+				34A53E7A221CFB0A001C640D /* TrafficHanlder.swift in Sources */,
 				34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */,
 				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,

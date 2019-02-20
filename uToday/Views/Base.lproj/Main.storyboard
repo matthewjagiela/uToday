@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCT-Uf-dUw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydr-qr-dJI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -172,6 +172,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exF-nw-OJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886" y="849"/>
+        </scene>
+        <!--Traffic View Controller-->
+        <scene sceneID="pBA-cf-t7C">
+            <objects>
+                <viewController id="ydr-qr-dJI" customClass="TrafficViewController" customModule="uToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p9R-wX-Akl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bc9-ff-Ov6">
+                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It will take 2 Hours 36 Minutes and 45 Seconds To Get To Work" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-AL-2xc">
+                                <rect key="frame" x="8" y="0.0" width="359" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="71r-vU-FQ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bc9-ff-Ov6" firstAttribute="leading" secondItem="p9R-wX-Akl" secondAttribute="leading" id="37U-kh-lN4"/>
+                            <constraint firstItem="bc9-ff-Ov6" firstAttribute="bottom" secondItem="lzu-38-cKQ" secondAttribute="bottom" id="9t3-BO-8uz"/>
+                            <constraint firstItem="bc9-ff-Ov6" firstAttribute="top" secondItem="I3h-AL-2xc" secondAttribute="bottom" constant="8" symbolic="YES" id="I34-Jb-1UM"/>
+                            <constraint firstItem="I3h-AL-2xc" firstAttribute="leading" secondItem="lzu-38-cKQ" secondAttribute="leading" constant="8" id="Oqt-mE-eSr"/>
+                            <constraint firstItem="I3h-AL-2xc" firstAttribute="top" secondItem="p9R-wX-Akl" secondAttribute="top" id="aKO-D2-F0n"/>
+                            <constraint firstItem="I3h-AL-2xc" firstAttribute="centerX" secondItem="bc9-ff-Ov6" secondAttribute="centerX" id="mxH-dI-de4"/>
+                            <constraint firstAttribute="trailing" secondItem="bc9-ff-Ov6" secondAttribute="trailing" id="vwu-ar-x7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lzu-38-cKQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="bc9-ff-Ov6" id="p27-C1-66L"/>
+                        <outlet property="summaryLabel" destination="I3h-AL-2xc" id="uxI-dq-4yJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXL-VA-jwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1095.2" y="-755.17241379310349"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="E6h-NV-YUY">

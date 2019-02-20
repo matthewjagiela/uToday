@@ -42,7 +42,10 @@ class LocalDataHandler: NSObject {
     func setWeatherIcon(icon: String){
         defaults.set(icon, forKey: "weatherImagePointer")
     }
-    
+    //Traffic Information:
+    func setWorkAddress(address: String){
+        defaults.set(address, forKey:"workAddress")
+    }
     
     //Getters:
     
@@ -67,6 +70,11 @@ class LocalDataHandler: NSObject {
     }
     func getWeatherIcon() -> String{
         return defaults.string(forKey: "weatherImagePointer")!
+    }
+    //Traffic Information:
+    func getWorkAddress() -> String{
+        //return defaults.string(forKey: "workAddress")
+        return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
     }
     
     
