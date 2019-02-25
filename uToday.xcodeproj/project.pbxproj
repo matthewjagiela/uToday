@@ -19,8 +19,10 @@
 		34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF422122EBB00229F0D /* WeatherViewController.swift */; };
 		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
 		34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
+		343C7A4B221E596B00032E69 /* CalendarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C7A4A221E596B00032E69 /* CalendarHandler.swift */; };
+		343C7A4D221E5D6500032E69 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C7A4C221E5D6500032E69 /* CalendarViewController.swift */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
-		34A53E7A221CFB0A001C640D /* TrafficHanlder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHanlder.swift */; };
+		34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
 		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
 		34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FD921F59236002004E2 /* Main.storyboard */; };
@@ -44,8 +46,10 @@
 		34393DF422122EBB00229F0D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF82213E6AC00229F0D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
+		343C7A4A221E596B00032E69 /* CalendarHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHandler.swift; sourceTree = "<group>"; };
+		343C7A4C221E5D6500032E69 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		34A53E79221CFB0A001C640D /* TrafficHanlder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHanlder.swift; sourceTree = "<group>"; };
+		34A53E79221CFB0A001C640D /* TrafficHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHandler.swift; sourceTree = "<group>"; };
 		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE4FD521F59236002004E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,11 +92,30 @@
 			path = "Weather Icons";
 			sourceTree = "<group>";
 		};
+		343E2EEA2223781F001068C6 /* Main App */ = {
+			isa = PBXGroup;
+			children = (
+				3474741C220A0D7900A82B2D /* MainViewController.swift */,
+				34393DF422122EBB00229F0D /* WeatherViewController.swift */,
+				34A53E7B221D0483001C640D /* TrafficViewController.swift */,
+				343C7A4C221E5D6500032E69 /* CalendarViewController.swift */,
+			);
+			path = "Main App";
+			sourceTree = "<group>";
+		};
+		343E2EEB22237836001068C6 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
 		34A53E77221CFAE3001C640D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				343C7A4A221E596B00032E69 /* CalendarHandler.swift */,
 				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
-				34A53E79221CFB0A001C640D /* TrafficHanlder.swift */,
+				34A53E79221CFB0A001C640D /* TrafficHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -175,9 +198,8 @@
 		34DE4FEB21F596DB002004E2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3474741C220A0D7900A82B2D /* MainViewController.swift */,
-				34393DF422122EBB00229F0D /* WeatherViewController.swift */,
-				34A53E7B221D0483001C640D /* TrafficViewController.swift */,
+				343E2EEB22237836001068C6 /* Setup */,
+				343E2EEA2223781F001068C6 /* Main App */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -357,12 +379,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343C7A4D221E5D6500032E69 /* CalendarViewController.swift in Sources */,
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
 				34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */,
 				34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
-				34A53E7A221CFB0A001C640D /* TrafficHanlder.swift in Sources */,
+				34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */,
 				34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */,
+				343C7A4B221E596B00032E69 /* CalendarHandler.swift in Sources */,
 				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,
 				34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */,

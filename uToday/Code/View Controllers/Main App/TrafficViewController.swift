@@ -11,39 +11,39 @@ import MapKit
 class TrafficViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var summaryLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    let traffic = TrafficHanlder()
+    let traffic = TrafficHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mapView.delegate = self
+        activityIndicator.startAnimating() //The directions and info has not been found...
+        self.summaryLabel.isHidden = true //Hide this so it doesn't show wrong data based on the wrong location...
+        mapView.delegate = self //Make it so we can override delegate methods for the map
         // Do any additional setup after loading the view.
         traffic.getETA {
             print("Executed Completely")
-            //Load the route we found to be shown on a map:
-            let directionsRequest = self.traffic.getDirectionsRequest()
-            let directions = MKDirections(request: directionsRequest)
-            directions.calculate { (response, error) in
-                if let route = response?.routes.first{
-                    print("ADD TO MAP")
-                    self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-                }
-                else{
-                    print("TRAFFIC HANDLER: Route cannot be found...")
-                }
-            }
+            //Update the UI based on information we got from the handler...
+            
             self.summaryLabel.text = self.traffic.getSummary()
+            self.summaryLabel.isHidden = false //show now that we have information...
+            self.mapView.showAnnotations([self.traffic.getDestinationAnnotation()], animated: true)
+            self.mapView.addOverlay((self.traffic.getMapPolyLine()), level: MKOverlayLevel.aboveRoads)
+            
+            self.mapView.setRegion(MKCoordinateRegion(self.traffic.getMapRegion()), animated: true)
+            self.activityIndicator.stopAnimating()
         }
     }
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         print("Render")
-        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.green
-        renderer.lineWidth = 2
+        renderer.lineWidth = 3
         return renderer
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 
     /*
     // MARK: - Navigation

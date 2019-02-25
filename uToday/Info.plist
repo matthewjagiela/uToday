@@ -8,6 +8,8 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Hold</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Hold</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Hold</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

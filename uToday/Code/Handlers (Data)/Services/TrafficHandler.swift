@@ -10,14 +10,17 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class TrafficHanlder: NSObject {
+class TrafficHandler: NSObject {
     let savedData = LocalDataHandler()
     let locationManager = CLLocationManager()
     
+    var route = MKRoute()
     var destinationLocation = CLLocation()
     var timeSeconds = 0
     var distance:Double = 0.0
     var directionsRequest = MKDirections.Request()
+    let destinationAnnotation = MKPointAnnotation()
+
     override init(){
         super.init()
         locationManager.requestAlwaysAuthorization() //Remove this in final product.
@@ -39,6 +42,7 @@ class TrafficHanlder: NSObject {
                 print("DEBUG TRAFFIC: Destination Coordinates: \(self.destinationLocation.coordinate.latitude)")
                 let destinationPlacemark = MKPlacemark(coordinate: self.destinationLocation.coordinate, addressDictionary: nil)
                 let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+                self.destinationAnnotation.coordinate = destinationPlacemark.coordinate
                 //Let's make the request for routing:
                 
                 
@@ -49,16 +53,19 @@ class TrafficHanlder: NSObject {
                 let directions = MKDirections(request: self.directionsRequest)
                 directions.calculate { (response, error) in
                     if let route = response?.routes.first{
+                        self.route = route
                         let meterDistance = Measurement(value: route.distance, unit: UnitLength.meters)
                         self.distance = meterDistance.converted(to: UnitLength.miles).value
                         self.timeSeconds = Int(route.expectedTravelTime)
+                        print("DEBUG: TRAFFIC HANDLER: TimeSeconds = \(self.timeSeconds) FORMAT: \(Int(route.expectedTravelTime))")
                         print("DEBUG: TRAFFIC HANDLER: Distance = \(self.distance) ETA: \(self.secondsToHoursMinutesSeconds(seconds: Int(route.expectedTravelTime)))")
+                        completion()
                     }
                     else{
                         print("TRAFFIC HANDLER: Route cannot be found...")
+                        completion()
                     }
                 }
-                completion()
             }
             
                 
@@ -68,6 +75,10 @@ class TrafficHanlder: NSObject {
     
     func getDirectionsRequest() -> MKDirections.Request{
         return directionsRequest
+    }
+    func getDestinationAnnotation() ->MKPointAnnotation{
+        destinationAnnotation.title = "Work" //This is going to label the destination as work
+        return destinationAnnotation
     }
     //Conversion Method:
     func secondsToHoursMinutesSeconds(seconds:Int) ->(Int, Int, Int){
@@ -85,6 +96,22 @@ class TrafficHanlder: NSObject {
         }
         
         
+    }
+    func getMapPolyLine()->MKPolyline{ //This is the line for the best way to get to work
+        return route.polyline
+    }
+    func getMapRegion()->MKMapRect{ //Make the map region based on the directions to "work" and then give it some padding room so it all fits.
+        var rect = route.polyline.boundingMapRect
+        let wPadding = rect.size.width * 0.25
+        let hPadding = rect.size.height * 0.25
+        rect.size.width += wPadding
+        rect.size.height += hPadding
+        rect.origin.x -= wPadding / 2
+        rect.origin.y -= hPadding / 2
+        return rect
+    }
+    func getMapKitRoute() ->MKRoute{ //Dont think this is going to be needed but in case it does this returns the route of the best way to go to work
+        return route
     }
 
 }

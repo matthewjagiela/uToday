@@ -11,6 +11,7 @@ import UIKit
 class ServiceHandler: NSObject {
     var service = ""
     lazy var weather = WeatherHandler() //If it is not needed it wont be stored in memory....
+    lazy var traffic = TrafficHandler()
     init(Service:String){
         super.init()
         service = Service //Set the service to this
@@ -21,6 +22,8 @@ class ServiceHandler: NSObject {
         switch service {
         case "weather":
             return weather.getSummary()
+        case "traffic":
+            return traffic.getSummary()
         default:
             return ""
         }
