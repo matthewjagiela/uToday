@@ -19,7 +19,10 @@ class LocalDataHandler: NSObject {
     
     
     //Setters:
-    
+    //Startup Setters:
+    func setFirstName(_ name: String){
+        defaults.set(name, forKey: "firstName")
+    }
     //Weather Setters:
     func setWeatherFeelsLikeTemperature(temperature: Int){
         defaults.set(temperature, forKey: "weatherFeelsTemperature")
@@ -48,7 +51,10 @@ class LocalDataHandler: NSObject {
     }
     
     //Getters:
-    
+    //Setup Getters:
+    func getFirstName() -> String{ //Get the users first name... If for some reason it is nill it will become Matthew.
+        return defaults.string(forKey: "firstName") ?? "Matthew"
+    }
     //Weather:
     func getWeatherFeelsLikeTemperature() ->Int{
         return defaults.integer(forKey: "weatherFeelsTemperature")
@@ -73,8 +79,8 @@ class LocalDataHandler: NSObject {
     }
     //Traffic Information:
     func getWorkAddress() -> String{
-        //return defaults.string(forKey: "workAddress")
-        return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
+        return defaults.string(forKey: "workAddress")!
+        //return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
     }
     
     

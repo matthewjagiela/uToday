@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qpr-YA-6Jq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCT-Uf-dUw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -140,7 +140,7 @@
         <scene sceneID="JxZ-vs-TR6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UJB-em-j9Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Services" id="fiU-0m-qFF">
+                    <tabBarItem key="tabBarItem" title="Services" image="Services" id="fiU-0m-qFF">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -382,11 +382,67 @@ Matthew</string>
             </objects>
             <point key="canvasLocation" x="-1095" y="649"/>
         </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="K08-SK-lnz">
+            <objects>
+                <viewController id="MiJ-ag-irW" customClass="InitialViewController" customModule="uToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ElF-ft-5ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olo-xs-iEp" customClass="Welcome">
+                                <rect key="frame" x="119" y="66" width="137" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7t-kn-c17">
+                                <rect key="frame" x="19" y="329" width="337" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="XvH-In-0bG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1m6-jT-dEb">
+                                <rect key="frame" x="22" y="143" width="331" height="117"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Welcome to uToday. uToday is designed with one goal: give you todays information. uToday keeps updating in the background and is mainly used with Siri, but you can come back to the app to visually see all the information you want. It's all about you. Lets get started with your name:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1m6-jT-dEb" firstAttribute="leading" secondItem="1kl-Dp-ikQ" secondAttribute="leading" constant="22" id="1x6-Ip-5zY"/>
+                            <constraint firstItem="1kl-Dp-ikQ" firstAttribute="trailing" secondItem="1m6-jT-dEb" secondAttribute="trailing" constant="22" id="5bO-sE-60p"/>
+                            <constraint firstItem="1kl-Dp-ikQ" firstAttribute="trailing" secondItem="r7t-kn-c17" secondAttribute="trailing" constant="19" id="O8u-A3-UVV"/>
+                            <constraint firstItem="1m6-jT-dEb" firstAttribute="top" secondItem="ElF-ft-5ZM" secondAttribute="topMargin" constant="123" id="UCt-CT-9s7"/>
+                            <constraint firstItem="r7t-kn-c17" firstAttribute="top" secondItem="1m6-jT-dEb" secondAttribute="bottom" constant="69" id="cxK-eb-roL"/>
+                            <constraint firstItem="r7t-kn-c17" firstAttribute="centerY" secondItem="1kl-Dp-ikQ" secondAttribute="centerY" id="fdO-20-WCb"/>
+                            <constraint firstItem="r7t-kn-c17" firstAttribute="leading" secondItem="1kl-Dp-ikQ" secondAttribute="leading" constant="19" id="uz2-f7-AlM"/>
+                            <constraint firstItem="r7t-kn-c17" firstAttribute="centerX" secondItem="1kl-Dp-ikQ" secondAttribute="centerX" id="x9x-3n-My7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1kl-Dp-ikQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="r7t-kn-c17" id="Z49-mc-7pb"/>
+                        <outlet property="welcomeDescription" destination="1m6-jT-dEb" id="V4h-lk-dAs"/>
+                        <outlet property="welcomeLabel" destination="olo-xs-iEp" id="rgp-9i-roN"/>
+                        <segue destination="hTq-jg-NZB" kind="show" identifier="stageTwo" id="vu5-nc-9oj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBN-nT-mdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1135" y="2311"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="9v0-m6-IIP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zh2-4f-nAz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="zEW-7L-Lxb"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="zEW-7L-Lxb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="xmZ-6Y-qdr">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -401,10 +457,211 @@ Matthew</string>
             </objects>
             <point key="canvasLocation" x="54" y="849"/>
         </scene>
+        <!--Authorization-->
+        <scene sceneID="HlK-6a-WoO">
+            <objects>
+                <viewController title="Authorization" id="MrS-P8-4v8" customClass="CalenderLocationPermissionViewController" customModule="uToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0o6-7D-ThN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioH-Dn-1wz">
+                                <rect key="frame" x="15" y="123" width="345" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29.5" id="QPh-vA-OjF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abT-ZW-JGG">
+                                <rect key="frame" x="14" y="319" width="345" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29.5" id="gSk-Ql-hsI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-fG-C8F">
+                                <rect key="frame" x="42" y="160" width="292" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="mVN-a2-ePS"/>
+                                </constraints>
+                                <string key="text">uToday needs access to your calendar. This is so we can tell you information about today based on your calendar without you having to enter it in 2 places.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-9l-Jsk">
+                                <rect key="frame" x="40" y="356" width="292" height="93"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="S6l-3d-T1O"/>
+                                </constraints>
+                                <string key="text">uToday also needs access to your current location. It is recommended you let it be in use at all times so the most relevant information can be given to you (weather, traffic, etc.)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vta-lC-kce">
+                                <rect key="frame" x="10" y="250" width="356" height="30"/>
+                                <state key="normal" title="Allow Calendar Access">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="requestCalendar:" destination="MrS-P8-4v8" eventType="touchUpInside" id="Dys-tk-VZQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrq-Xl-vCL">
+                                <rect key="frame" x="55" y="457" width="266" height="30"/>
+                                <state key="normal" title="Allow Access To Location">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="requestLocation:" destination="MrS-P8-4v8" eventType="touchUpInside" id="xdV-RV-qdB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DlQ-Hf-ceA" firstAttribute="trailing" secondItem="qmD-fG-C8F" secondAttribute="trailing" constant="41" id="1e1-7e-s4V"/>
+                            <constraint firstItem="DlQ-Hf-ceA" firstAttribute="trailing" secondItem="abT-ZW-JGG" secondAttribute="trailing" constant="16" id="41S-2w-5lM"/>
+                            <constraint firstItem="yrq-Xl-vCL" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="55" id="5MA-ih-w7W"/>
+                            <constraint firstItem="DlQ-Hf-ceA" firstAttribute="trailing" secondItem="ioH-Dn-1wz" secondAttribute="trailing" constant="15" id="73C-xP-viS"/>
+                            <constraint firstItem="qmD-fG-C8F" firstAttribute="top" secondItem="ioH-Dn-1wz" secondAttribute="bottom" constant="7.5" id="E2E-ik-zeM"/>
+                            <constraint firstItem="ioH-Dn-1wz" firstAttribute="top" secondItem="DlQ-Hf-ceA" secondAttribute="top" constant="7" id="IpY-ko-oWy"/>
+                            <constraint firstItem="Mgj-9l-Jsk" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="40" id="MFy-dy-mX6"/>
+                            <constraint firstItem="qmD-fG-C8F" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="42" id="QtS-F9-yOf"/>
+                            <constraint firstItem="ioH-Dn-1wz" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="15" id="RMm-HU-ltu"/>
+                            <constraint firstItem="Mgj-9l-Jsk" firstAttribute="top" secondItem="abT-ZW-JGG" secondAttribute="bottom" constant="7.5" id="S7r-2M-tcc"/>
+                            <constraint firstItem="yrq-Xl-vCL" firstAttribute="top" secondItem="Mgj-9l-Jsk" secondAttribute="bottom" constant="8" id="bMv-8d-ZnV"/>
+                            <constraint firstItem="DlQ-Hf-ceA" firstAttribute="trailing" secondItem="Mgj-9l-Jsk" secondAttribute="trailing" constant="43" id="gRk-lP-33J"/>
+                            <constraint firstItem="Vta-lC-kce" firstAttribute="centerX" secondItem="qmD-fG-C8F" secondAttribute="centerX" id="nt2-7U-39d"/>
+                            <constraint firstItem="abT-ZW-JGG" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="14" id="oXl-Tv-IKR"/>
+                            <constraint firstItem="Vta-lC-kce" firstAttribute="leading" secondItem="DlQ-Hf-ceA" secondAttribute="leading" constant="10" id="pkv-yO-pxH"/>
+                            <constraint firstItem="yrq-Xl-vCL" firstAttribute="centerX" secondItem="Vta-lC-kce" secondAttribute="centerX" id="pvW-uP-pde"/>
+                            <constraint firstItem="Vta-lC-kce" firstAttribute="top" secondItem="qmD-fG-C8F" secondAttribute="bottom" constant="8" symbolic="YES" id="qdO-Og-ONf"/>
+                            <constraint firstItem="abT-ZW-JGG" firstAttribute="top" secondItem="Vta-lC-kce" secondAttribute="bottom" constant="39" id="sZ7-TN-pqc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DlQ-Hf-ceA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authorizations" id="6p8-fC-aCo"/>
+                    <connections>
+                        <segue destination="j6Y-Q9-rnl" kind="show" identifier="stageThree" id="Pib-Y2-gx1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nek-dd-jAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="2310"/>
+        </scene>
+        <!--One More Thing...-->
+        <scene sceneID="u8n-s9-WSr">
+            <objects>
+                <viewController title="One More Thing..." id="j6Y-Q9-rnl" customClass="siriSetupViewController" customModule="uToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLi-BZ-mxx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHS-ES-OhE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say &quot;Hello&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dw-hG-P06">
+                                <rect key="frame" x="166" y="148" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cHS-ES-OhE" firstAttribute="trailing" secondItem="GfX-o1-on2" secondAttribute="trailing" id="0mM-QB-TIK"/>
+                            <constraint firstItem="cHS-ES-OhE" firstAttribute="top" secondItem="tLi-BZ-mxx" secondAttribute="top" id="Cft-wA-Hxh"/>
+                            <constraint firstItem="cHS-ES-OhE" firstAttribute="leading" secondItem="GfX-o1-on2" secondAttribute="leading" id="MUL-u6-1Xr"/>
+                            <constraint firstAttribute="bottom" secondItem="cHS-ES-OhE" secondAttribute="bottom" id="gjM-Sn-lup"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GfX-o1-on2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvi-tL-CLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="2312.2938530734637"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8eU-wL-I8d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTq-jg-NZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HT6-se-nDn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y8Z-mK-2Z4" kind="relationship" relationship="rootViewController" id="kLN-gl-3g4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmn-SE-mrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-358" y="2310"/>
+        </scene>
+        <!--Address-->
+        <scene sceneID="07m-sZ-2sR">
+            <objects>
+                <viewController id="y8Z-mK-2Z4" customClass="AddressSetupViewController" customModule="uToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fJd-dq-nbM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKo-wZ-lUf">
+                                <rect key="frame" x="16" y="376.5" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2jz-rv-e51"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="6nh-fh-YnY">
+                                <rect key="frame" x="41" y="174" width="292" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="whH-GS-MWH"/>
+                                </constraints>
+                                <string key="text">uToday needs to know your work address in order to give you the most up to date traffic information. Please enter your address here:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fKo-wZ-lUf" firstAttribute="centerX" secondItem="EeI-WS-oPG" secondAttribute="centerX" id="BGy-30-t5K"/>
+                            <constraint firstItem="6nh-fh-YnY" firstAttribute="top" secondItem="EeI-WS-oPG" secondAttribute="top" constant="58" id="DDx-1A-YPt"/>
+                            <constraint firstItem="fKo-wZ-lUf" firstAttribute="leading" secondItem="EeI-WS-oPG" secondAttribute="leading" constant="16" id="OUU-vg-bsl"/>
+                            <constraint firstItem="EeI-WS-oPG" firstAttribute="trailing" secondItem="6nh-fh-YnY" secondAttribute="trailing" constant="42" id="aeL-97-83q"/>
+                            <constraint firstItem="EeI-WS-oPG" firstAttribute="trailing" secondItem="fKo-wZ-lUf" secondAttribute="trailing" constant="16" id="eIb-NP-imm"/>
+                            <constraint firstItem="fKo-wZ-lUf" firstAttribute="centerY" secondItem="EeI-WS-oPG" secondAttribute="centerY" id="j1p-wR-XxP"/>
+                            <constraint firstItem="6nh-fh-YnY" firstAttribute="leading" secondItem="EeI-WS-oPG" secondAttribute="leading" constant="41" id="kUm-yU-H9a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EeI-WS-oPG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Address" id="mgx-P6-mOt"/>
+                    <connections>
+                        <outlet property="addressField" destination="fKo-wZ-lUf" id="gf5-hg-qub"/>
+                        <segue destination="MrS-P8-4v8" kind="show" identifier="stageThree" id="XtY-55-z4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcE-Ku-vnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="2309.5952023988007"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cloudy.png" width="1024" height="1024"/>
+        <image name="MainScreen.png" width="1242" height="2688"/>
+        <image name="Services" width="50" height="50"/>
+        <image name="Settings" width="50" height="50"/>
         <image name="Snow.png" width="1024" height="1024"/>
     </resources>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

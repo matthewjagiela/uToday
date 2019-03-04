@@ -12,9 +12,6 @@ class CalendarHandler: NSObject {
     let eventStore = EKEventStore()
     var events = Array<EKEvent>()
     override init(){
-        eventStore.requestAccess(to: .event) { (granted, error) in
-            
-        }
         let now = Date()
         let calendar = Calendar.current
         var dateComponenets = DateComponents()
@@ -33,6 +30,16 @@ class CalendarHandler: NSObject {
             print("DEBUG: CALENDAR: \(event.title) DATE: \(event.startDate)")
         }
         
+    }
+    
+    func requestCalenderAccess() -> Bool{
+        var isGranted = false
+        eventStore.requestAccess(to: .event) { (granted, error) in
+            if(granted){
+                isGranted = true
+            }
+        }
+        return isGranted
     }
     
     func getSummary() -> String{
