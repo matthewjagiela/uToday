@@ -29,6 +29,10 @@ class ServiceHandler: NSObject {
         }
         
     }
+    func getSegue(service: String) -> String{
+        
+        return ""
+    }
     
 
 }

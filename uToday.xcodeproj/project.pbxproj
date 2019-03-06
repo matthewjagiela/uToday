@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		223955787984F0B4DB4FF6D7 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */; };
+		34120C98222F40980051C11A /* Night Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C97222F40980051C11A /* Night Background.png */; };
+		34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C9B222F49C30051C11A /* Main Selection Background.png */; };
 		34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF422122EBB00229F0D /* WeatherViewController.swift */; };
 		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
 		34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
@@ -28,16 +29,16 @@
 		343FDFD92228B6DA00964A61 /* settings50.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFD72228B6DA00964A61 /* settings50.png */; };
 		343FDFDC2228B7DB00964A61 /* services75.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFDA2228B7DB00964A61 /* services75.png */; };
 		343FDFDD2228B7DB00964A61 /* services50.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFDB2228B7DB00964A61 /* services50.png */; };
-		346B7C8C222DDC3C007226FC /* NightlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C82222DDC37007226FC /* NightlyCloudy.png */; };
-		346B7C8D222DDC3C007226FC /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C83222DDC37007226FC /* windy.png */; };
-		346B7C8E222DDC3C007226FC /* partlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C84222DDC38007226FC /* partlyCloudy.png */; };
-		346B7C8F222DDC3C007226FC /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C85222DDC38007226FC /* sun.png */; };
-		346B7C90222DDC3C007226FC /* snowy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C86222DDC38007226FC /* snowy.png */; };
-		346B7C91222DDC3C007226FC /* Lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C87222DDC39007226FC /* Lightning.png */; };
-		346B7C92222DDC3C007226FC /* foggy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C88222DDC3A007226FC /* foggy.png */; };
-		346B7C93222DDC3C007226FC /* rainy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C89222DDC3B007226FC /* rainy.png */; };
-		346B7C94222DDC3C007226FC /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C8A222DDC3B007226FC /* cloud.png */; };
-		346B7C95222DDC3C007226FC /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C8B222DDC3C007226FC /* night.png */; };
+		346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C96222DE32B007226FC /* NightlyCloudy.png */; };
+		346B7CA1222DE32F007226FC /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C97222DE32B007226FC /* windy.png */; };
+		346B7CA2222DE32F007226FC /* partlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C98222DE32C007226FC /* partlyCloudy.png */; };
+		346B7CA4222DE32F007226FC /* snowy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9A222DE32D007226FC /* snowy.png */; };
+		346B7CA5222DE32F007226FC /* Lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9B222DE32D007226FC /* Lightning.png */; };
+		346B7CA6222DE32F007226FC /* foggy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9C222DE32E007226FC /* foggy.png */; };
+		346B7CA7222DE32F007226FC /* rainy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9D222DE32E007226FC /* rainy.png */; };
+		346B7CA8222DE32F007226FC /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9E222DE32E007226FC /* cloud.png */; };
+		346B7CA9222DE32F007226FC /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9F222DE32F007226FC /* night.png */; };
+		346B7CAD222DF55D007226FC /* Day Weather BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7CAC222DF55C007226FC /* Day Weather BG.png */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
 		34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
 		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
@@ -50,10 +51,12 @@
 		34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
 		34EE16D422246632000EF3D6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 34EE16D322246632000EF3D6 /* MainScreen.png */; };
 		34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */; };
+		6B41F1B57065275C79C3ADB4 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515E14469BA611E7FCD49100 /* Pods_uToday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
+		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
+		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
 		34393DF422122EBB00229F0D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF82213E6AC00229F0D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
@@ -74,16 +77,17 @@
 		343FDFD72228B6DA00964A61 /* settings50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings50.png; sourceTree = "<group>"; };
 		343FDFDA2228B7DB00964A61 /* services75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services75.png; sourceTree = "<group>"; };
 		343FDFDB2228B7DB00964A61 /* services50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services50.png; sourceTree = "<group>"; };
-		346B7C82222DDC37007226FC /* NightlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightlyCloudy.png; sourceTree = "<group>"; };
-		346B7C83222DDC37007226FC /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
-		346B7C84222DDC38007226FC /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partlyCloudy.png; sourceTree = "<group>"; };
-		346B7C85222DDC38007226FC /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
-		346B7C86222DDC38007226FC /* snowy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowy.png; sourceTree = "<group>"; };
-		346B7C87222DDC39007226FC /* Lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lightning.png; sourceTree = "<group>"; };
-		346B7C88222DDC3A007226FC /* foggy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foggy.png; sourceTree = "<group>"; };
-		346B7C89222DDC3B007226FC /* rainy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainy.png; sourceTree = "<group>"; };
-		346B7C8A222DDC3B007226FC /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
-		346B7C8B222DDC3C007226FC /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
+		346B7C96222DE32B007226FC /* NightlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightlyCloudy.png; sourceTree = "<group>"; };
+		346B7C97222DE32B007226FC /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
+		346B7C98222DE32C007226FC /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partlyCloudy.png; sourceTree = "<group>"; };
+		346B7C99222DE32C007226FC /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		346B7C9A222DE32D007226FC /* snowy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowy.png; sourceTree = "<group>"; };
+		346B7C9B222DE32D007226FC /* Lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lightning.png; sourceTree = "<group>"; };
+		346B7C9C222DE32E007226FC /* foggy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foggy.png; sourceTree = "<group>"; };
+		346B7C9D222DE32E007226FC /* rainy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainy.png; sourceTree = "<group>"; };
+		346B7C9E222DE32E007226FC /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		346B7C9F222DE32F007226FC /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
+		346B7CAC222DF55C007226FC /* Day Weather BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Day Weather BG.png"; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34A53E79221CFB0A001C640D /* TrafficHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHandler.swift; sourceTree = "<group>"; };
 		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +103,9 @@
 		34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHandler.swift; sourceTree = "<group>"; };
 		34EE16D322246632000EF3D6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
 		34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSetupViewController.swift; sourceTree = "<group>"; };
-		9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
+		43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
+		515E14469BA611E7FCD49100 /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223955787984F0B4DB4FF6D7 /* Pods_uToday.framework in Frameworks */,
+				6B41F1B57065275C79C3ADB4 /* Pods_uToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,16 +123,16 @@
 		3419F2E52211FE3500EC49E8 /* Weather Icons */ = {
 			isa = PBXGroup;
 			children = (
-				346B7C8A222DDC3B007226FC /* cloud.png */,
-				346B7C88222DDC3A007226FC /* foggy.png */,
-				346B7C87222DDC39007226FC /* Lightning.png */,
-				346B7C8B222DDC3C007226FC /* night.png */,
-				346B7C82222DDC37007226FC /* NightlyCloudy.png */,
-				346B7C84222DDC38007226FC /* partlyCloudy.png */,
-				346B7C89222DDC3B007226FC /* rainy.png */,
-				346B7C86222DDC38007226FC /* snowy.png */,
-				346B7C85222DDC38007226FC /* sun.png */,
-				346B7C83222DDC37007226FC /* windy.png */,
+				346B7C9E222DE32E007226FC /* cloud.png */,
+				346B7C9C222DE32E007226FC /* foggy.png */,
+				346B7C9B222DE32D007226FC /* Lightning.png */,
+				346B7C9F222DE32F007226FC /* night.png */,
+				346B7C96222DE32B007226FC /* NightlyCloudy.png */,
+				346B7C98222DE32C007226FC /* partlyCloudy.png */,
+				346B7C9D222DE32E007226FC /* rainy.png */,
+				346B7C9A222DE32D007226FC /* snowy.png */,
+				346B7C99222DE32C007226FC /* sun.png */,
+				346B7C97222DE32B007226FC /* windy.png */,
 			);
 			path = "Weather Icons";
 			sourceTree = "<group>";
@@ -214,8 +219,8 @@
 			children = (
 				34DE4FD421F59236002004E2 /* uToday */,
 				34DE4FD321F59236002004E2 /* Products */,
-				34DE4FF021F598E1002004E2 /* Frameworks */,
-				BDD274B5859CC275C2EF55D5 /* Pods */,
+				92AC872645FBBF5E1C21CEBD /* Pods */,
+				D6CD0E40175BC0D4556AD15C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,29 +317,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		34DE4FF021F598E1002004E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9F2060FE9C1789A57FB8C856 /* Pods_uToday.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		34EE16D222246615000EF3D6 /* Screen Images */ = {
 			isa = PBXGroup;
 			children = (
+				34120C9B222F49C30051C11A /* Main Selection Background.png */,
+				346B7CAC222DF55C007226FC /* Day Weather BG.png */,
+				34120C97222F40980051C11A /* Night Background.png */,
 				34EE16D322246632000EF3D6 /* MainScreen.png */,
 			);
 			path = "Screen Images";
 			sourceTree = "<group>";
 		};
-		BDD274B5859CC275C2EF55D5 /* Pods */ = {
+		92AC872645FBBF5E1C21CEBD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */,
-				2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */,
+				43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */,
+				C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6CD0E40175BC0D4556AD15C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				515E14469BA611E7FCD49100 /* Pods_uToday.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +352,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
 			buildPhases = (
-				C967C456FE938F101ECE6420 /* [CP] Check Pods Manifest.lock */,
+				5C7115AD1C4E46936A80DBD8 /* [CP] Check Pods Manifest.lock */,
 				34DE4FCE21F59236002004E2 /* Sources */,
 				34DE4FCF21F59236002004E2 /* Frameworks */,
 				34DE4FD021F59236002004E2 /* Resources */,
-				F2F515BCB12200DA42C2229B /* [CP] Embed Pods Frameworks */,
+				1EB140CAB793E316DC06ED4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,31 +416,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346B7C92222DDC3C007226FC /* foggy.png in Resources */,
+				346B7CA6222DE32F007226FC /* foggy.png in Resources */,
 				343FDFD92228B6DA00964A61 /* settings50.png in Resources */,
 				343FDFD12228B4BD00964A61 /* weather.png in Resources */,
 				343FDFCC2228B4BD00964A61 /* list.png in Resources */,
+				346B7CAD222DF55D007226FC /* Day Weather BG.png in Resources */,
 				34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */,
-				346B7C8C222DDC3C007226FC /* NightlyCloudy.png in Resources */,
+				346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */,
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
-				346B7C93222DDC3C007226FC /* rainy.png in Resources */,
+				346B7CA7222DE32F007226FC /* rainy.png in Resources */,
 				343FDFD22228B4BD00964A61 /* sun.png in Resources */,
-				346B7C90222DDC3C007226FC /* snowy.png in Resources */,
-				346B7C94222DDC3C007226FC /* cloud.png in Resources */,
-				346B7C91222DDC3C007226FC /* Lightning.png in Resources */,
+				346B7CA4222DE32F007226FC /* snowy.png in Resources */,
+				346B7CA8222DE32F007226FC /* cloud.png in Resources */,
+				346B7CA5222DE32F007226FC /* Lightning.png in Resources */,
+				34120C98222F40980051C11A /* Night Background.png in Resources */,
 				343FDFD02228B4BD00964A61 /* traffic.png in Resources */,
 				343FDFCD2228B4BD00964A61 /* settings.png in Resources */,
 				343FDFCF2228B4BD00964A61 /* calendar.png in Resources */,
 				343FDFD32228B4BD00964A61 /* news.png in Resources */,
-				346B7C8E222DDC3C007226FC /* partlyCloudy.png in Resources */,
-				346B7C8F222DDC3C007226FC /* sun.png in Resources */,
+				346B7CA2222DE32F007226FC /* partlyCloudy.png in Resources */,
 				343FDFDD2228B7DB00964A61 /* services50.png in Resources */,
 				34EE16D422246632000EF3D6 /* MainScreen.png in Resources */,
-				346B7C8D222DDC3C007226FC /* windy.png in Resources */,
+				346B7CA1222DE32F007226FC /* windy.png in Resources */,
 				34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */,
+				34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */,
 				343FDFCE2228B4BD00964A61 /* services.png in Resources */,
 				343FDFDC2228B7DB00964A61 /* services75.png in Resources */,
-				346B7C95222DDC3C007226FC /* night.png in Resources */,
+				346B7CA9222DE32F007226FC /* night.png in Resources */,
 				343FDFD82228B6DA00964A61 /* settings75.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +450,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C967C456FE938F101ECE6420 /* [CP] Check Pods Manifest.lock */ = {
+		1EB140CAB793E316DC06ED4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7115AD1C4E46936A80DBD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -456,24 +486,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2F515BCB12200DA42C2229B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -642,7 +654,7 @@
 		};
 		34DE4FE521F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C64FE54ED9AB67E60C22DC24 /* Pods-uToday.debug.xcconfig */;
+			baseConfigurationReference = 43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
@@ -662,7 +674,7 @@
 		};
 		34DE4FE621F59237002004E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2000DE48A4890D31CE655B22 /* Pods-uToday.release.xcconfig */;
+			baseConfigurationReference = C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;

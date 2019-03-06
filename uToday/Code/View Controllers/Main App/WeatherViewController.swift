@@ -9,6 +9,7 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
+    @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var welcomeMessage: UILabel!
     @IBOutlet var conditionImage: UIImageView!
     @IBOutlet var currentMessage: UILabel!
@@ -18,8 +19,11 @@ class WeatherViewController: UIViewController {
     @IBOutlet var FeelsLike: UILabel!
     @IBOutlet var LowTemperature: UILabel!
     @IBOutlet var activityMonitor: UIActivityIndicatorView!
+    @IBOutlet var dayLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     
     let savedData = LocalDataHandler()
+    let location = TrafficHandler()
     
     
     let weather = WeatherHandler() //Eventually ill pass the weather from the main screen to this so it doesn't use an API request...
@@ -30,6 +34,8 @@ class WeatherViewController: UIViewController {
         //We are going to populate with saved data and refresh in the background
         //populateSavedData()
         let hour = Calendar.current.component(.hour, from: Date())
+        dayLabel.text = getDayOfWeek()
+        
         
         switch hour {
         case 1..<12 : welcomeMessage.text = "Good Morning,\nMatthew"
@@ -37,8 +43,9 @@ class WeatherViewController: UIViewController {
         case 17..<25 : welcomeMessage.text = "Good Evening,\nMatthew"
         default: welcomeMessage.text = "Good Night,\nMatthew"
         }
+    
         activityMonitor.startAnimating()
-        //self.populateSavedData()
+        self.populateSavedData()
         weather.getData {
 
             self.populateData()
@@ -53,6 +60,7 @@ class WeatherViewController: UIViewController {
         LowTemperature.text = "Low Temp: \(savedData.getWeatherLowTemperature())"
         currentMessage.text = "Currently: \(savedData.getWeatherCurrentCondition())"
         todaysWeather.text = "Today: \(savedData.getWeatherDaySumarray())"
+        
     }
     @objc func populateData(){
         conditionImage.image = weather.getWeatherImage()
@@ -62,7 +70,42 @@ class WeatherViewController: UIViewController {
         LowTemperature.text = "Low Temp: \(weather.getDailyLow())"
         currentMessage.text = "Currently: \(weather.getCurrentCondition())"
         todaysWeather.text = "Today: \(weather.getSummary())"
+        location.lookupLocation {
+            self.locationLabel.text = self.location.getCity()
+        }
+        //Determine based on location and time of day which image to use as the background (day or night)
+        if(weather.isDayTime){backgroundImage.image = UIImage(named: "Day Weather BG.png")}
+        else{backgroundImage.image = UIImage(named: "Night Background.png")}
     }
+    func getDayOfWeek() -> String {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: Date())
+        switch weekDay {
+        case 1:
+            return "Sunday"
+        case 2:
+            return "Monday"
+        case 3:
+            return "Tuesday"
+        case 4:
+            return "Wednesday"
+        case 5:
+            return "Thursday"
+        case 6:
+            return "Friday"
+        case 7:
+            return "Saturday"
+        default:
+            return "Unknown"
+        }
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
+
     
 
     /*

@@ -28,6 +28,7 @@ class siriSetupViewController: UIViewController {
         
         navigationController?.navigationBar.isUserInteractionEnabled = false
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
+        
         self.setNeedsStatusBarAppearanceUpdate()
     }
     

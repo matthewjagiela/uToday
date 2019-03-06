@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import Alamofire
+import Solar
 class WeatherHandler: NSObject, CLLocationManagerDelegate {
     //Location Variables:
     var currentLocation:CLLocation!
@@ -29,7 +30,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     var iconToFind = ""
     var currentConditionImg = UIImage()
     var isDayTime = Bool()
-    
+    var sunUp = false
     var apiDict = [String: Any]()
     override init() { //This is going to handle all the data we need and store it into variables when we initialize it so we can just pull them
         
@@ -43,7 +44,8 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
             print("The latitude of the current location is: \(userLocation.coordinate.latitude)") //Used for testing
             print("The longitude of the current location is \(userLocation.coordinate.longitude)") //Used for testing
             let weatherURL = URL(string: "https://api.darksky.net/forecast/603692cb177160a63d1eeeb0d2125bfd/\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)") //This is the url we need to make the URL request to get the weather DATA
-            
+            let solar = Solar(coordinate: userLocation.coordinate) //This is going to make it so we know if the sun is currently up
+            sunUp = solar?.isDaytime ?? true
             
             var currentConditions = [String: Any]() //This is going to be the data for the current conditions
             var dailyWeatherDict = [String: Any]() //This is going to be the daily conditions for the day
@@ -116,26 +118,26 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     func getWeatherImage() -> UIImage{ //ALRIGHT sooooo.... This is going to determine the image we want to show based on the weather conditions and time.
         print("Icon To Find: \(iconToFind)")
         if(iconToFind == "rain"){
-            currentConditionImg = UIImage(named: "Rain.png")!
+            currentConditionImg = UIImage(named: "rainy.png")!
         }
         if(iconToFind == "partly-cloudy-day"){
             print("IF = partly cloudy day")
-            currentConditionImg = UIImage(named: "Partly Cloudy.png")!
+            currentConditionImg = UIImage(named: "partlyCloudy.png")!
         }
         else if(iconToFind == "partly-cloudy-night"){
-            currentConditionImg = UIImage(named: "NightCloudy.png")!
+            currentConditionImg = UIImage(named: "NightlyCloudy.png")!
         }
         else if(iconToFind == "cloudy" || iconToFind == "fog"){
-            currentConditionImg = UIImage(named: "Cloudy.png")!
+            currentConditionImg = UIImage(named: "cloud.png")!
         }
         else if(iconToFind == "clear-day"){
-            currentConditionImg = UIImage(named: "Sunny.png")!
+            currentConditionImg = UIImage(named: "sun.png")!
         }
         else if(iconToFind == "clear-night"){
-            currentConditionImg = UIImage(named: "Moon.png")!
+            currentConditionImg = UIImage(named: "night.png")!
         }
         else if(iconToFind == "snow" || iconToFind == "sleet" || iconToFind == "hail"){
-            currentConditionImg = UIImage(named: "Snow.png")!
+            currentConditionImg = UIImage(named: "snowy.png")!
         }
         
         return currentConditionImg
@@ -144,30 +146,33 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     func getWeatherImage(image: String) -> UIImage{ //ALRIGHT sooooo.... This is going to determine the image we want to show based on the weather conditions and time.
         print("Icon To Find: \(iconToFind)")
         if(image == "rain"){
-            currentConditionImg = UIImage(named: "Rain.png")!
+            currentConditionImg = UIImage(named: "rainy.png")!
         }
         if(image == "partly-cloudy-day"){
             print("IF = partly cloudy day")
-            currentConditionImg = UIImage(named: "Partly Cloudy.png")!
+            currentConditionImg = UIImage(named: "partlyCloudy.png")!
         }
         else if(image == "partly-cloudy-night"){
-            currentConditionImg = UIImage(named: "NightCloudy.png")!
+            currentConditionImg = UIImage(named: "NightlyCloudy.png")!
         }
         else if(image == "cloudy" || iconToFind == "fog"){
-            currentConditionImg = UIImage(named: "Cloudy.png")!
+            currentConditionImg = UIImage(named: "cloud.png")!
         }
         else if(image == "clear-day"){
-            currentConditionImg = UIImage(named: "Sunny.png")!
+            currentConditionImg = UIImage(named: "sun.png")!
         }
         else if(image == "clear-night"){
-            currentConditionImg = UIImage(named: "Moon.png")!
+            currentConditionImg = UIImage(named: "night.png")!
         }
         else if(image == "snow" || iconToFind == "sleet" || iconToFind == "hail"){
-            currentConditionImg = UIImage(named: "Snow.png")!
+            currentConditionImg = UIImage(named: "snowy.png")!
         }
         
         return currentConditionImg
         
+    }
+    func isSunUp() -> Bool{
+        return sunUp
     }
     
     private func testAllVariables(){

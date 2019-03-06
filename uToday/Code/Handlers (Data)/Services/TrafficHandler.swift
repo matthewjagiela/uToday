@@ -20,11 +20,31 @@ class TrafficHandler: NSObject {
     var distance:Double = 0.0
     var directionsRequest = MKDirections.Request()
     let destinationAnnotation = MKPointAnnotation()
+    
+    lazy var city = ""
+    lazy var state = ""
 
     override init(){
         super.init()
         locationManager.requestAlwaysAuthorization() //Remove this in final product.
         
+    }
+    func lookupLocation(completion: @escaping () -> ()){
+        CLGeocoder().reverseGeocodeLocation(locationManager.location!) { (placemarks, error) in
+            if((error) != nil){ print(error?.localizedDescription)}
+            else{
+                let pm = placemarks![0] as CLPlacemark
+                self.city = pm.locality!
+                self.state = pm.administrativeArea!
+                print("DEBUG TRAFFIC HANDLER: \(self.city)")
+                completion()
+                
+            }
+        }
+    }
+    func getCity() -> String{
+        print("Get city... \(city)")
+        return "\(city), \(state)"
     }
     
     func getETA(completion: @escaping() -> ()){

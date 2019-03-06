@@ -19,12 +19,34 @@ class MainViewController: UITableViewController{
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.view.backgroundColor = .black
+        //self.view.backgroundColor = .black
         locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Main Selection Background.png"))
         let weather = WeatherHandler()
         
         tableView.rowHeight = 185 //This is how tall the row is going to be... This can be the same across devices.
         
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.tintColor = .clear
+        
+        navigationController?.navigationBar.isUserInteractionEnabled = false
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
+        self.setNeedsStatusBarAppearanceUpdate()
+        
+        //Tab  Bar Hiding:
+        
+        tabBarController?.tabBar.backgroundImage = UIImage()
+        tabBarController?.tabBar.shadowImage = UIImage()
+        tabBarController?.tabBar.isTranslucent = true
+    
         
     }
    
@@ -53,9 +75,13 @@ class MainViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath) as! ModuleTableViewCell
 
         // Configure the cell... : This is going to change because there is going to be a custom cell for modules, this is to test the table
+        /**
         cell.layer.cornerRadius = 5
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.white.cgColor
+ **/
+        
+        cell.backgroundColor = .clear //Make it so we can see the background image through the cell
 
         return cell
     }
