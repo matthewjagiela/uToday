@@ -41,7 +41,7 @@ class CalenderLocationPermissionViewController: UIViewController {
     @IBAction func requestCalendar(_ sender: Any) {
         if(calendar.requestCalenderAccess()){calendarAccess = true}
         else{calendarAccess = false}
-        self.performSegue(withIdentifier: "stageThree", sender: self)
+        
     }
     @IBAction func requestLocation(_ sender: Any) {
         locationManager.requestAlwaysAuthorization()
@@ -53,7 +53,7 @@ class CalenderLocationPermissionViewController: UIViewController {
             print("LOCATION AUTHORIZED")
         }
         locationAccess = true
-        self.performSegue(withIdentifier: "stageThree", sender: self)
+        if(calendarAccess && locationAccess){self.performSegue(withIdentifier: "stageThree", sender: self)}
     }
     
     /*

@@ -24,8 +24,11 @@ class AddressSetupViewController: UIViewController,UITextFieldDelegate {
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        data.setWorkAddress(address: textField.text ?? "275 Mount Carmel Ave, Hamden CT, 06518") //Default will be QU if there is some error with a null value
-        self.performSegue(withIdentifier: "stageThree", sender: self)
+        if(textField.text != ""){
+            data.setWorkAddress(address: textField.text ?? "275 Mount Carmel Ave, Hamden CT, 06518") //Default will be QU if there is some error with a null value
+            self.performSegue(withIdentifier: "stageThree", sender: self)
+        }
+        
         return true
     }
     

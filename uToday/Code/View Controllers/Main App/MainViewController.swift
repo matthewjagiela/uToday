@@ -28,7 +28,7 @@ class MainViewController: UITableViewController{
         services.loadingDone {
             print("MAIN")
             self.tableView.reloadData()
-            self.refreshIndicator.isHidden = true
+            self.refreshIndicator.isHidden = true //Hiding because stuff has been refreshed
            
         }
         
