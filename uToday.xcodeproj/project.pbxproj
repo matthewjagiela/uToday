@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34120C98222F40980051C11A /* Night Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C97222F40980051C11A /* Night Background.png */; };
 		34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C9B222F49C30051C11A /* Main Selection Background.png */; };
+		343213A0223F5A5600808496 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432139F223F5A5600808496 /* CalendarTableViewCell.swift */; };
 		34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF422122EBB00229F0D /* WeatherViewController.swift */; };
 		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
 		34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
 		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
+		3432139F223F5A5600808496 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF422122EBB00229F0D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF82213E6AC00229F0D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
@@ -198,8 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				343C7A4A221E596B00032E69 /* CalendarHandler.swift */,
-				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
 				34A53E79221CFB0A001C640D /* TrafficHandler.swift */,
+				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -304,6 +306,7 @@
 			children = (
 				34DE4FD521F59236002004E2 /* AppDelegate.swift */,
 				34393DF6221388D200229F0D /* ModuleTableViewCell.swift */,
+				3432139F223F5A5600808496 /* CalendarTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,
 				34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */,
+				343213A0223F5A5600808496 /* CalendarTableViewCell.swift in Sources */,
 				3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */,
 				34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */,
 			);

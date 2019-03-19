@@ -33,7 +33,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     var sunUp = false
     var apiDict = [String: Any]()
     override init() { //This is going to handle all the data we need and store it into variables when we initialize it so we can just pull them
-        
+        print("Weather init")
     }
     
     func getData(completion: @escaping () -> ()){
@@ -45,7 +45,9 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
             print("The longitude of the current location is \(userLocation.coordinate.longitude)") //Used for testing
             let weatherURL = URL(string: "https://api.darksky.net/forecast/603692cb177160a63d1eeeb0d2125bfd/\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)") //This is the url we need to make the URL request to get the weather DATA
             let solar = Solar(coordinate: userLocation.coordinate) //This is going to make it so we know if the sun is currently up
+            
             sunUp = solar?.isDaytime ?? true
+            print("DEBUG SUNRISE: \(solar?.sunrise) SUNSET: \(solar?.sunset) ISDAY: \(solar?.isDaytime)")
             
             var currentConditions = [String: Any]() //This is going to be the data for the current conditions
             var dailyWeatherDict = [String: Any]() //This is going to be the daily conditions for the day
@@ -172,6 +174,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
         
     }
     func isSunUp() -> Bool{
+        print("DEBUG RETURNING: \(sunUp)")
         return sunUp
     }
     

@@ -27,6 +27,7 @@ class CalenderLocationPermissionViewController: UIViewController {
         UINavigationBar.appearance().tintColor = .black
         
         
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

@@ -39,18 +39,45 @@ class WeatherViewController: UIViewController {
         
         switch hour {
         case 1..<12 : welcomeMessage.text = "Good Morning,\nMatthew"
-        case 12..<17 : welcomeMessage.text = "Good Afternoon,\nMatthew"
-        case 17..<25 : welcomeMessage.text = "Good Evening,\nMatthew"
+        case 12..<19 : welcomeMessage.text = "Good Afternoon,\nMatthew"
+        case 19..<25 : welcomeMessage.text = "Good Evening,\nMatthew"
         default: welcomeMessage.text = "Good Night,\nMatthew"
         }
     
         activityMonitor.startAnimating()
-        self.populateSavedData()
+        //self.populateSavedData()
         weather.getData {
 
             self.populateData()
             self.activityMonitor.isHidden = true
         }
+    }
+    override func viewWillAppear(_ animated: Bool) { //We did a bunch of stuff to kill the navigation bar so now we need to undo it.
+        theming()
+        
+    }
+    func theming(){ //The notorious matthew jagiela theming method...
+        if(weather.isSunUp()){
+            navigationController?.navigationBar.prefersLargeTitles = false
+            navigationController?.navigationItem.hidesBackButton = false
+            navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            navigationController?.navigationBar.shadowImage = nil
+            
+            navigationController?.navigationBar.barStyle = .default
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black]
+            navigationController?.navigationBar.tintColor = .black
+        }
+        else{ //Sun is down we can make things a little bit... Darker
+            navigationController?.navigationBar.prefersLargeTitles = false
+            navigationController?.navigationItem.hidesBackButton = false
+            navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            navigationController?.navigationBar.shadowImage = nil
+            
+            navigationController?.navigationBar.barStyle = .blackTranslucent
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.white]
+            navigationController?.navigationBar.tintColor = .white
+        }
+        tabBarController?.tabBar.isHidden = true
     }
     func populateSavedData(){ //This is going to populate the view with already saved data while we refresh in the background...
         conditionImage.image = weather.getWeatherImage(image: savedData.getWeatherIcon())
@@ -59,7 +86,7 @@ class WeatherViewController: UIViewController {
         HighTemperature.text = "High Temp: \(savedData.getWeatherHighTemperature())"
         LowTemperature.text = "Low Temp: \(savedData.getWeatherLowTemperature())"
         currentMessage.text = "Currently: \(savedData.getWeatherCurrentCondition())"
-        todaysWeather.text = "Today: \(savedData.getWeatherDaySumarray())"
+        todaysWeather.text = "Today: \(savedData.getWeatherDaySummary())"
         
     }
     @objc func populateData(){
@@ -70,12 +97,15 @@ class WeatherViewController: UIViewController {
         LowTemperature.text = "Low Temp: \(weather.getDailyLow())"
         currentMessage.text = "Currently: \(weather.getCurrentCondition())"
         todaysWeather.text = "Today: \(weather.getSummary())"
+        if(weather.isSunUp()){backgroundImage.image = UIImage(named: "Day Weather BG.png")}
+        else{backgroundImage.image = UIImage(named: "Night Background.png")}
         location.lookupLocation {
             self.locationLabel.text = self.location.getCity()
+            
         }
         //Determine based on location and time of day which image to use as the background (day or night)
-        if(weather.isDayTime){backgroundImage.image = UIImage(named: "Day Weather BG.png")}
-        else{backgroundImage.image = UIImage(named: "Night Background.png")}
+    
+        
     }
     func getDayOfWeek() -> String {
         let formatter  = DateFormatter()

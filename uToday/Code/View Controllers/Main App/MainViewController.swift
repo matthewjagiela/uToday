@@ -10,7 +10,10 @@ import UIKit
 import CoreLocation //This is going to be removed when we have a setup page
 
 class MainViewController: UITableViewController{
+    
+    @IBOutlet var refreshIndicator: UIActivityIndicatorView!
     let locationManager = CLLocationManager()
+    var services = ServiceHandler() //Right now there is not going to be any service passed so we can do it later...
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,17 +25,23 @@ class MainViewController: UITableViewController{
         //self.view.backgroundColor = .black
         locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
         tableView.backgroundView = UIImageView(image: UIImage(named: "Main Selection Background.png"))
-        let weather = WeatherHandler()
+        services.loadingDone {
+            print("MAIN")
+            self.tableView.reloadData()
+            self.refreshIndicator.isHidden = true
+           
+        }
         
-        tableView.rowHeight = 185 //This is how tall the row is going to be... This can be the same across devices.
+        tableView.rowHeight = 143 //This is how tall the row is going to be... This can be the same across devices.
         
         
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) { //All of this is going to be for the navigation controller and tab bar controller to get the appearance correct
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
@@ -46,6 +55,12 @@ class MainViewController: UITableViewController{
         tabBarController?.tabBar.backgroundImage = UIImage()
         tabBarController?.tabBar.shadowImage = UIImage()
         tabBarController?.tabBar.isTranslucent = true
+        tabBarController?.tabBar.isHidden = false 
+        
+        let tableSelection: IndexPath? = tableView.indexPathForSelectedRow
+        if let tableSelection = tableSelection {
+            tableView.deselectRow(at: tableSelection, animated: false)
+        }
     
         
     }
@@ -55,7 +70,7 @@ class MainViewController: UITableViewController{
 
     override func numberOfSections(in tableView: UITableView) -> Int { //This is going to be actually returning the number of modules we are going to store.
         
-        return 2
+        return services.getAmountOfServices() //The amount of enabled services...
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { //This is going to make the spacing between cards
         let headerView = UIView()
@@ -79,11 +94,23 @@ class MainViewController: UITableViewController{
         cell.layer.cornerRadius = 5
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.white.cgColor
+         
  **/
+        services.setService(services.getServices(indexPath.section))
+        cell.nameOfService.text = services.serviceName()
+        cell.summary.text = services.getServiceSummary()
+        cell.pictureOfService.image = services.getServiceImage()
+        cell.imageView?.contentMode = .scaleAspectFill
+        
+        cell.imageView?.clipsToBounds = true
         
         cell.backgroundColor = .clear //Make it so we can see the background image through the cell
 
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        services.setService(services.getServices(indexPath.section))
+        self.performSegue(withIdentifier: services.getSegue(), sender: self)
     }
     
     

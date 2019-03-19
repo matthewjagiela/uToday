@@ -12,6 +12,7 @@ class CalendarHandler: NSObject {
     let eventStore = EKEventStore()
     var events = Array<EKEvent>()
     override init(){
+        print("Init")
         let now = Date()
         let calendar = Calendar.current
         var dateComponenets = DateComponents()
@@ -27,7 +28,8 @@ class CalendarHandler: NSObject {
         events = self.eventStore.events(matching: eventPredicate) //All of the events from now till end of day
         for event in events{ //DEBUG: For each event tell us about it
             
-            print("DEBUG: CALENDAR: \(event.title) DATE: \(event.startDate)")
+            print("DEBUG: CALENDAR: \(event.title) DATE: \(event.startDate), \(event.calendar.cgColor)")
+            print("DEBUG: CALENDAR EVENT: \(event.isAllDay)")
         }
         
     }
@@ -41,9 +43,25 @@ class CalendarHandler: NSObject {
         }
         return isGranted
     }
-    
+    func getNewestColor() -> CGColor{
+        return events[0].calendar.cgColor
+    }
     func getSummary() -> String{
-        return "" //Change
+        if(events.count == 0){
+            return "You no more appointments today!"
+        }
+        else{
+            var index = 0
+            for i in 0 ... events.count{
+                if(!events[0].isAllDay){
+                    index = i
+                    break
+                }
+            }
+            
+            return "Your next event is \(events[index].title!) at \(getEventStartDate(index))" //This is going to display the name and the start of what the next event (or current) that is scheduled in user calendar.
+        }
+        
     }
     func getEvents() -> Array<EKEvent>{ //This is going to return all of the events out of every calendar for the day...
         return events
@@ -53,9 +71,16 @@ class CalendarHandler: NSObject {
     }
     func getEventStartDate(_ index:Int) ->String{
         let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "EEEE, MMM d, yyyy"
+        dateFormat.dateFormat = "h:mm a"
         return "\(dateFormat.string(from: events[index].startDate))"
     }
+    func getCalendarTitle(_ index: Int)-> String{
+        return events[index].calendar.title
+    }
+    func getEventColor(_ index: Int) -> UIColor{
+        return UIColor(cgColor: events[index].calendar.cgColor)
+    }
+    
     
     
 
