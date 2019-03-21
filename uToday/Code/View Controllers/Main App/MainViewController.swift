@@ -11,6 +11,7 @@ import CoreLocation //This is going to be removed when we have a setup page
 
 class MainViewController: UITableViewController{
     
+    
     @IBOutlet var refreshIndicator: UIActivityIndicatorView!
     let locationManager = CLLocationManager()
     var services = ServiceHandler() //Right now there is not going to be any service passed so we can do it later...

@@ -109,9 +109,13 @@ class TrafficHandler: NSObject {
         let (h,m,s) = secondsToHoursMinutesSeconds(seconds: timeSeconds)
         print("DEBUG: SECONDS \(timeSeconds)")
         if(h == 0){ //No hours
-            return "It will take \(m) Minutes and \(s) Seconds to get to work"
+            if(m == 0){
+                return "You are already at work!"
+            }
+            else { return "It will take \(m) Minutes and \(s) Seconds to get to work" }
         }
         else{
+            
             return "It will take \(h) Hours \(m) Minutes and \(s) Seconds to get to work "
         }
         

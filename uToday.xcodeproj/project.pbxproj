@@ -41,21 +41,26 @@
 		346B7CA9222DE32F007226FC /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C9F222DE32F007226FC /* night.png */; };
 		346B7CAD222DF55D007226FC /* Day Weather BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7CAC222DF55C007226FC /* Day Weather BG.png */; };
 		3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3474741C220A0D7900A82B2D /* MainViewController.swift */; };
+		3481B1582241EFEC0079E3C6 /* NewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481B1572241EFEC0079E3C6 /* NewsHandler.swift */; };
 		34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
 		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
+		34CC0CA02242D328006AD340 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */; };
+		34CC0CA222431F51006AD340 /* newsBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CC0CA122431F50006AD340 /* newsBlack.png */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
 		34DE4FDB21F59236002004E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FD921F59236002004E2 /* Main.storyboard */; };
 		34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FDC21F59236002004E2 /* Assets.xcassets */; };
 		34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE4FDE21F59236002004E2 /* LaunchScreen.storyboard */; };
 		34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF321F64169002004E2 /* LocalDataHandler.swift */; };
 		34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */; };
+		34DF60CA2242BFBA008DC9B6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF60C92242BFB9008DC9B6 /* NewsTableViewCell.swift */; };
 		34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
 		34EE16D422246632000EF3D6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 34EE16D322246632000EF3D6 /* MainScreen.png */; };
 		34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */; };
-		6B41F1B57065275C79C3ADB4 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515E14469BA611E7FCD49100 /* Pods_uToday.framework */; };
+		A026F9503EAE6DFB332EC19A /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
 		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
 		3432139F223F5A5600808496 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		343FDFD72228B6DA00964A61 /* settings50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings50.png; sourceTree = "<group>"; };
 		343FDFDA2228B7DB00964A61 /* services75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services75.png; sourceTree = "<group>"; };
 		343FDFDB2228B7DB00964A61 /* services50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services50.png; sourceTree = "<group>"; };
+		344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 		346B7C96222DE32B007226FC /* NightlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightlyCloudy.png; sourceTree = "<group>"; };
 		346B7C97222DE32B007226FC /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
 		346B7C98222DE32C007226FC /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partlyCloudy.png; sourceTree = "<group>"; };
@@ -91,8 +97,11 @@
 		346B7C9F222DE32F007226FC /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
 		346B7CAC222DF55C007226FC /* Day Weather BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Day Weather BG.png"; sourceTree = "<group>"; };
 		3474741C220A0D7900A82B2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3481B1572241EFEC0079E3C6 /* NewsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHandler.swift; sourceTree = "<group>"; };
 		34A53E79221CFB0A001C640D /* TrafficHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHandler.swift; sourceTree = "<group>"; };
 		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
+		34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		34CC0CA122431F50006AD340 /* newsBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsBlack.png; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE4FD521F59236002004E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE4FDA21F59236002004E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,12 +111,11 @@
 		34DE4FEF21F598AD002004E2 /* uToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = uToday.entitlements; sourceTree = "<group>"; };
 		34DE4FF321F64169002004E2 /* LocalDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataHandler.swift; sourceTree = "<group>"; };
 		34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataHandler.swift; sourceTree = "<group>"; };
+		34DF60C92242BFB9008DC9B6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHandler.swift; sourceTree = "<group>"; };
 		34EE16D322246632000EF3D6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
 		34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSetupViewController.swift; sourceTree = "<group>"; };
-		43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
-		515E14469BA611E7FCD49100 /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
+		85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B41F1B57065275C79C3ADB4 /* Pods_uToday.framework in Frameworks */,
+				A026F9503EAE6DFB332EC19A /* Pods_uToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +154,7 @@
 				34393DF422122EBB00229F0D /* WeatherViewController.swift */,
 				34A53E7B221D0483001C640D /* TrafficViewController.swift */,
 				343C7A4C221E5D6500032E69 /* CalendarViewController.swift */,
+				34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -181,6 +190,7 @@
 		343FDFD42228B6B200964A61 /* RAW */ = {
 			isa = PBXGroup;
 			children = (
+				34CC0CA122431F50006AD340 /* newsBlack.png */,
 			);
 			path = RAW;
 			sourceTree = "<group>";
@@ -202,6 +212,7 @@
 				343C7A4A221E596B00032E69 /* CalendarHandler.swift */,
 				34A53E79221CFB0A001C640D /* TrafficHandler.swift */,
 				34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */,
+				3481B1572241EFEC0079E3C6 /* NewsHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,8 +232,8 @@
 			children = (
 				34DE4FD421F59236002004E2 /* uToday */,
 				34DE4FD321F59236002004E2 /* Products */,
-				92AC872645FBBF5E1C21CEBD /* Pods */,
-				D6CD0E40175BC0D4556AD15C /* Frameworks */,
+				7CBDDF50250A320E8DFCDC66 /* Pods */,
+				BE210E487F1152A940BD4741 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +318,7 @@
 				34DE4FD521F59236002004E2 /* AppDelegate.swift */,
 				34393DF6221388D200229F0D /* ModuleTableViewCell.swift */,
 				3432139F223F5A5600808496 /* CalendarTableViewCell.swift */,
+				34DF60C92242BFB9008DC9B6 /* NewsTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -331,19 +343,19 @@
 			path = "Screen Images";
 			sourceTree = "<group>";
 		};
-		92AC872645FBBF5E1C21CEBD /* Pods */ = {
+		7CBDDF50250A320E8DFCDC66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */,
-				C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */,
+				85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */,
+				344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D6CD0E40175BC0D4556AD15C /* Frameworks */ = {
+		BE210E487F1152A940BD4741 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				515E14469BA611E7FCD49100 /* Pods_uToday.framework */,
+				2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,11 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
 			buildPhases = (
-				5C7115AD1C4E46936A80DBD8 /* [CP] Check Pods Manifest.lock */,
+				F5532B4411FF1939E65888E5 /* [CP] Check Pods Manifest.lock */,
 				34DE4FCE21F59236002004E2 /* Sources */,
 				34DE4FCF21F59236002004E2 /* Frameworks */,
 				34DE4FD021F59236002004E2 /* Resources */,
-				1EB140CAB793E316DC06ED4D /* [CP] Embed Pods Frameworks */,
+				06A077F51BC72F63A8CAEDB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,6 +436,7 @@
 				343FDFD12228B4BD00964A61 /* weather.png in Resources */,
 				343FDFCC2228B4BD00964A61 /* list.png in Resources */,
 				346B7CAD222DF55D007226FC /* Day Weather BG.png in Resources */,
+				34CC0CA222431F51006AD340 /* newsBlack.png in Resources */,
 				34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */,
 				346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */,
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
@@ -453,7 +466,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EB140CAB793E316DC06ED4D /* [CP] Embed Pods Frameworks */ = {
+		06A077F51BC72F63A8CAEDB8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,11 +474,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NewsAPISwift/NewsAPISwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NewsAPISwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +490,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C7115AD1C4E46936A80DBD8 /* [CP] Check Pods Manifest.lock */ = {
+		F5532B4411FF1939E65888E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,8 +520,10 @@
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
 				34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */,
 				34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */,
+				3481B1582241EFEC0079E3C6 /* NewsHandler.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
 				34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */,
+				34CC0CA02242D328006AD340 /* NewsTableViewController.swift in Sources */,
 				34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */,
 				343E2EF12223B0D0001068C6 /* AddressSetupViewController.swift in Sources */,
 				343E2EEF222392E8001068C6 /* CalenderLocationPermissionViewController.swift in Sources */,
@@ -515,6 +534,7 @@
 				343213A0223F5A5600808496 /* CalendarTableViewCell.swift in Sources */,
 				3474741D220A0D7900A82B2D /* MainViewController.swift in Sources */,
 				34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */,
+				34DF60CA2242BFBA008DC9B6 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +678,7 @@
 		};
 		34DE4FE521F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43B25364A453B38FCE0D5093 /* Pods-uToday.debug.xcconfig */;
+			baseConfigurationReference = 85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
@@ -678,7 +698,7 @@
 		};
 		34DE4FE621F59237002004E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DDEF13B9C4DD9061ED3799 /* Pods-uToday.release.xcconfig */;
+			baseConfigurationReference = 344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;

@@ -52,8 +52,10 @@ class CalendarHandler: NSObject {
         }
         else{
             var index = 0
-            for i in 0 ... events.count{
-                if(!events[0].isAllDay){
+            
+            for i in 0 ... events.count - 1{
+                
+                if(!events[i].isAllDay){
                     index = i
                     break
                 }

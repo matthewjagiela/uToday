@@ -13,10 +13,11 @@ class ServiceHandler: NSObject {
     let weather = WeatherHandler() //If it is not needed it wont be stored in memory....
     let traffic = TrafficHandler()
     let calendar = CalendarHandler()
-    let services = ["Weather","Traffic","Calendar"]
+    let news = NewsHandler()
+    let services = ["Weather","Traffic","Calendar", "News"]
+    
     override init(){
         super.init()
-        
     }
     init(Service:String){
         super.init()
@@ -34,26 +35,34 @@ class ServiceHandler: NSObject {
             return traffic.getSummary()
         case "Calendar":
             return calendar.getSummary()
+        case "News":
+            print("DEBUG NEWS: GET SUMMARY HANDLER")
+            return news.getSummary()
         default:
             return ""
         }
         
     }
     func loadingDone(completion: @escaping () -> ()){ //We need this because these services need to download the web and then display... It makes it do it first. 
-        var completedSteps = 0 //When this is 2 we can pass the completion handler... (enabled - 1)
+        var completedSteps = 0 //When this is 3 we can pass the completion handler... (enabled - 1)
         weather.getData {
             print("Weather done")
             completedSteps += 1
-            if(completedSteps == 2){
+            if(completedSteps == 3){
                 completion()
             }
         }
         traffic.getETA {
             print("Traffic Done")
             completedSteps += 1
-            if(completedSteps == 2){
+            if(completedSteps == 3){
                 completion()
             }
+        }
+        news.getArticles {
+            print("Headlines fetched")
+            completedSteps += 1
+            if(completedSteps == 3){completion()}
         }
         
         
@@ -79,6 +88,8 @@ class ServiceHandler: NSObject {
             return UIImage(named: "traffic.png")!
         case "Calendar":
             return UIImage(named: "calendar.png")!
+        case "News":
+            return UIImage(named:"news.png")!
         default:
             return UIImage()
             
