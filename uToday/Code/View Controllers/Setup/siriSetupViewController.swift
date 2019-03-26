@@ -31,7 +31,16 @@ class siriSetupViewController: UIViewController {
         
         self.setNeedsStatusBarAppearanceUpdate()
     }
-    
+    @IBAction func nextButton(_ sender: Any) {
+        let savedData = LocalDataHandler()
+        //savedData.setupDone()
+        //self.performSegue(withIdentifier: "setupDone", sender: self)
+        switchScreen()
+    }
+    func switchScreen() {
+        self.performSegue(withIdentifier: "stageThree", sender: self)
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -24,7 +24,7 @@ class MainViewController: UITableViewController{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //self.view.backgroundColor = .black
-        locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
+        //locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
         tableView.backgroundView = UIImageView(image: UIImage(named: "Main Selection Background.png"))
         services.loadingDone {
             print("MAIN")
@@ -38,14 +38,18 @@ class MainViewController: UITableViewController{
         
     }
     override func viewWillAppear(_ animated: Bool) { //All of this is going to be for the navigation controller and tab bar controller to get the appearance correct
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        //navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
+        navigationController?.navigationBar.barStyle = .default
         
         navigationController?.navigationBar.isUserInteractionEnabled = false
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
@@ -53,8 +57,10 @@ class MainViewController: UITableViewController{
         
         //Tab  Bar Hiding:
         
-        tabBarController?.tabBar.backgroundImage = UIImage()
-        tabBarController?.tabBar.shadowImage = UIImage()
+        //tabBarController?.tabBar.backgroundImage = UIImage()
+        // tabBarController?.tabBar.shadowImage = UIImage()
+        tabBarController?.tabBar.barStyle = .default
+        tabBarController?.tabBar.tintColor = .black
         tabBarController?.tabBar.isTranslucent = true
         tabBarController?.tabBar.isHidden = false 
         
@@ -62,6 +68,10 @@ class MainViewController: UITableViewController{
         if let tableSelection = tableSelection {
             tableView.deselectRow(at: tableSelection, animated: false)
         }
+        
+        
+       
+
     
         
     }
@@ -111,8 +121,11 @@ class MainViewController: UITableViewController{
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         services.setService(services.getServices(indexPath.section))
+        
         self.performSegue(withIdentifier: services.getSegue(), sender: self)
     }
+    
+ 
     
     
     
@@ -163,5 +176,14 @@ class MainViewController: UITableViewController{
         // Pass the selected object to the new view controller.
     }
     */
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 
 }
+extension UINavigationController {
+    open override var childForStatusBarStyle: UIViewController? {
+        return topViewController
+    }
+}
+

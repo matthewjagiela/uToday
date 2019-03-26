@@ -86,7 +86,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
             }
         }
         else{
-            locationManager.requestAlwaysAuthorization() //This is going to be removed for something else when we have a setup page
+            //locationManager.requestAlwaysAuthorization() //This is going to be removed for something else when we have a setup page
         }
     }
     func saveAllData(){ //We are going to save the data locally so we can have something to load

@@ -23,24 +23,20 @@ class CalenderLocationPermissionViewController: UIViewController {
         
         
         //navigationController?.navigationBar.isTranslucent = false
-         UINavigationBar.appearance().barTintColor = .black
-        UINavigationBar.appearance().tintColor = .black
+         
         
         
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        navigationController?.navigationBar.tintColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0)
         
-        navigationController?.navigationBar.barStyle = .default
         
     }
     
     @IBAction func requestCalendar(_ sender: Any) {
-        if(calendar.requestCalenderAccess()){calendarAccess = true}
-        else{calendarAccess = false}
+        calendar.requestCalenderAccess()
+        calendarAccess = true
         
     }
     @IBAction func requestLocation(_ sender: Any) {

@@ -22,7 +22,7 @@ class NewsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        tableView.rowHeight = 138
+        tableView.rowHeight = 110
         news.getArticles {
             self.reloaded = true
             self.tableView.reloadData()
@@ -40,6 +40,7 @@ class NewsTableViewController: UITableViewController {
         
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController?.navigationBar.tintColor = .black
         tabBarController?.tabBar.isHidden = true
     }

@@ -30,6 +30,9 @@
 		343FDFD92228B6DA00964A61 /* settings50.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFD72228B6DA00964A61 /* settings50.png */; };
 		343FDFDC2228B7DB00964A61 /* services75.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFDA2228B7DB00964A61 /* services75.png */; };
 		343FDFDD2228B7DB00964A61 /* services50.png in Resources */ = {isa = PBXBuildFile; fileRef = 343FDFDB2228B7DB00964A61 /* services50.png */; };
+		34507C3822480D1500ACCF8D /* iPhone3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34507C3522480D1400ACCF8D /* iPhone3x.png */; };
+		34507C3922480D1500ACCF8D /* iPhone2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34507C3622480D1400ACCF8D /* iPhone2x.png */; };
+		34507C3A22480D1500ACCF8D /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34507C3722480D1400ACCF8D /* main_icon.png */; };
 		346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C96222DE32B007226FC /* NightlyCloudy.png */; };
 		346B7CA1222DE32F007226FC /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C97222DE32B007226FC /* windy.png */; };
 		346B7CA2222DE32F007226FC /* partlyCloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 346B7C98222DE32C007226FC /* partlyCloudy.png */; };
@@ -44,6 +47,7 @@
 		3481B1582241EFEC0079E3C6 /* NewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481B1572241EFEC0079E3C6 /* NewsHandler.swift */; };
 		34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
 		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
+		34A7BD5C2243D14D005DEEE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7BD5B2243D14D005DEEE7 /* HomeViewController.swift */; };
 		34CC0CA02242D328006AD340 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */; };
 		34CC0CA222431F51006AD340 /* newsBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CC0CA122431F50006AD340 /* newsBlack.png */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
@@ -85,6 +89,9 @@
 		343FDFDA2228B7DB00964A61 /* services75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services75.png; sourceTree = "<group>"; };
 		343FDFDB2228B7DB00964A61 /* services50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services50.png; sourceTree = "<group>"; };
 		344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
+		34507C3522480D1400ACCF8D /* iPhone3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone3x.png; sourceTree = "<group>"; };
+		34507C3622480D1400ACCF8D /* iPhone2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone2x.png; sourceTree = "<group>"; };
+		34507C3722480D1400ACCF8D /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		346B7C96222DE32B007226FC /* NightlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightlyCloudy.png; sourceTree = "<group>"; };
 		346B7C97222DE32B007226FC /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
 		346B7C98222DE32C007226FC /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partlyCloudy.png; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		3481B1572241EFEC0079E3C6 /* NewsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHandler.swift; sourceTree = "<group>"; };
 		34A53E79221CFB0A001C640D /* TrafficHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHandler.swift; sourceTree = "<group>"; };
 		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
+		34A7BD5B2243D14D005DEEE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		34CC0CA122431F50006AD340 /* newsBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsBlack.png; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +163,7 @@
 				34A53E7B221D0483001C640D /* TrafficViewController.swift */,
 				343C7A4C221E5D6500032E69 /* CalendarViewController.swift */,
 				34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */,
+				34A7BD5B2243D14D005DEEE7 /* HomeViewController.swift */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -204,6 +213,16 @@
 				343FDFD62228B6DA00964A61 /* settings75.png */,
 			);
 			path = Scaled;
+			sourceTree = "<group>";
+		};
+		34507C3422480CCE00ACCF8D /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				34507C3622480D1400ACCF8D /* iPhone2x.png */,
+				34507C3522480D1400ACCF8D /* iPhone3x.png */,
+				34507C3722480D1400ACCF8D /* main_icon.png */,
+			);
+			path = "App Icons";
 			sourceTree = "<group>";
 		};
 		34A53E77221CFAE3001C640D /* Services */ = {
@@ -270,6 +289,7 @@
 		34DE4FE821F59682002004E2 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				34507C3422480CCE00ACCF8D /* App Icons */,
 				343FDFC32228B49600964A61 /* Services */,
 				3419F2E52211FE3500EC49E8 /* Weather Icons */,
 			);
@@ -437,11 +457,14 @@
 				343FDFCC2228B4BD00964A61 /* list.png in Resources */,
 				346B7CAD222DF55D007226FC /* Day Weather BG.png in Resources */,
 				34CC0CA222431F51006AD340 /* newsBlack.png in Resources */,
+				34507C3922480D1500ACCF8D /* iPhone2x.png in Resources */,
 				34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */,
 				346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */,
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
 				346B7CA7222DE32F007226FC /* rainy.png in Resources */,
 				343FDFD22228B4BD00964A61 /* sun.png in Resources */,
+				34507C3822480D1500ACCF8D /* iPhone3x.png in Resources */,
+				34507C3A22480D1500ACCF8D /* main_icon.png in Resources */,
 				346B7CA4222DE32F007226FC /* snowy.png in Resources */,
 				346B7CA8222DE32F007226FC /* cloud.png in Resources */,
 				346B7CA5222DE32F007226FC /* Lightning.png in Resources */,
@@ -520,6 +543,7 @@
 				34DE4FF621F6417D002004E2 /* CloudDataHandler.swift in Sources */,
 				34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */,
 				34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */,
+				34A7BD5C2243D14D005DEEE7 /* HomeViewController.swift in Sources */,
 				3481B1582241EFEC0079E3C6 /* NewsHandler.swift in Sources */,
 				34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */,
 				34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */,
@@ -685,6 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MCRTE5CC2K;
 				INFOPLIST_FILE = uToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,6 +730,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MCRTE5CC2K;
 				INFOPLIST_FILE = uToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

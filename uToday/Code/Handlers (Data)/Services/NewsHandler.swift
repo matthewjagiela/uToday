@@ -51,7 +51,7 @@ class NewsHandler: NSObject {
         return summary
     }
     func getImageURL(_ index:Int) -> URL{
-        return articles[index].urlToImage!
+        return articles[index].urlToImage ?? URL(fileURLWithPath: "") //The default is going to return an empty string so we can just placehold our own image there...
     }
     
     

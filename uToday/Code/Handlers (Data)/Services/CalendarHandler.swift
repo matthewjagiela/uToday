@@ -48,7 +48,7 @@ class CalendarHandler: NSObject {
     }
     func getSummary() -> String{
         if(events.count == 0){
-            return "You no more appointments today!"
+            return "You have no more appointments today!"
         }
         else{
             var index = 0

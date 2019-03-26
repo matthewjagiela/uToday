@@ -11,12 +11,21 @@ import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let savedData = LocalDataHandler()
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if(savedData.setupIsDone()){
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "MainController")
+        }
+        else{
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "SetupController")
+        }
         return true
     }
 

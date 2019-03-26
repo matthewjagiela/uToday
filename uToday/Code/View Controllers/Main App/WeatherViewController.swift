@@ -35,13 +35,13 @@ class WeatherViewController: UIViewController {
         //populateSavedData()
         let hour = Calendar.current.component(.hour, from: Date())
         dayLabel.text = getDayOfWeek()
-        
+        let name = savedData.getFirstName()
         
         switch hour {
-        case 1..<12 : welcomeMessage.text = "Good Morning,\nMatthew"
-        case 12..<19 : welcomeMessage.text = "Good Afternoon,\nMatthew"
-        case 19..<25 : welcomeMessage.text = "Good Evening,\nMatthew"
-        default: welcomeMessage.text = "Good Night,\nMatthew"
+        case 1..<12 : welcomeMessage.text = "Good Morning,\n\(name)"
+        case 12..<19 : welcomeMessage.text = "Good Afternoon,\n\(name)"
+        case 19..<25 : welcomeMessage.text = "Good Evening,\n\(name)"
+        default: welcomeMessage.text = "Good Night,\n\(name)"
         }
     
         activityMonitor.startAnimating()
@@ -58,6 +58,7 @@ class WeatherViewController: UIViewController {
     }
     func theming(){ //The notorious matthew jagiela theming method...
         if(weather.isSunUp()){
+            print("WEATHER CONTROLLER DEBUG: sun is up")
             navigationController?.navigationBar.prefersLargeTitles = false
             navigationController?.navigationItem.hidesBackButton = false
             navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
@@ -131,11 +132,10 @@ class WeatherViewController: UIViewController {
             return "Unknown"
         }
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle{ //The status bar has to be set based on if the dark view or not is showing....
+        if weather.isSunUp() { return .default}
+        else{return .lightContent}
     }
-    
-
     
 
     /*
@@ -149,3 +149,5 @@ class WeatherViewController: UIViewController {
     */
 
 }
+
+
