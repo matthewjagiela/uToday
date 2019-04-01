@@ -33,7 +33,7 @@ class siriSetupViewController: UIViewController {
     }
     @IBAction func nextButton(_ sender: Any) {
         let savedData = LocalDataHandler()
-        //savedData.setupDone()
+        savedData.setupDone()
         //self.performSegue(withIdentifier: "setupDone", sender: self)
         switchScreen()
     }

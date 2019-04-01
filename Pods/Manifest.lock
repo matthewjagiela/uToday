@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.8.1)
+  - NewsAPISwift (2.0)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - Solar (2.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - NewsAPISwift
+  - SDWebImage
+  - Solar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - NewsAPISwift
+    - SDWebImage
+    - Solar
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  NewsAPISwift: 61b069546b0170b48ee3ef7a0158b294e125d7b7
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+
+PODFILE CHECKSUM: fe925af05a9feddb2a136599aa251805e633376b
+
+COCOAPODS: 1.5.3

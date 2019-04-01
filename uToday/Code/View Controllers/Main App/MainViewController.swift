@@ -15,6 +15,7 @@ class MainViewController: UITableViewController{
     @IBOutlet var refreshIndicator: UIActivityIndicatorView!
     let locationManager = CLLocationManager()
     var services = ServiceHandler() //Right now there is not going to be any service passed so we can do it later...
+    var offset = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,10 +31,14 @@ class MainViewController: UITableViewController{
             print("MAIN")
             self.tableView.reloadData()
             self.refreshIndicator.isHidden = true //Hiding because stuff has been refreshed
+            self.offset = Double(self.tableView.contentOffset.y)
            
         }
         
         tableView.rowHeight = 143 //This is how tall the row is going to be... This can be the same across devices.
+        
+        //offset = scrollView.contentOffset.y
+        
         
         
     }
@@ -75,7 +80,9 @@ class MainViewController: UITableViewController{
     
         
     }
-   
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
 
     // MARK: - Table view data source
 

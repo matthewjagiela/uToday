@@ -59,6 +59,8 @@
 		34DF60CA2242BFBA008DC9B6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF60C92242BFB9008DC9B6 /* NewsTableViewCell.swift */; };
 		34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
 		34EE16D422246632000EF3D6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 34EE16D322246632000EF3D6 /* MainScreen.png */; };
+		34F0C0282251C2B200F2BD09 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0262251C2B200F2BD09 /* box.png */; };
+		34F0C0292251C2B200F2BD09 /* Box 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0272251C2B200F2BD09 /* Box 50.png */; };
 		34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */; };
 		A026F9503EAE6DFB332EC19A /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +124,8 @@
 		34DF60C92242BFB9008DC9B6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHandler.swift; sourceTree = "<group>"; };
 		34EE16D322246632000EF3D6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
+		34F0C0262251C2B200F2BD09 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		34F0C0272251C2B200F2BD09 /* Box 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box 50.png"; sourceTree = "<group>"; };
 		34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSetupViewController.swift; sourceTree = "<group>"; };
 		85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +211,8 @@
 		343FDFD52228B6BD00964A61 /* Scaled */ = {
 			isa = PBXGroup;
 			children = (
+				34F0C0272251C2B200F2BD09 /* Box 50.png */,
+				34F0C0262251C2B200F2BD09 /* box.png */,
 				343FDFDB2228B7DB00964A61 /* services50.png */,
 				343FDFDA2228B7DB00964A61 /* services75.png */,
 				343FDFD72228B6DA00964A61 /* settings50.png */,
@@ -463,10 +469,12 @@
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
 				346B7CA7222DE32F007226FC /* rainy.png in Resources */,
 				343FDFD22228B4BD00964A61 /* sun.png in Resources */,
+				34F0C0282251C2B200F2BD09 /* box.png in Resources */,
 				34507C3822480D1500ACCF8D /* iPhone3x.png in Resources */,
 				34507C3A22480D1500ACCF8D /* main_icon.png in Resources */,
 				346B7CA4222DE32F007226FC /* snowy.png in Resources */,
 				346B7CA8222DE32F007226FC /* cloud.png in Resources */,
+				34F0C0292251C2B200F2BD09 /* Box 50.png in Resources */,
 				346B7CA5222DE32F007226FC /* Lightning.png in Resources */,
 				34120C98222F40980051C11A /* Night Background.png in Resources */,
 				343FDFD02228B4BD00964A61 /* traffic.png in Resources */,

@@ -288,7 +288,7 @@ meme</string>
         <scene sceneID="JxZ-vs-TR6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UJB-em-j9Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Services" image="Services" id="fiU-0m-qFF">
+                    <tabBarItem key="tabBarItem" title="Services" image="Box" id="fiU-0m-qFF">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -973,25 +973,25 @@ z</string>
                                 <rect key="frame" x="16" y="230" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Api-kE-1QG">
                                 <rect key="frame" x="16" y="268" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State / Province / Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-uT-rUd">
                                 <rect key="frame" x="16" y="306" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ZIp / Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-q0-c0F">
                                 <rect key="frame" x="16" y="344" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="cc-number"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1029,6 +1029,7 @@ z</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Box" width="25" height="25"/>
         <image name="Day Weather BG.png" width="1242" height="2688"/>
         <image name="Main Selection Background.png" width="1242" height="2688"/>
         <image name="MainScreen.png" width="1242" height="2688"/>
