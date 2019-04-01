@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00962CA870FB3B7EAD19479E /* Pods_TodayIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C97119E76E3899C7394D02 /* Pods_TodayIntent.framework */; };
 		34120C98222F40980051C11A /* Night Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C97222F40980051C11A /* Night Background.png */; };
 		34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C9B222F49C30051C11A /* Main Selection Background.png */; };
+		342CD16722525E280057EDDB /* VoiceShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */; };
+		342CD169225269DF0057EDDB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342CD168225269DF0057EDDB /* CoreLocation.framework */; };
+		342CD16A225269E80057EDDB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342CD168225269DF0057EDDB /* CoreLocation.framework */; };
 		343213A0223F5A5600808496 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432139F223F5A5600808496 /* CalendarTableViewCell.swift */; };
 		34393DF522122EBB00229F0D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF422122EBB00229F0D /* WeatherViewController.swift */; };
 		34393DF7221388D200229F0D /* ModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF6221388D200229F0D /* ModuleTableViewCell.swift */; };
@@ -48,6 +52,30 @@
 		34A53E7A221CFB0A001C640D /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
 		34A53E7C221D0483001C640D /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E7B221D0483001C640D /* TrafficViewController.swift */; };
 		34A7BD5C2243D14D005DEEE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7BD5B2243D14D005DEEE7 /* HomeViewController.swift */; };
+		34C502BE225250BE005A5D25 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C502BD225250BE005A5D25 /* IntentHandler.swift */; };
+		34C502C6225250BE005A5D25 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C502C5225250BE005A5D25 /* IntentsUI.framework */; };
+		34C502C9225250BE005A5D25 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C502C8225250BE005A5D25 /* IntentViewController.swift */; };
+		34C502CC225250BE005A5D25 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C502CA225250BE005A5D25 /* MainInterface.storyboard */; };
+		34C502D0225250BE005A5D25 /* TodayIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 34C502C4225250BE005A5D25 /* TodayIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34C502D3225250BE005A5D25 /* TodayIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 34C502BB225250BD005A5D25 /* TodayIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34C502DC22525125005A5D25 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 34C502DB22525125005A5D25 /* Intents.intentdefinition */; };
+		34C502DD2252542B005A5D25 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 34C502DB22525125005A5D25 /* Intents.intentdefinition */; };
+		34C502DE2252542C005A5D25 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 34C502DB22525125005A5D25 /* Intents.intentdefinition */; };
+		34C502E0225254EE005A5D25 /* MyDayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C502DF225254EE005A5D25 /* MyDayIntentHandler.swift */; };
+		34C502E1225255A7005A5D25 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
+		34C502E2225255A8005A5D25 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34393DF82213E6AC00229F0D /* ServiceHandler.swift */; };
+		34C502E3225255CB005A5D25 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF321F64169002004E2 /* LocalDataHandler.swift */; };
+		34C502E4225255CB005A5D25 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF321F64169002004E2 /* LocalDataHandler.swift */; };
+		34C502E5225255CF005A5D25 /* CloudDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */; };
+		34C502E6225255D0005A5D25 /* CloudDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */; };
+		34C502E7225255D3005A5D25 /* CalendarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C7A4A221E596B00032E69 /* CalendarHandler.swift */; };
+		34C502E8225255D3005A5D25 /* CalendarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C7A4A221E596B00032E69 /* CalendarHandler.swift */; };
+		34C502E9225255D7005A5D25 /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
+		34C502EA225255D7005A5D25 /* TrafficHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A53E79221CFB0A001C640D /* TrafficHandler.swift */; };
+		34C502EB225255DA005A5D25 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
+		34C502EC225255DB005A5D25 /* WeatherHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E11F9A22109AD7002B8D46 /* WeatherHandler.swift */; };
+		34C502ED225255DE005A5D25 /* NewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481B1572241EFEC0079E3C6 /* NewsHandler.swift */; };
+		34C502EE225255DE005A5D25 /* NewsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481B1572241EFEC0079E3C6 /* NewsHandler.swift */; };
 		34CC0CA02242D328006AD340 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */; };
 		34CC0CA222431F51006AD340 /* newsBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CC0CA122431F50006AD340 /* newsBlack.png */; };
 		34DE4FD621F59236002004E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE4FD521F59236002004E2 /* AppDelegate.swift */; };
@@ -62,13 +90,50 @@
 		34F0C0282251C2B200F2BD09 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0262251C2B200F2BD09 /* box.png */; };
 		34F0C0292251C2B200F2BD09 /* Box 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0272251C2B200F2BD09 /* Box 50.png */; };
 		34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */; };
-		A026F9503EAE6DFB332EC19A /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */; };
+		6E637F356430F6299F033A7C /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DCA03050D35497248E162F /* Pods_uToday.framework */; };
+		FFF708DD482F29781EB6073A /* Pods_TodayIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E049B50DDD7FA2F9D4AEFD01 /* Pods_TodayIntentUI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		34C502CE225250BE005A5D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34DE4FCA21F59236002004E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C502C3225250BE005A5D25;
+			remoteInfo = TodayIntentUI;
+		};
+		34C502D1225250BE005A5D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34DE4FCA21F59236002004E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C502BA225250BD005A5D25;
+			remoteInfo = TodayIntent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34C502DA225250BE005A5D25 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				34C502D3225250BE005A5D25 /* TodayIntent.appex in Embed App Extensions */,
+				34C502D0225250BE005A5D25 /* TodayIntentUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29DCA03050D35497248E162F /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
 		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
+		342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutsManager.swift; sourceTree = "<group>"; };
+		342CD168225269DF0057EDDB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		342CD16B22526F230057EDDB /* TodayIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayIntent.entitlements; sourceTree = "<group>"; };
+		342CD16C22526F2C0057EDDB /* TodayIntentUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayIntentUI.entitlements; sourceTree = "<group>"; };
 		3432139F223F5A5600808496 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		34393DF422122EBB00229F0D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		34393DF6221388D200229F0D /* ModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,7 +155,6 @@
 		343FDFD72228B6DA00964A61 /* settings50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings50.png; sourceTree = "<group>"; };
 		343FDFDA2228B7DB00964A61 /* services75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services75.png; sourceTree = "<group>"; };
 		343FDFDB2228B7DB00964A61 /* services50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = services50.png; sourceTree = "<group>"; };
-		344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 		34507C3522480D1400ACCF8D /* iPhone3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone3x.png; sourceTree = "<group>"; };
 		34507C3622480D1400ACCF8D /* iPhone2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone2x.png; sourceTree = "<group>"; };
 		34507C3722480D1400ACCF8D /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
@@ -110,6 +174,16 @@
 		34A53E79221CFB0A001C640D /* TrafficHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficHandler.swift; sourceTree = "<group>"; };
 		34A53E7B221D0483001C640D /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		34A7BD5B2243D14D005DEEE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		34C502BB225250BD005A5D25 /* TodayIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C502BD225250BE005A5D25 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		34C502BF225250BE005A5D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C502C4225250BE005A5D25 /* TodayIntentUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayIntentUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C502C5225250BE005A5D25 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		34C502C8225250BE005A5D25 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		34C502CB225250BE005A5D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		34C502CD225250BE005A5D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C502DB22525125005A5D25 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		34C502DF225254EE005A5D25 /* MyDayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayIntentHandler.swift; sourceTree = "<group>"; };
 		34CC0C9F2242D328006AD340 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		34CC0CA122431F50006AD340 /* newsBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsBlack.png; sourceTree = "<group>"; };
 		34DE4FD221F59236002004E2 /* uToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,21 +201,60 @@
 		34F0C0262251C2B200F2BD09 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		34F0C0272251C2B200F2BD09 /* Box 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box 50.png"; sourceTree = "<group>"; };
 		34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSetupViewController.swift; sourceTree = "<group>"; };
-		85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
+		531E603E763D2F1352602DA4 /* Pods-TodayIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntent.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.release.xcconfig"; sourceTree = "<group>"; };
+		6CFDA616F6834B3D855D6108 /* Pods-TodayIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntentUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.release.xcconfig"; sourceTree = "<group>"; };
+		8EE292C204A02291C76F1B6B /* Pods-TodayIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.debug.xcconfig"; sourceTree = "<group>"; };
+		AD556134CE881B3614CC8012 /* Pods-TodayIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntentUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F088878006C094BC00F27F /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
+		E049B50DDD7FA2F9D4AEFD01 /* Pods_TodayIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C97119E76E3899C7394D02 /* Pods_TodayIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1ACEFD7E07A0F0CACB6FE32 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34C502B8225250BD005A5D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342CD169225269DF0057EDDB /* CoreLocation.framework in Frameworks */,
+				00962CA870FB3B7EAD19479E /* Pods_TodayIntent.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C502C1225250BE005A5D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342CD16A225269E80057EDDB /* CoreLocation.framework in Frameworks */,
+				34C502C6225250BE005A5D25 /* IntentsUI.framework in Frameworks */,
+				FFF708DD482F29781EB6073A /* Pods_TodayIntentUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34DE4FCF21F59236002004E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A026F9503EAE6DFB332EC19A /* Pods_uToday.framework in Frameworks */,
+				6E637F356430F6299F033A7C /* Pods_uToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111B7D07AC583E968A95C66E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EE292C204A02291C76F1B6B /* Pods-TodayIntent.debug.xcconfig */,
+				531E603E763D2F1352602DA4 /* Pods-TodayIntent.release.xcconfig */,
+				B8F088878006C094BC00F27F /* Pods-uToday.debug.xcconfig */,
+				F1ACEFD7E07A0F0CACB6FE32 /* Pods-uToday.release.xcconfig */,
+				AD556134CE881B3614CC8012 /* Pods-TodayIntentUI.debug.xcconfig */,
+				6CFDA616F6834B3D855D6108 /* Pods-TodayIntentUI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3419F2E52211FE3500EC49E8 /* Weather Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,17 +361,43 @@
 				34393DF82213E6AC00229F0D /* ServiceHandler.swift */,
 				34DE4FF321F64169002004E2 /* LocalDataHandler.swift */,
 				34DE4FF521F6417D002004E2 /* CloudDataHandler.swift */,
+				342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */,
 			);
 			path = Functionality;
+			sourceTree = "<group>";
+		};
+		34C502BC225250BE005A5D25 /* TodayIntent */ = {
+			isa = PBXGroup;
+			children = (
+				342CD16B22526F230057EDDB /* TodayIntent.entitlements */,
+				34C502BD225250BE005A5D25 /* IntentHandler.swift */,
+				34C502BF225250BE005A5D25 /* Info.plist */,
+				34C502DF225254EE005A5D25 /* MyDayIntentHandler.swift */,
+			);
+			path = TodayIntent;
+			sourceTree = "<group>";
+		};
+		34C502C7225250BE005A5D25 /* TodayIntentUI */ = {
+			isa = PBXGroup;
+			children = (
+				342CD16C22526F2C0057EDDB /* TodayIntentUI.entitlements */,
+				34C502C8225250BE005A5D25 /* IntentViewController.swift */,
+				34C502CA225250BE005A5D25 /* MainInterface.storyboard */,
+				34C502CD225250BE005A5D25 /* Info.plist */,
+			);
+			path = TodayIntentUI;
 			sourceTree = "<group>";
 		};
 		34DE4FC921F59236002004E2 = {
 			isa = PBXGroup;
 			children = (
+				34C502DB22525125005A5D25 /* Intents.intentdefinition */,
 				34DE4FD421F59236002004E2 /* uToday */,
+				34C502BC225250BE005A5D25 /* TodayIntent */,
+				34C502C7225250BE005A5D25 /* TodayIntentUI */,
 				34DE4FD321F59236002004E2 /* Products */,
-				7CBDDF50250A320E8DFCDC66 /* Pods */,
 				BE210E487F1152A940BD4741 /* Frameworks */,
+				111B7D07AC583E968A95C66E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				34DE4FD221F59236002004E2 /* uToday.app */,
+				34C502BB225250BD005A5D25 /* TodayIntent.appex */,
+				34C502C4225250BE005A5D25 /* TodayIntentUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -369,19 +510,14 @@
 			path = "Screen Images";
 			sourceTree = "<group>";
 		};
-		7CBDDF50250A320E8DFCDC66 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */,
-				344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BE210E487F1152A940BD4741 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F3B173A886F79B9A3CAC29C /* Pods_uToday.framework */,
+				342CD168225269DF0057EDDB /* CoreLocation.framework */,
+				34C502C5225250BE005A5D25 /* IntentsUI.framework */,
+				E6C97119E76E3899C7394D02 /* Pods_TodayIntent.framework */,
+				29DCA03050D35497248E162F /* Pods_uToday.framework */,
+				E049B50DDD7FA2F9D4AEFD01 /* Pods_TodayIntentUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,19 +525,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		34DE4FD121F59236002004E2 /* uToday */ = {
+		34C502BA225250BD005A5D25 /* TodayIntent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
+			buildConfigurationList = 34C502D7225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntent" */;
 			buildPhases = (
-				F5532B4411FF1939E65888E5 /* [CP] Check Pods Manifest.lock */,
-				34DE4FCE21F59236002004E2 /* Sources */,
-				34DE4FCF21F59236002004E2 /* Frameworks */,
-				34DE4FD021F59236002004E2 /* Resources */,
-				06A077F51BC72F63A8CAEDB8 /* [CP] Embed Pods Frameworks */,
+				C23AB563616F4FA279A7537D /* [CP] Check Pods Manifest.lock */,
+				34C502B7225250BD005A5D25 /* Sources */,
+				34C502B8225250BD005A5D25 /* Frameworks */,
+				34C502B9225250BD005A5D25 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = TodayIntent;
+			productName = TodayIntent;
+			productReference = 34C502BB225250BD005A5D25 /* TodayIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		34C502C3225250BE005A5D25 /* TodayIntentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C502D4225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntentUI" */;
+			buildPhases = (
+				4C51D0A2DE367FF7BECB0DE3 /* [CP] Check Pods Manifest.lock */,
+				34C502C0225250BE005A5D25 /* Sources */,
+				34C502C1225250BE005A5D25 /* Frameworks */,
+				34C502C2225250BE005A5D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayIntentUI;
+			productName = TodayIntentUI;
+			productReference = 34C502C4225250BE005A5D25 /* TodayIntentUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		34DE4FD121F59236002004E2 /* uToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
+			buildPhases = (
+				0D902A3141FBB24276E29E21 /* [CP] Check Pods Manifest.lock */,
+				34DE4FCE21F59236002004E2 /* Sources */,
+				34DE4FCF21F59236002004E2 /* Frameworks */,
+				34DE4FD021F59236002004E2 /* Resources */,
+				34C502DA225250BE005A5D25 /* Embed App Extensions */,
+				AFC319C9D4C172FE3F6777D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34C502CF225250BE005A5D25 /* PBXTargetDependency */,
+				34C502D2225250BE005A5D25 /* PBXTargetDependency */,
 			);
 			name = uToday;
 			productName = uToday;
@@ -414,10 +589,26 @@
 		34DE4FCA21F59236002004E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Matthew Jagiela";
 				TargetAttributes = {
+					34C502BA225250BD005A5D25 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					34C502C3225250BE005A5D25 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					34DE4FD121F59236002004E2 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -425,6 +616,9 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 							com.apple.iCloud = {
@@ -448,11 +642,28 @@
 			projectRoot = "";
 			targets = (
 				34DE4FD121F59236002004E2 /* uToday */,
+				34C502BA225250BD005A5D25 /* TodayIntent */,
+				34C502C3225250BE005A5D25 /* TodayIntentUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		34C502B9225250BD005A5D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C502C2225250BE005A5D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C502CC225250BE005A5D25 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34DE4FD021F59236002004E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,7 +708,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06A077F51BC72F63A8CAEDB8 /* [CP] Embed Pods Frameworks */ = {
+		0D902A3141FBB24276E29E21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uToday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C51D0A2DE367FF7BECB0DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayIntentUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC319C9D4C172FE3F6777D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,7 +768,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5532B4411FF1939E65888E5 /* [CP] Check Pods Manifest.lock */ = {
+		C23AB563616F4FA279A7537D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -532,7 +779,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-uToday-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TodayIntent-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -542,6 +789,39 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		34C502B7225250BD005A5D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C502DD2252542B005A5D25 /* Intents.intentdefinition in Sources */,
+				34C502ED225255DE005A5D25 /* NewsHandler.swift in Sources */,
+				34C502E3225255CB005A5D25 /* LocalDataHandler.swift in Sources */,
+				34C502BE225250BE005A5D25 /* IntentHandler.swift in Sources */,
+				34C502E1225255A7005A5D25 /* ServiceHandler.swift in Sources */,
+				34C502E9225255D7005A5D25 /* TrafficHandler.swift in Sources */,
+				34C502E5225255CF005A5D25 /* CloudDataHandler.swift in Sources */,
+				34C502E7225255D3005A5D25 /* CalendarHandler.swift in Sources */,
+				34C502EB225255DA005A5D25 /* WeatherHandler.swift in Sources */,
+				34C502E0225254EE005A5D25 /* MyDayIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C502C0225250BE005A5D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C502E4225255CB005A5D25 /* LocalDataHandler.swift in Sources */,
+				34C502DE2252542C005A5D25 /* Intents.intentdefinition in Sources */,
+				34C502E2225255A8005A5D25 /* ServiceHandler.swift in Sources */,
+				34C502EA225255D7005A5D25 /* TrafficHandler.swift in Sources */,
+				34C502E6225255D0005A5D25 /* CloudDataHandler.swift in Sources */,
+				34C502EE225255DE005A5D25 /* NewsHandler.swift in Sources */,
+				34C502EC225255DB005A5D25 /* WeatherHandler.swift in Sources */,
+				34C502E8225255D3005A5D25 /* CalendarHandler.swift in Sources */,
+				34C502C9225250BE005A5D25 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34DE4FCE21F59236002004E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,6 +840,8 @@
 				343E2EF12223B0D0001068C6 /* AddressSetupViewController.swift in Sources */,
 				343E2EEF222392E8001068C6 /* CalenderLocationPermissionViewController.swift in Sources */,
 				343C7A4B221E596B00032E69 /* CalendarHandler.swift in Sources */,
+				342CD16722525E280057EDDB /* VoiceShortcutsManager.swift in Sources */,
+				34C502DC22525125005A5D25 /* Intents.intentdefinition in Sources */,
 				34E11F9B22109AD7002B8D46 /* WeatherHandler.swift in Sources */,
 				34DE4FF421F64169002004E2 /* LocalDataHandler.swift in Sources */,
 				34393DF92213E6AC00229F0D /* ServiceHandler.swift in Sources */,
@@ -572,7 +854,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		34C502CF225250BE005A5D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C502C3225250BE005A5D25 /* TodayIntentUI */;
+			targetProxy = 34C502CE225250BE005A5D25 /* PBXContainerItemProxy */;
+		};
+		34C502D2225250BE005A5D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C502BA225250BD005A5D25 /* TodayIntent */;
+			targetProxy = 34C502D1225250BE005A5D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		34C502CA225250BE005A5D25 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C502CB225250BE005A5D25 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		34DE4FD921F59236002004E2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -592,6 +895,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		34C502D5225250BE005A5D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD556134CE881B3614CC8012 /* Pods-TodayIntentUI.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayIntentUI/TodayIntentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCRTE5CC2K;
+				INFOPLIST_FILE = TodayIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uapps.uTodayiOS.TodayIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34C502D6225250BE005A5D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CFDA616F6834B3D855D6108 /* Pods-TodayIntentUI.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayIntentUI/TodayIntentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCRTE5CC2K;
+				INFOPLIST_FILE = TodayIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uapps.uTodayiOS.TodayIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34C502D8225250BE005A5D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE292C204A02291C76F1B6B /* Pods-TodayIntent.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayIntent/TodayIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCRTE5CC2K;
+				INFOPLIST_FILE = TodayIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uapps.uTodayiOS.TodayIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34C502D9225250BE005A5D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 531E603E763D2F1352602DA4 /* Pods-TodayIntent.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayIntent/TodayIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MCRTE5CC2K;
+				INFOPLIST_FILE = TodayIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uapps.uTodayiOS.TodayIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		34DE4FE221F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -710,8 +1101,9 @@
 		};
 		34DE4FE521F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85000A101CA0EAF609A4D40D /* Pods-uToday.debug.xcconfig */;
+			baseConfigurationReference = B8F088878006C094BC00F27F /* Pods-uToday.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -731,8 +1123,9 @@
 		};
 		34DE4FE621F59237002004E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 344F074844D4321C1339FF5B /* Pods-uToday.release.xcconfig */;
+			baseConfigurationReference = F1ACEFD7E07A0F0CACB6FE32 /* Pods-uToday.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = uToday/uToday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -753,6 +1146,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34C502D4225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C502D5225250BE005A5D25 /* Debug */,
+				34C502D6225250BE005A5D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C502D7225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C502D8225250BE005A5D25 /* Debug */,
+				34C502D9225250BE005A5D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		34DE4FCD21F59236002004E2 /* Build configuration list for PBXProject "uToday" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

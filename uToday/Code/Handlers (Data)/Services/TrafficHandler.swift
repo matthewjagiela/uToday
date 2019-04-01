@@ -79,6 +79,7 @@ class TrafficHandler: NSObject {
                         self.timeSeconds = Int(route.expectedTravelTime)
                         print("DEBUG: TRAFFIC HANDLER: TimeSeconds = \(self.timeSeconds) FORMAT: \(Int(route.expectedTravelTime))")
                         print("DEBUG: TRAFFIC HANDLER: Distance = \(self.distance) ETA: \(self.secondsToHoursMinutesSeconds(seconds: Int(route.expectedTravelTime)))")
+                        self.savedData.setTrafficSummary(summary: self.getSummary())
                         completion()
                     }
                     else{

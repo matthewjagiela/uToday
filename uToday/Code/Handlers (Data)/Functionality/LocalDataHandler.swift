@@ -52,6 +52,12 @@ class LocalDataHandler: NSObject {
     func setupDone(){
       defaults.set(true, forKey: "setup")
     }
+    func setTrafficSummary(summary: String){
+        defaults.set(summary, forKey: "trafficSummary")
+    }
+    func setNewsSummary(summary: String){
+        defaults.set(summary, forKey: "newsSummary")
+    }
     
     //Getters:
     //Setup Getters:
@@ -87,6 +93,12 @@ class LocalDataHandler: NSObject {
     }
     func setupIsDone() -> Bool{
         return defaults.bool(forKey: "setup")
+    }
+    func getTrafficSummary() -> String{
+        return defaults.string(forKey: "trafficSummary")!
+    }
+    func getNewsSummary() ->String{
+        return defaults.string(forKey: "newsSummary")!
     }
     
     

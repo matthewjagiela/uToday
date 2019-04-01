@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "636EE5E38E9043858DFC2AC64245BE49"
-               BuildableName = "Pods_uToday.framework"
-               BlueprintName = "Pods-uToday"
+               BlueprintIdentifier = "2400508F1229DF5210A50B6D515EF876"
+               BuildableName = "Pods_TodayIntentUI.framework"
+               BlueprintName = "Pods-TodayIntentUI"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "636EE5E38E9043858DFC2AC64245BE49"
-            BuildableName = "Pods_uToday.framework"
-            BlueprintName = "Pods-uToday"
+            BlueprintIdentifier = "2400508F1229DF5210A50B6D515EF876"
+            BuildableName = "Pods_TodayIntentUI.framework"
+            BlueprintName = "Pods-TodayIntentUI"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

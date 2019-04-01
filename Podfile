@@ -11,4 +11,11 @@ pod 'Solar'
 pod 'NewsAPISwift'
 pod 'SDWebImage'
 
+target 'TodayIntent' do
+inherit! :search_paths
 end
+target 'TodayIntentUI' do
+inherit! :search_paths
+end
+end
+

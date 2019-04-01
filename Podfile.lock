@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.1)
+  - Alamofire (4.8.2)
   - NewsAPISwift (2.0)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
@@ -20,11 +20,11 @@ SPEC REPOS:
     - Solar
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   NewsAPISwift: 61b069546b0170b48ee3ef7a0158b294e125d7b7
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
 
-PODFILE CHECKSUM: fe925af05a9feddb2a136599aa251805e633376b
+PODFILE CHECKSUM: c7791413a7b6042b49af9e1e42e35bccf0d08730
 
 COCOAPODS: 1.5.3

@@ -16,6 +16,7 @@ class NewsHandler: NSObject {
     var articles = [NewsArticle]()
     var images = [UIImage]() //This is going to be an array of all downloaded images we get from articles...
     let news = NewsAPI(apiKey: "1aad99aecdcf44f8bce4f9b62316966a")
+    let savedData = LocalDataHandler()
 
     func getArticles(completion: @escaping () -> ()){
         news.getTopHeadlines(country: .us, pageSize: 10, page: 1){ result in
@@ -30,6 +31,7 @@ class NewsHandler: NSObject {
                 print("DEBUG NEWS: Article : TITLE = \(article.title), SOURCE = \(article.source.name), URL = \(article.url)")
             }
             self.summary = self.articles[0].title
+            self.savedData.setNewsSummary(summary: self.getSummary())
             completion()
             
         }
