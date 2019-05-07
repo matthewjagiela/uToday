@@ -37,7 +37,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
                 self.welcomeDescription.alpha = 1.0
                 self.firstNameField.alpha = 1.0
             }, completion: { (shown) in //This doesnt matter
-                
+                self.firstNameField.becomeFirstResponder()
             })
             
         }

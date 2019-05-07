@@ -1,35 +1,30 @@
 //
-//  AddressSetupViewController.swift
+//  HomeAddressSetupViewController.swift
 //  uToday
 //
-//  Created by Matthew Jagiela on 2/25/19.
+//  Created by Matthew Jagiela on 4/7/19.
 //  Copyright © 2019 Matthew Jagiela. All rights reserved.
 //
 
 import UIKit
 
-class AddressSetupViewController: UIViewController,UITextFieldDelegate {
+class HomeAddressSetupViewController: UIViewController, UITextFieldDelegate {
     let data = LocalDataHandler()
     @IBOutlet var streetAddress: UITextField!
     @IBOutlet var city: UITextField!
     @IBOutlet var stateField: UITextField!
     @IBOutlet var zipField: UITextField!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //Nothing happens here
         streetAddress.delegate = self
         city.delegate = self
         stateField.delegate = self
         zipField.delegate = self
         streetAddress.becomeFirstResponder() //this is going to make it so the keyboard shows up and the user can just enter info
         
-        
-        
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -52,19 +47,18 @@ class AddressSetupViewController: UIViewController,UITextFieldDelegate {
             }
             else{ //All Fields valid... Go on to the next step and save the data
                 
-                data.setWorkAddress(address: "\(streetAddress.text!),\(city.text!),\(stateField.text!),\(zipField.text!)")
+                data.setHomeAddress(address: "\(streetAddress.text!),\(city.text!),\(stateField.text!),\(zipField.text!)")
                 
-                self.performSegue(withIdentifier: "stageThree", sender: self)
-
+                self.performSegue(withIdentifier: "stageTwo", sender: self)
+                
             }
             
             
-                    }
+        }
         // Do not add a line break
         return false
         
     }
-    
     
 
     /*

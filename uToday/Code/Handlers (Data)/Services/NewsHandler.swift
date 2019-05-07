@@ -19,12 +19,12 @@ class NewsHandler: NSObject {
     let savedData = LocalDataHandler()
 
     func getArticles(completion: @escaping () -> ()){
-        news.getTopHeadlines(country: .us, pageSize: 10, page: 1){ result in
+        news.getTopHeadlines(country: .us, pageSize: 1, page: 1){ result in
             switch result {
             case .success(let articles):
                 self.articles = articles
             case .failure(let error):
-                fatalError("\(error)")
+                fatalError("ERROR: \(error.localizedDescription)")
             }
             print("DEBUG NEWS: ARTICLE SIZE: \(self.articles.count)")
             for article in self.articles{

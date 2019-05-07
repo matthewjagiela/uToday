@@ -40,6 +40,7 @@ class TrafficHandler: NSObject {
                 completion()
                 
             }
+            
         }
     }
     func getCity() -> String{

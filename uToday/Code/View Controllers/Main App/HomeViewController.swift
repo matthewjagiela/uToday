@@ -66,9 +66,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         tableView.rowHeight = 143
+        NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
+        
         
         
     }
+    @objc func userDefaultsDidChange(_ notification: Notification) {
+        print("MAIN VIEW STUFF CHANGED")
+        tableView.reloadData()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

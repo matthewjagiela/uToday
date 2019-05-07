@@ -40,7 +40,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
        
         print("getData")
         if (CLLocationManager.authorizationStatus() == .authorizedAlways) { //The application has actually been authorized to use locations
-            userLocation = locationManager.location! //This is the actual user location
+            userLocation = locationManager.location ?? CLLocation(latitude: 41.420007, longitude: -72.893671) //This is the actual user location
             print("The latitude of the current location is: \(userLocation.coordinate.latitude)") //Used for testing
             print("The longitude of the current location is \(userLocation.coordinate.longitude)") //Used for testing
             let weatherURL = URL(string: "https://api.darksky.net/forecast/603692cb177160a63d1eeeb0d2125bfd/\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)") //This is the url we need to make the URL request to get the weather DATA

@@ -49,6 +49,9 @@ class LocalDataHandler: NSObject {
     func setWorkAddress(address: String){
         defaults.set(address, forKey:"workAddress")
     }
+    func setHomeAddress(address: String){
+        defaults.set(address, forKey: "homeAddress")
+    }
     func setupDone(){
       defaults.set(true, forKey: "setup")
     }
@@ -90,6 +93,9 @@ class LocalDataHandler: NSObject {
     func getWorkAddress() -> String{
         return defaults.string(forKey: "workAddress") ?? "275 Mount Carmel Ave, Hamden, CT, 06518" //If for some reason they did not set one up in the beginning it will default to QU Campus
         //return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
+    }
+    func getHomeAddress() -> String{
+        return defaults.string(forKey: "homeAddress") ?? "305 Sherman Ave, Hamden, CT, 06518"
     }
     func setupIsDone() -> Bool{
         return defaults.bool(forKey: "setup")

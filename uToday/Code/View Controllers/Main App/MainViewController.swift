@@ -12,10 +12,12 @@ import CoreLocation //This is going to be removed when we have a setup page
 class MainViewController: UITableViewController{
     
     
-    @IBOutlet var refreshIndicator: UIActivityIndicatorView!
+   // @IBOutlet var refreshIndicator: UIActivityIndicatorView!
     let locationManager = CLLocationManager()
     var services = ServiceHandler() //Right now there is not going to be any service passed so we can do it later...
     var offset = 0.0
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +28,12 @@ class MainViewController: UITableViewController{
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //self.view.backgroundColor = .black
         //locationManager.requestAlwaysAuthorization() //This needs to be here right now until we have a setup page
+        
         tableView.backgroundView = UIImageView(image: UIImage(named: "Main Selection Background.png"))
         services.loadingDone {
             print("MAIN")
             self.tableView.reloadData()
-            self.refreshIndicator.isHidden = true //Hiding because stuff has been refreshed
+            //self.refreshIndicator.isHidden = true //Hiding because stuff has been refreshed
             self.offset = Double(self.tableView.contentOffset.y)
            
         }

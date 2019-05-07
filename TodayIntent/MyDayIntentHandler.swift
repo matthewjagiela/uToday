@@ -25,7 +25,7 @@ class MyDayIntentHandler: NSObject, MyDayIntentHandling {
         let trafficSummary = savedData.getTrafficSummary()
         let weatherSummary = savedData.getWeatherDaySummary()
         let newsSummary = savedData.getNewsSummary()
-        completion(MyDayIntentResponse.success(name: savedData.getFirstName(), weather: weatherSummary, calendar: calendarSummary, traffic: trafficSummary, news: newsSummary))
+        completion(MyDayIntentResponse.success(name: savedData.getFirstName(), weather: weatherSummary, calendar: calendarSummary, traffic: trafficSummary, news: newsSummary)) //Siri reads this
         
     }
     
