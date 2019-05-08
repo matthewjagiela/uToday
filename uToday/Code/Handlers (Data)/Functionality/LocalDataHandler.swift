@@ -91,7 +91,7 @@ class LocalDataHandler: NSObject {
     }
     //Traffic Information:
     func getWorkAddress() -> String{
-        return defaults.string(forKey: "workAddress") ?? "275 Mount Carmel Ave, Hamden, CT, 06518" //If for some reason they did not set one up in the beginning it will default to QU Campus
+        return defaults.string(forKey: "workAddress") ?? "305 Sherman Ave, Hamden, CT, 06518" //If for some reason they did not set one up in the beginning it will default to QU Campus
         //return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
     }
     func getHomeAddress() -> String{

@@ -21,13 +21,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Hold</string>
+	<string>Allow uToday to access your calendar to show what is coming up next in your day</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Hold</string>
+	<string>Allow uToday to access your location to tell you how long it is going to take to get to work</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Hold</string>
+	<string>Allow uToday to access your location to tell you how long it is going to take to get to work</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Hold</string>
+	<string>Allow uToday to access your location to tell you how long it is going to take to get to work</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>MyDayIntent</string>

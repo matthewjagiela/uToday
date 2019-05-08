@@ -106,7 +106,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let tableSelection: IndexPath? = tableView.indexPathForSelectedRow
         if let tableSelection = tableSelection {
             tableView.deselectRow(at: tableSelection, animated: false)
+            
         }
+        tableView.reloadData()
+        
     }
     
 

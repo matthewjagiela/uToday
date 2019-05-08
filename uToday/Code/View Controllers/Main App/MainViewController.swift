@@ -76,7 +76,7 @@ class MainViewController: UITableViewController{
         if let tableSelection = tableSelection {
             tableView.deselectRow(at: tableSelection, animated: false)
         }
-        
+        tableView.reloadData()
         
        
 

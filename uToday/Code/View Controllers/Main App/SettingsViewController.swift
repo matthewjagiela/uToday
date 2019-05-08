@@ -26,13 +26,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 150)
         //scrollView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        /**
+        
         zipBox.delegate = self
         stateBox.delegate = self
         streetBox.delegate = self
         cityBox.delegate = self
         firstNameBox.delegate = self
- **/
+
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -81,6 +81,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             else{ //All Fields valid... Go on to the next step and save the data
                 print("SAVING")
                 data.setWorkAddress(address: "\(streetBox.text!),\(cityBox.text!),\(stateBox.text!),\(zipBox.text!)")
+                textField.resignFirstResponder()
             }
         }
         else{ //Go to the next field

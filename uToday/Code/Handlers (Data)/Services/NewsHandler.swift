@@ -24,7 +24,9 @@ class NewsHandler: NSObject {
             case .success(let articles):
                 self.articles = articles
             case .failure(let error):
-                fatalError("ERROR: \(error.localizedDescription)")
+                print("ERROR: \(error.localizedDescription)")
+                //fatalError("ERROR: \(error.localizedDescription)")
+                
             }
             print("DEBUG NEWS: ARTICLE SIZE: \(self.articles.count)")
             for article in self.articles{
