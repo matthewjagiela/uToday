@@ -1,0 +1,254 @@
+Pods/NewsAPISwift/Source/Provider
+Pods/Target Support Files/Solar
+Pods/Target Support Files/NewsAPISwift
+Pods/Alamofire/Source
+Pods/NewsAPISwift/Source/Decoders
+Pods/Target Support Files/Pods-TodayIntent
+Pods/Solar/Solar
+Pods/Target Support Files/Pods-TodayIntentUI
+Pods/NewsAPISwift/Source/Entities
+Pods/SDWebImage/WebImage
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes
+Pods/NewsAPISwift/Source/NewsAPI
+Pods/SDWebImage/SDWebImage
+Pods/Target Support Files
+Pods/Target Support Files/Pods-uToday
+Pods/Pods.xcodeproj/xcuserdata
+Pods/Target Support Files/SDWebImage
+Pods/Target Support Files/Alamofire
+Pods
+Pods/Alamofire
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad
+Pods/Solar
+Pods/NewsAPISwift/Source
+Pods/SDWebImage/SDWebImage/Private
+Pods/NewsAPISwift/Source/Parameters
+Pods/NewsAPISwift
+Pods/SDWebImage
+Pods/Pods.xcodeproj
+Pods/SDWebImage/SDWebImage/Core
+Pods/NewsAPISwift/Source/NewsAPI Service
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/NewsAPISwift/Source/Decoders/NewsAPIDecoder.swift
+Pods/NewsAPISwift/Source/Entities/NewsArticle.swift
+Pods/NewsAPISwift/Source/Entities/NewsSource.swift
+Pods/NewsAPISwift/Source/NewsAPI/NewsAPI.swift
+Pods/NewsAPISwift/Source/NewsAPI/NewsAPIError.swift
+Pods/NewsAPISwift/Source/NewsAPI/Result.swift
+Pods/NewsAPISwift/Source/NewsAPI Service/APITargetType.swift
+Pods/NewsAPISwift/Source/NewsAPI Service/NewsAPITarget.swift
+Pods/NewsAPISwift/Source/Parameters/NewsCategory.swift
+Pods/NewsAPISwift/Source/Parameters/NewsCountry.swift
+Pods/NewsAPISwift/Source/Parameters/NewsLanguage.swift
+Pods/NewsAPISwift/Source/Provider/NewsProvider.swift
+Pods/NewsAPISwift/Source/Provider/URLRequestBuilder.swift
+Pods/NewsAPISwift/LICENSE
+Pods/NewsAPISwift/README.md
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/NewsAPISwift.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/Pods-TodayIntent.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/Pods-TodayIntentUI.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/Pods-uToday.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/SDWebImage.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/Solar.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/matthewjagiela.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.h
+Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.m
+Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.h
+Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.m
+Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.h
+Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.m
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.h
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.m
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.h
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.m
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.h
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.m
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.h
+Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.m
+Pods/SDWebImage/SDWebImage/Core/SDDiskCache.h
+Pods/SDWebImage/SDWebImage/Core/SDDiskCache.m
+Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCache.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCache.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.m
+Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.h
+Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.m
+Pods/SDWebImage/SDWebImage/Core/SDImageFrame.h
+Pods/SDWebImage/SDWebImage/Core/SDImageFrame.m
+Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.h
+Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.m
+Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.h
+Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.m
+Pods/SDWebImage/SDWebImage/Core/SDImageLoader.h
+Pods/SDWebImage/SDWebImage/Core/SDImageLoader.m
+Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.h
+Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.m
+Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.h
+Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.m
+Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.h
+Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageError.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageError.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageOperation.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.m
+Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.h
+Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.m
+Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.h
+Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.m
+Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.h
+Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.m
+Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.h
+Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.m
+Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.h
+Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.m
+Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.h
+Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.m
+Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.h
+Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.m
+Pods/SDWebImage/SDWebImage/Private/NSBezierPath+RoundedCorners.h
+Pods/SDWebImage/SDWebImage/Private/NSBezierPath+RoundedCorners.m
+Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.h
+Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.m
+Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.h
+Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.m
+Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.h
+Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.m
+Pods/SDWebImage/SDWebImage/Private/SDImageHEICCoderInternal.h
+Pods/SDWebImage/SDWebImage/Private/SDImageIOAnimatedCoderInternal.h
+Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.h
+Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.m
+Pods/SDWebImage/SDWebImage/Private/SDmetamacros.h
+Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.h
+Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.m
+Pods/SDWebImage/SDWebImage/Private/UIColor+HexString.h
+Pods/SDWebImage/SDWebImage/Private/UIColor+HexString.m
+Pods/SDWebImage/WebImage/SDWebImage.h
+Pods/SDWebImage/LICENSE
+Pods/SDWebImage/README.md
+Pods/Solar/Solar/Solar.swift
+Pods/Solar/LICENSE
+Pods/Solar/README.md
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift-dummy.m
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift-Info.plist
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift-prefix.pch
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift-umbrella.h
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift.modulemap
+Pods/Target Support Files/NewsAPISwift/NewsAPISwift.xcconfig
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent-acknowledgements.markdown
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent-acknowledgements.plist
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent-dummy.m
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent-Info.plist
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent-umbrella.h
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.debug.xcconfig
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.modulemap
+Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.release.xcconfig
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI-acknowledgements.markdown
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI-acknowledgements.plist
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI-dummy.m
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI-Info.plist
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI-umbrella.h
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.debug.xcconfig
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.modulemap
+Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.release.xcconfig
+Pods/Target Support Files/Pods-uToday/Pods-uToday-acknowledgements.markdown
+Pods/Target Support Files/Pods-uToday/Pods-uToday-acknowledgements.plist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-dummy.m
+Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh
+Pods/Target Support Files/Pods-uToday/Pods-uToday-Info.plist
+Pods/Target Support Files/Pods-uToday/Pods-uToday-umbrella.h
+Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig
+Pods/Target Support Files/Pods-uToday/Pods-uToday.modulemap
+Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig
+Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m
+Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist
+Pods/Target Support Files/SDWebImage/SDWebImage-prefix.pch
+Pods/Target Support Files/SDWebImage/SDWebImage-umbrella.h
+Pods/Target Support Files/SDWebImage/SDWebImage.modulemap
+Pods/Target Support Files/SDWebImage/SDWebImage.xcconfig
+Pods/Target Support Files/Solar/Solar-dummy.m
+Pods/Target Support Files/Solar/Solar-Info.plist
+Pods/Target Support Files/Solar/Solar-prefix.pch
+Pods/Target Support Files/Solar/Solar-umbrella.h
+Pods/Target Support Files/Solar/Solar.modulemap
+Pods/Target Support Files/Solar/Solar.xcconfig
+Pods/Manifest.lock
+Podfile.lock
