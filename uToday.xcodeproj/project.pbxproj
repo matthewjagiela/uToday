@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2218CAFDA7D88A5E2AFC9C73 /* Pods_uToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE1DCF6617E74599CC6D8DE /* Pods_uToday.framework */; };
 		34120C98222F40980051C11A /* Night Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C97222F40980051C11A /* Night Background.png */; };
 		34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C9B222F49C30051C11A /* Main Selection Background.png */; };
 		342CD16722525E280057EDDB /* VoiceShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */; };
@@ -92,8 +91,6 @@
 		34F0C0282251C2B200F2BD09 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0262251C2B200F2BD09 /* box.png */; };
 		34F0C0292251C2B200F2BD09 /* Box 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F0C0272251C2B200F2BD09 /* Box 50.png */; };
 		34FE11BB2224B00B00DCAD94 /* siriSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */; };
-		5F09EDC3DED903FF36A14A12 /* Pods_TodayIntentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46248E8672D3BFBB489220C9 /* Pods_TodayIntentUI.framework */; };
-		6983DEAFF041DAA5BDE050F2 /* Pods_TodayIntent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB16670307C95AC70EA59313 /* Pods_TodayIntent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,8 +126,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		15874A6B42C1165F5AFA4099 /* Pods-TodayIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.debug.xcconfig"; sourceTree = "<group>"; };
-		1C556C721FD587E11653BBF2 /* Pods-uToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.release.xcconfig"; sourceTree = "<group>"; };
 		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
 		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
 		342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutsManager.swift; sourceTree = "<group>"; };
@@ -206,13 +201,6 @@
 		34F0C0262251C2B200F2BD09 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		34F0C0272251C2B200F2BD09 /* Box 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box 50.png"; sourceTree = "<group>"; };
 		34FE11BA2224B00B00DCAD94 /* siriSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSetupViewController.swift; sourceTree = "<group>"; };
-		46248E8672D3BFBB489220C9 /* Pods_TodayIntentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayIntentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F1EB95CEA7D0F3C1205437B /* Pods-TodayIntentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntentUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.debug.xcconfig"; sourceTree = "<group>"; };
-		58E1E89C33CF06857EAFE366 /* Pods-TodayIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntentUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.release.xcconfig"; sourceTree = "<group>"; };
-		663B94B705F54F847350DE4F /* Pods-uToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uToday/Pods-uToday.debug.xcconfig"; sourceTree = "<group>"; };
-		AD90F056BECBEC9B294578E5 /* Pods-TodayIntent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntent.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayIntent/Pods-TodayIntent.release.xcconfig"; sourceTree = "<group>"; };
-		CB16670307C95AC70EA59313 /* Pods_TodayIntent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayIntent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE1DCF6617E74599CC6D8DE /* Pods_uToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				342CD169225269DF0057EDDB /* CoreLocation.framework in Frameworks */,
-				6983DEAFF041DAA5BDE050F2 /* Pods_TodayIntent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +218,6 @@
 			files = (
 				342CD16A225269E80057EDDB /* CoreLocation.framework in Frameworks */,
 				34C502C6225250BE005A5D25 /* IntentsUI.framework in Frameworks */,
-				5F09EDC3DED903FF36A14A12 /* Pods_TodayIntentUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +225,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2218CAFDA7D88A5E2AFC9C73 /* Pods_uToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +375,6 @@
 				34C502C7225250BE005A5D25 /* TodayIntentUI */,
 				34DE4FD321F59236002004E2 /* Products */,
 				BE210E487F1152A940BD4741 /* Frameworks */,
-				F3C33BD4DEBB85620280A1E5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -508,24 +492,8 @@
 			children = (
 				342CD168225269DF0057EDDB /* CoreLocation.framework */,
 				34C502C5225250BE005A5D25 /* IntentsUI.framework */,
-				CB16670307C95AC70EA59313 /* Pods_TodayIntent.framework */,
-				46248E8672D3BFBB489220C9 /* Pods_TodayIntentUI.framework */,
-				CEE1DCF6617E74599CC6D8DE /* Pods_uToday.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3C33BD4DEBB85620280A1E5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				15874A6B42C1165F5AFA4099 /* Pods-TodayIntent.debug.xcconfig */,
-				AD90F056BECBEC9B294578E5 /* Pods-TodayIntent.release.xcconfig */,
-				4F1EB95CEA7D0F3C1205437B /* Pods-TodayIntentUI.debug.xcconfig */,
-				58E1E89C33CF06857EAFE366 /* Pods-TodayIntentUI.release.xcconfig */,
-				663B94B705F54F847350DE4F /* Pods-uToday.debug.xcconfig */,
-				1C556C721FD587E11653BBF2 /* Pods-uToday.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,7 +503,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C502D7225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntent" */;
 			buildPhases = (
-				91B38E5235FC50E60900852F /* [CP] Check Pods Manifest.lock */,
 				34C502B7225250BD005A5D25 /* Sources */,
 				34C502B8225250BD005A5D25 /* Frameworks */,
 				34C502B9225250BD005A5D25 /* Resources */,
@@ -553,7 +520,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C502D4225250BE005A5D25 /* Build configuration list for PBXNativeTarget "TodayIntentUI" */;
 			buildPhases = (
-				3660D672D2F4BDD3DEE3E472 /* [CP] Check Pods Manifest.lock */,
 				34C502C0225250BE005A5D25 /* Sources */,
 				34C502C1225250BE005A5D25 /* Frameworks */,
 				34C502C2225250BE005A5D25 /* Resources */,
@@ -571,12 +537,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34DE4FE421F59237002004E2 /* Build configuration list for PBXNativeTarget "uToday" */;
 			buildPhases = (
-				D11D109F163F02F50B69C665 /* [CP] Check Pods Manifest.lock */,
 				34DE4FCE21F59236002004E2 /* Sources */,
 				34DE4FCF21F59236002004E2 /* Frameworks */,
 				34DE4FD021F59236002004E2 /* Resources */,
 				34C502DA225250BE005A5D25 /* Embed App Extensions */,
-				A625AFCE1BB77FAB99776E39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -713,87 +677,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3660D672D2F4BDD3DEE3E472 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TodayIntentUI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91B38E5235FC50E60900852F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TodayIntent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A625AFCE1BB77FAB99776E39 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/NewsAPISwift/NewsAPISwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NewsAPISwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uToday/Pods-uToday-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D11D109F163F02F50B69C665 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-uToday-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		34C502B7225250BD005A5D25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -905,7 +788,6 @@
 /* Begin XCBuildConfiguration section */
 		34C502D5225250BE005A5D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F1EB95CEA7D0F3C1205437B /* Pods-TodayIntentUI.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayIntentUI/TodayIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -927,7 +809,6 @@
 		};
 		34C502D6225250BE005A5D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58E1E89C33CF06857EAFE366 /* Pods-TodayIntentUI.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayIntentUI/TodayIntentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -949,7 +830,6 @@
 		};
 		34C502D8225250BE005A5D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15874A6B42C1165F5AFA4099 /* Pods-TodayIntent.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayIntent/TodayIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -971,7 +851,6 @@
 		};
 		34C502D9225250BE005A5D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD90F056BECBEC9B294578E5 /* Pods-TodayIntent.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayIntent/TodayIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1109,7 +988,6 @@
 		};
 		34DE4FE521F59237002004E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 663B94B705F54F847350DE4F /* Pods-uToday.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1131,7 +1009,6 @@
 		};
 		34DE4FE621F59237002004E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C556C721FD587E11653BBF2 /* Pods-uToday.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
