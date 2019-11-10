@@ -33,7 +33,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.navigationBar.shadowImage = nil
         
         navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController?.navigationBar.tintColor = .black
         tabBarController?.tabBar.isHidden = true
     }
@@ -55,7 +55,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! CalendarTableViewCell
         print("Cell \(indexPath.section)")
@@ -67,7 +66,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-    
 
     /*
     // MARK: - Navigation

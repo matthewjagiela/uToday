@@ -48,9 +48,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 5
     }
     
-    
-    
-    
     let services = ServiceHandler() //This is going to be so we can manage all the services within the app on this controller
 
     override func viewDidLoad() {
@@ -68,8 +65,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight = 143
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
         
-        
-        
     }
     @objc func userDefaultsDidChange(_ notification: Notification) {
         print("MAIN VIEW STUFF CHANGED")
@@ -84,8 +79,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.barStyle = .default
@@ -111,7 +106,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
         
     }
-    
 
     /*
     // MARK: - Navigation

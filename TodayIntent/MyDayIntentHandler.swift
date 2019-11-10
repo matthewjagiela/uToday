@@ -28,6 +28,5 @@ class MyDayIntentHandler: NSObject, MyDayIntentHandling {
         completion(MyDayIntentResponse.success(name: savedData.getFirstName(), weather: weatherSummary, calendar: calendarSummary, traffic: trafficSummary, news: newsSummary)) //Siri reads this
         
     }
-    
 
 }

@@ -17,22 +17,21 @@ class TrafficHandler: NSObject {
     var route = MKRoute()
     var destinationLocation = CLLocation()
     var timeSeconds = 0
-    var distance:Double = 0.0
+    var distance: Double = 0.0
     var directionsRequest = MKDirections.Request()
     let destinationAnnotation = MKPointAnnotation()
     
     lazy var city = ""
     lazy var state = ""
 
-    override init(){
+    override init() {
         super.init()
         locationManager.requestAlwaysAuthorization() //Remove this in final product.
         
     }
-    func lookupLocation(completion: @escaping () -> ()){
+    func lookupLocation(completion: @escaping () -> Void) {
         CLGeocoder().reverseGeocodeLocation(locationManager.location!) { (placemarks, error) in
-            if((error) != nil){ print(error?.localizedDescription)}
-            else{
+            if((error) != nil) { print(error?.localizedDescription)} else {
                 let pm = placemarks![0] as CLPlacemark
                 self.city = pm.locality!
                 self.state = pm.administrativeArea!
@@ -43,13 +42,13 @@ class TrafficHandler: NSObject {
             
         }
     }
-    func getCity() -> String{
+    func getCity() -> String {
         print("Get city... \(city)")
         return "\(city), \(state)"
     }
     
-    func getETA(completion: @escaping() -> ()){
-        if(CLLocationManager.authorizationStatus() == .authorizedAlways){
+    func getETA(completion: @escaping() -> Void) {
+        if(CLLocationManager.authorizationStatus() == .authorizedAlways) {
             let address = savedData.getWorkAddress()
             print("DEBUG: TRAFFIC ADDRESS: \(address) ")
             let geoCoder = CLGeocoder()
@@ -66,14 +65,13 @@ class TrafficHandler: NSObject {
                 self.destinationAnnotation.coordinate = destinationPlacemark.coordinate
                 //Let's make the request for routing:
                 
-                
                 self.directionsRequest.source = sourceMapItem
                 self.directionsRequest.destination = destinationMapItem
                 self.directionsRequest.transportType = .automobile
                 self.directionsRequest.requestsAlternateRoutes = false //Making this false for right now
                 let directions = MKDirections(request: self.directionsRequest)
-                directions.calculate { (response, error) in
-                    if let route = response?.routes.first{
+                directions.calculate { (response, _) in
+                    if let route = response?.routes.first {
                         self.route = route
                         let meterDistance = Measurement(value: route.distance, unit: UnitLength.meters)
                         self.distance = meterDistance.converted(to: UnitLength.miles).value
@@ -82,51 +80,46 @@ class TrafficHandler: NSObject {
                         print("DEBUG: TRAFFIC HANDLER: Distance = \(self.distance) ETA: \(self.secondsToHoursMinutesSeconds(seconds: Int(route.expectedTravelTime)))")
                         self.savedData.setTrafficSummary(summary: self.getSummary())
                         completion()
-                    }
-                    else{
+                    } else {
                         print("TRAFFIC HANDLER: Route cannot be found...")
                         completion()
                     }
                 }
             }
-            
                 
         }
             
     }
     
-    func getDirectionsRequest() -> MKDirections.Request{
+    func getDirectionsRequest() -> MKDirections.Request {
         return directionsRequest
     }
-    func getDestinationAnnotation() ->MKPointAnnotation{
+    func getDestinationAnnotation() -> MKPointAnnotation {
         destinationAnnotation.title = "Work" //This is going to label the destination as work
         return destinationAnnotation
     }
     //Conversion Method:
-    func secondsToHoursMinutesSeconds(seconds:Int) ->(Int, Int, Int){
+    func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     //Summary for the module page:
-    func getSummary() -> String{
-        let (h,m,s) = secondsToHoursMinutesSeconds(seconds: timeSeconds)
+    func getSummary() -> String {
+        let (h, m, s) = secondsToHoursMinutesSeconds(seconds: timeSeconds)
         print("DEBUG: SECONDS \(timeSeconds)")
-        if(h == 0){ //No hours
-            if(m == 0){
+        if(h == 0) { //No hours
+            if(m == 0) {
                 return "You are already at work!"
-            }
-            else { return "It will take \(m) Minutes and \(s) Seconds to get to work" }
-        }
-        else{
+            } else { return "It will take \(m) Minutes and \(s) Seconds to get to work" }
+        } else {
             
             return "It will take \(h) Hours \(m) Minutes and \(s) Seconds to get to work "
         }
         
-        
     }
-    func getMapPolyLine()->MKPolyline{ //This is the line for the best way to get to work
+    func getMapPolyLine() -> MKPolyline { //This is the line for the best way to get to work
         return route.polyline
     }
-    func getMapRegion()->MKMapRect{ //Make the map region based on the directions to "work" and then give it some padding room so it all fits.
+    func getMapRegion() -> MKMapRect { //Make the map region based on the directions to "work" and then give it some padding room so it all fits.
         var rect = route.polyline.boundingMapRect
         let wPadding = rect.size.width * 0.25
         let hPadding = rect.size.height * 0.25
@@ -136,7 +129,7 @@ class TrafficHandler: NSObject {
         rect.origin.y -= hPadding / 2
         return rect
     }
-    func getMapKitRoute() ->MKRoute{ //Dont think this is going to be needed but in case it does this returns the route of the best way to go to work
+    func getMapKitRoute() -> MKRoute { //Dont think this is going to be needed but in case it does this returns the route of the best way to go to work
         return route
     }
 

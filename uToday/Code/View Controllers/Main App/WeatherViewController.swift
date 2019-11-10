@@ -25,7 +25,6 @@ class WeatherViewController: UIViewController {
     let savedData = LocalDataHandler()
     let location = TrafficHandler()
     
-    
     let weather = WeatherHandler() //Eventually ill pass the weather from the main screen to this so it doesn't use an API request...
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +55,8 @@ class WeatherViewController: UIViewController {
         theming()
         
     }
-    func theming(){ //The notorious matthew jagiela theming method...
-        if(weather.isSunUp()){
+    func theming() { //The notorious matthew jagiela theming method...
+        if(weather.isSunUp()) {
             print("WEATHER CONTROLLER DEBUG: sun is up")
             navigationController?.navigationBar.prefersLargeTitles = false
             navigationController?.navigationItem.hidesBackButton = false
@@ -65,22 +64,21 @@ class WeatherViewController: UIViewController {
             navigationController?.navigationBar.shadowImage = nil
             
             navigationController?.navigationBar.barStyle = .default
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
             navigationController?.navigationBar.tintColor = .black
-        }
-        else{ //Sun is down we can make things a little bit... Darker
+        } else { //Sun is down we can make things a little bit... Darker
             navigationController?.navigationBar.prefersLargeTitles = false
             navigationController?.navigationItem.hidesBackButton = false
             navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             navigationController?.navigationBar.shadowImage = nil
             
             navigationController?.navigationBar.barStyle = .blackTranslucent
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             navigationController?.navigationBar.tintColor = .white
         }
         tabBarController?.tabBar.isHidden = true
     }
-    func populateSavedData(){ //This is going to populate the view with already saved data while we refresh in the background...
+    func populateSavedData() { //This is going to populate the view with already saved data while we refresh in the background...
         conditionImage.image = weather.getWeatherImage(image: savedData.getWeatherIcon())
         temperature.text = "Temperature: \(savedData.getWeatherTemperature())"
         FeelsLike.text = "Feels Like: \(savedData.getWeatherFeelsLikeTemperature())"
@@ -90,7 +88,7 @@ class WeatherViewController: UIViewController {
         todaysWeather.text = "Today: \(savedData.getWeatherDaySummary())"
         
     }
-    @objc func populateData(){
+    @objc func populateData() {
         conditionImage.image = weather.getWeatherImage()
         temperature.text = "Temperature: \(weather.getCurrentTemperature())"
         FeelsLike.text = "Feels Like: \(weather.getFeelsLikeTemperature())"
@@ -98,14 +96,12 @@ class WeatherViewController: UIViewController {
         LowTemperature.text = "Low Temp: \(weather.getDailyLow())"
         currentMessage.text = "Currently: \(weather.getCurrentCondition())"
         todaysWeather.text = "Today: \(weather.getSummary())"
-        if(weather.isSunUp()){backgroundImage.image = UIImage(named: "Day Weather BG.png")}
-        else{backgroundImage.image = UIImage(named: "Night Background.png")}
+        if(weather.isSunUp()) {backgroundImage.image = UIImage(named: "Day Weather BG.png")} else {backgroundImage.image = UIImage(named: "Night Background.png")}
         location.lookupLocation {
             self.locationLabel.text = self.location.getCity()
             
         }
         //Determine based on location and time of day which image to use as the background (day or night)
-    
         
     }
     func getDayOfWeek() -> String {
@@ -132,11 +128,9 @@ class WeatherViewController: UIViewController {
             return "Unknown"
         }
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{ //The status bar has to be set based on if the dark view or not is showing....
-        if weather.isSunUp() { return .default}
-        else{return .lightContent}
+    override var preferredStatusBarStyle: UIStatusBarStyle { //The status bar has to be set based on if the dark view or not is showing....
+        if weather.isSunUp() { return .default} else {return .lightContent}
     }
-    
 
     /*
     // MARK: - Navigation
@@ -149,5 +143,3 @@ class WeatherViewController: UIViewController {
     */
 
 }
-
-

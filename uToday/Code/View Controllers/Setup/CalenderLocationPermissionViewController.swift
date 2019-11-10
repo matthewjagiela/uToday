@@ -20,17 +20,11 @@ class CalenderLocationPermissionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
-        
         //navigationController?.navigationBar.isTranslucent = false
-         
-        
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         
     }
     
@@ -41,15 +35,14 @@ class CalenderLocationPermissionViewController: UIViewController {
     }
     @IBAction func requestLocation(_ sender: Any) {
         locationManager.requestAlwaysAuthorization()
-        if(CLLocationManager.authorizationStatus() == .denied){
+        if(CLLocationManager.authorizationStatus() == .denied) {
             let alert = UIAlertController(title: "Location Denied", message: "You have denied uToday location services. Note you will not be allowed to use weather or traffic information till granted...", preferredStyle: .alert)
             self.present(alert, animated: true)
-        }
-        else{
+        } else {
             print("LOCATION AUTHORIZED")
         }
         locationAccess = true
-        if(calendarAccess && locationAccess){self.performSegue(withIdentifier: "stageThree", sender: self)}
+        if(calendarAccess && locationAccess) {self.performSegue(withIdentifier: "stageThree", sender: self)}
     }
     
     /*

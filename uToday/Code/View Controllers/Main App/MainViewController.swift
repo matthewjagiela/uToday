@@ -9,14 +9,12 @@
 import UIKit
 import CoreLocation //This is going to be removed when we have a setup page
 
-class MainViewController: UITableViewController{
-    
+class MainViewController: UITableViewController {
     
    // @IBOutlet var refreshIndicator: UIActivityIndicatorView!
     let locationManager = CLLocationManager()
     var services = ServiceHandler() //Right now there is not going to be any service passed so we can do it later...
     var offset = 0.0
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +40,6 @@ class MainViewController: UITableViewController{
         
         //offset = scrollView.contentOffset.y
         
-        
-        
     }
     override func viewWillAppear(_ animated: Bool) { //All of this is going to be for the navigation controller and tab bar controller to get the appearance correct
         
@@ -53,8 +49,8 @@ class MainViewController: UITableViewController{
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         //navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.barStyle = .default
@@ -77,10 +73,6 @@ class MainViewController: UITableViewController{
             tableView.deselectRow(at: tableSelection, animated: false)
         }
         tableView.reloadData()
-        
-       
-
-    
         
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -105,7 +97,6 @@ class MainViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //We only want one per section... This is going to make it so we have the space between modules and no duplicates
         return 1
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
         let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath) as! ModuleTableViewCell
@@ -135,12 +126,7 @@ class MainViewController: UITableViewController{
         self.performSegue(withIdentifier: services.getSegue(), sender: self)
     }
     
- 
-    
-    
-    
     //ALL OF THIS AS OF RIGHT NOW IS NOT GOING TO MATTER BUT AM GOING TO KEEP IT JUST IN CASE WE WANT TO USE IT IN THE FUTURE
- 
 
     /*
     // Override to support conditional editing of the table view.
@@ -186,7 +172,7 @@ class MainViewController: UITableViewController{
         // Pass the selected object to the new view controller.
     }
     */
-    override var preferredStatusBarStyle: UIStatusBarStyle{
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
@@ -196,4 +182,3 @@ extension UINavigationController {
         return topViewController
     }
 }
-
