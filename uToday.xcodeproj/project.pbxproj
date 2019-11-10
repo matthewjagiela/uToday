@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E480B5223787B7800F31FE0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2E480B5123787B7800F31FE0 /* .swiftlint.yml */; };
 		34120C98222F40980051C11A /* Night Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C97222F40980051C11A /* Night Background.png */; };
 		34120C9C222F49C30051C11A /* Main Selection Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34120C9B222F49C30051C11A /* Main Selection Background.png */; };
 		342CD16722525E280057EDDB /* VoiceShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */; };
@@ -131,6 +132,7 @@
 /* Begin PBXFileReference section */
 		07C436442A2D5D30FE9E2832 /* Pods-TodayIntent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntent.debug.xcconfig"; path = "Target Support Files/Pods-TodayIntent/Pods-TodayIntent.debug.xcconfig"; sourceTree = "<group>"; };
 		1FDD963CB06E00A63D1E47AD /* Pods-TodayIntentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayIntentUI.release.xcconfig"; path = "Target Support Files/Pods-TodayIntentUI/Pods-TodayIntentUI.release.xcconfig"; sourceTree = "<group>"; };
+		2E480B5123787B7800F31FE0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		34120C97222F40980051C11A /* Night Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night Background.png"; sourceTree = "<group>"; };
 		34120C9B222F49C30051C11A /* Main Selection Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Selection Background.png"; sourceTree = "<group>"; };
 		342CD16622525E280057EDDB /* VoiceShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutsManager.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		34DE4FC921F59236002004E2 = {
 			isa = PBXGroup;
 			children = (
+				2E480B5123787B7800F31FE0 /* .swiftlint.yml */,
 				34C502DB22525125005A5D25 /* Intents.intentdefinition */,
 				34DE4FD421F59236002004E2 /* uToday */,
 				34C502BC225250BE005A5D25 /* TodayIntent */,
@@ -513,7 +516,6 @@
 				3C033A2A71641770EDE87F6F /* Pods-uToday.debug.xcconfig */,
 				ADD1F41DC202A050A84A2B30 /* Pods-uToday.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -578,6 +580,7 @@
 				34DE4FD021F59236002004E2 /* Resources */,
 				34C502DA225250BE005A5D25 /* Embed App Extensions */,
 				6979441B512A4AFEC9BB1018 /* [CP] Embed Pods Frameworks */,
+				2E480B5323787BD200F31FE0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -685,6 +688,7 @@
 				34DE4FE021F59236002004E2 /* LaunchScreen.storyboard in Resources */,
 				346B7CA0222DE32F007226FC /* NightlyCloudy.png in Resources */,
 				34DE4FDD21F59236002004E2 /* Assets.xcassets in Resources */,
+				2E480B5223787B7800F31FE0 /* .swiftlint.yml in Resources */,
 				346B7CA7222DE32F007226FC /* rainy.png in Resources */,
 				343FDFD22228B4BD00964A61 /* sun.png in Resources */,
 				34F0C0282251C2B200F2BD09 /* box.png in Resources */,
@@ -736,6 +740,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2E480B5323787BD200F31FE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		6979441B512A4AFEC9BB1018 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
