@@ -10,6 +10,7 @@ pod 'Alamofire'
 pod 'Solar'
 pod 'NewsAPISwift'
 pod 'SDWebImage'
+pod 'SwiftLint'
 
 target 'TodayIntent' do
 inherit! :search_paths
