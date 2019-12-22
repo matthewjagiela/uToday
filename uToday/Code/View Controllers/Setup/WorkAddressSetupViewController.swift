@@ -35,13 +35,13 @@ class WorkAddressSetupViewController: UIViewController, UITextFieldDelegate {
         } else { //This is the last field... If everything is fine then we can say that we can move on... Otherwise we need to do some error correction...
             
             //Testing for completion:
-            if streetAddress.text == "" {
+            if streetAddress.text?.isEmpty ?? true {
                 streetAddress.backgroundColor = UIColor.red
-            } else if city.text == "" {
+            } else if city.text?.isEmpty ?? true {
                 city.backgroundColor = .red
-            } else if stateField.text == "" {
+            } else if stateField.text?.isEmpty ?? true {
                 stateField.backgroundColor = .red
-            } else if zipField.text == "" {
+            } else if zipField.text?.isEmpty ?? true {
                 zipField.backgroundColor = .red
             } else { //All Fields valid... Go on to the next step and save the data
                 
