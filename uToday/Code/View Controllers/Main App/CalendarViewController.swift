@@ -58,7 +58,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! CalendarTableViewCell
         print("Cell \(indexPath.section)")
-        var index = indexPath.section
+        let index = indexPath.section
         cell.calendarColor.backgroundColor = calendar.getEventColor(index)
         cell.calendarName.text = calendar.getCalendarTitle(index)
         cell.timeLabel.text = calendar.getEventStartDate(index)

@@ -46,7 +46,6 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
             let solar = Solar(coordinate: userLocation.coordinate) //This is going to make it so we know if the sun is currently up
             
             sunUp = solar?.isDaytime ?? true
-            print("DEBUG SUNRISE: \(solar?.sunrise) SUNSET: \(solar?.sunset) ISDAY: \(solar?.isDaytime)")
             
             var currentConditions = [String: Any]() //This is going to be the data for the current conditions
             var dailyWeatherDict = [String: Any]() //This is going to be the daily conditions for the day

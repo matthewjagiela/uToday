@@ -31,15 +31,16 @@ class TrafficHandler: NSObject {
     }
     func lookupLocation(completion: @escaping () -> Void) {
         CLGeocoder().reverseGeocodeLocation(locationManager.location!) { (placemarks, error) in
-            if (error) != nil { print(error?.localizedDescription)} else {
+            
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
                 let pm = placemarks![0] as CLPlacemark
                 self.city = pm.locality!
                 self.state = pm.administrativeArea!
                 print("DEBUG TRAFFIC HANDLER: \(self.city)")
                 completion()
-                
             }
-            
         }
     }
     func getCity() -> String {
