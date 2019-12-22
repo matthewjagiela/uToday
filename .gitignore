@@ -252,3 +252,5 @@ Pods/Target Support Files/Solar/Solar.modulemap
 Pods/Target Support Files/Solar/Solar.xcconfig
 Pods/Manifest.lock
 Podfile.lock
+uToday.xcworkspace
+uToday.xcodeproj/xcuserdata
