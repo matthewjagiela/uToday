@@ -47,19 +47,12 @@ class CalendarHandler: NSObject {
         if events.isEmpty {
             return "You have no more appointments today!"
         } else {
-            var index = 0
             
-            for i in 0 ... events.count - 1 {
-                
-                if !events[i].isAllDay {
-                    index = i
-                    break
-                }
+            for event in events where !event.isAllDay {
+                return "Your next event is \(event.title ?? "") at \(getEventStartDate(event))"
             }
-            
-            return "Your next event is \(events[index].title!) at \(getEventStartDate(index))" //This is going to display the name and the start of what the next event (or current) that is scheduled in user calendar.
         }
-        
+        return ""
     }
     func getEvents() -> [EKEvent] { //This is going to return all of the events out of every calendar for the day...
         return events
@@ -71,6 +64,11 @@ class CalendarHandler: NSObject {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "h:mm a"
         return "\(dateFormat.string(from: events[index].startDate))"
+    }
+    func getEventStartDate(_ event: EKEvent) -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "h:mm a"
+        return dateFormat.string(from: event.startDate)
     }
     func getCalendarTitle(_ index: Int) -> String {
         return events[index].calendar.title
