@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSections(in tableView: UITableView) -> Int {
         return services.getAmountOfServices()
     }
-    
+    //swiftlint:disable force_cast
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath) as! ModuleTableViewCell
         
@@ -39,6 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    //swiftlint:enable force_cast
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { //This is going to make the spacing between cards
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
@@ -47,9 +48,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { // This is how much space we want between the cards
         return 5
     }
-    
-    
-    
     
     let services = ServiceHandler() //This is going to be so we can manage all the services within the app on this controller
 
@@ -68,8 +66,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight = 143
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
         
-        
-        
     }
     @objc func userDefaultsDidChange(_ notification: Notification) {
         print("MAIN VIEW STUFF CHANGED")
@@ -84,8 +80,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.barStyle = .default
@@ -111,7 +107,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
         
     }
-    
 
     /*
     // MARK: - Navigation

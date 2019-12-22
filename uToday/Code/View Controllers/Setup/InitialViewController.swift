@@ -29,14 +29,15 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         //We are going to use this timer to move the welcome label to the top a second after the app has launched
         _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.moveWelcome), userInfo: nil, repeats: false)
     }
-    @objc func moveWelcome(){ //Move welcome, make objects appear
+    //swiftlint:disable multiple_closures_with_trailing_closure
+    @objc func moveWelcome() { //Move welcome, make objects appear
         UIView.animate(withDuration: 2, animations: { //Animate the movement
             self.welcomeLabel.center = CGPoint(x: self.view.frame.size.width / 2, y: self.view.frame.height / 7)
-        }) { (moved) in //When it has moved
+        }) { (_) in //When it has moved
             UIView.animate(withDuration: 1, animations: { //Animate the appearance of other elements
                 self.welcomeDescription.alpha = 1.0
                 self.firstNameField.alpha = 1.0
-            }, completion: { (shown) in //This doesnt matter
+            }, completion: { (_) in //This doesnt matter
                 self.firstNameField.becomeFirstResponder()
             })
             

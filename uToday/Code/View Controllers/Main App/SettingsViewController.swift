@@ -32,7 +32,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         streetBox.delegate = self
         cityBox.delegate = self
         firstNameBox.delegate = self
-
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -41,13 +40,12 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func modifySiri(_ sender: Any) {
         let voice = VoiceShortcutsManager()
         voice.updateVoiceShortcuts {
-            if(voice.siriEnabled()){ //We have to edit the phrase
-                let editViewController = INUIEditVoiceShortcutViewController(voiceShortcut: voice.voiceShortcut()!);
+            if voice.siriEnabled() { //We have to edit the phrase
+                let editViewController = INUIEditVoiceShortcutViewController(voiceShortcut: voice.voiceShortcut()!)
                 editViewController.delegate = self
                 self.present(editViewController, animated: true, completion: nil)
                 
-            }
-            else{
+            } else {
                 let intent = MyDayIntent()
                 intent.suggestedInvocationPhrase = "What's Happening Today?"
                 if let shortcut = INShortcut(intent: intent) {
@@ -62,30 +60,24 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        
         print("CURRENT TEXT BOX \(currentTextBox)")
-        if(textField.tag == 0){ //Name Field Save The Data
+        if textField.tag == 0 { //Name Field Save The Data
             data.setFirstName(textField.text ?? "Matthew")
-        }
-        else if(currentTextBox == 5){ //Save and reset
-            if(streetBox.text == ""){
+        } else if currentTextBox == 5 { //Save and reset
+            if streetBox.text?.isEmpty ?? true {
                 streetBox.backgroundColor = UIColor.red
-            }
-            else if(cityBox.text == ""){
+            } else if cityBox.text?.isEmpty ?? true {
                 cityBox.backgroundColor = .red
-            }
-            else if(stateBox.text == ""){
+            } else if stateBox.text?.isEmpty ?? true {
                 stateBox.backgroundColor = .red
-            }
-            else if(zipBox.text == ""){
+            } else if zipBox.text?.isEmpty ?? true {
                 zipBox.backgroundColor = .red
-            }
-            else{ //All Fields valid... Go on to the next step and save the data
+            } else { //All Fields valid... Go on to the next step and save the data
                 print("SAVING")
                 data.setWorkAddress(address: "\(streetBox.text!),\(cityBox.text!),\(stateBox.text!),\(zipBox.text!)")
                 textField.resignFirstResponder()
             }
-        }
-        else{ //Go to the next field
-            if let nextField = textField.superview?.viewWithTag(currentTextBox) as? UITextField{
+        } else { //Go to the next field
+            if let nextField = textField.superview?.viewWithTag(currentTextBox) as? UITextField {
                 currentTextBox += 1
                 nextField.becomeFirstResponder()
             }
@@ -93,7 +85,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
 
     /*
     // MARK: - Navigation
@@ -106,7 +97,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     */
 
 }
-extension SettingsViewController : INUIAddVoiceShortcutViewControllerDelegate, INUIAddVoiceShortcutButtonDelegate,INUIEditVoiceShortcutViewControllerDelegate{
+extension SettingsViewController: INUIAddVoiceShortcutViewControllerDelegate, INUIAddVoiceShortcutButtonDelegate, INUIEditVoiceShortcutViewControllerDelegate {
     func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController, didUpdate voiceShortcut: INVoiceShortcut?, error: Error?) {
         controller.dismiss(animated: true) {
             //self.savedData.setSiriEnabled(enabled: true)
@@ -150,6 +141,5 @@ extension SettingsViewController : INUIAddVoiceShortcutViewControllerDelegate, I
         }
         
     }
-    
     
 }

@@ -24,7 +24,7 @@ class siriSetupViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .clear
         
@@ -34,7 +34,7 @@ class siriSetupViewController: UIViewController {
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
-    func addSiriButton(){ //This is going to make it so the Apple "Add To Siri" button appears...
+    func addSiriButton() { //This is going to make it so the Apple "Add To Siri" button appears...
         let button = INUIAddVoiceShortcutButton(style: .blackOutline)
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -51,12 +51,9 @@ class siriSetupViewController: UIViewController {
         let shortcut = INShortcut(intent: intent)! //This is going to actually make the shortcut based on all of our class files and definitions that the user is going to want. This includes the GUI file.
         let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
         viewController.modalPresentationStyle = .formSheet
-        viewController.delegate = (self as! INUIAddVoiceShortcutViewControllerDelegate)
+        viewController.delegate = (self as INUIAddVoiceShortcutViewControllerDelegate)
         
         present(viewController, animated: true, completion: nil)
-        
-        
-        
         
     }
 
@@ -82,10 +79,9 @@ class siriSetupViewController: UIViewController {
     */
 
 }
-extension siriSetupViewController : INUIAddVoiceShortcutViewControllerDelegate, INUIAddVoiceShortcutButtonDelegate,INUIEditVoiceShortcutViewControllerDelegate{
+extension siriSetupViewController: INUIAddVoiceShortcutViewControllerDelegate, INUIAddVoiceShortcutButtonDelegate, INUIEditVoiceShortcutViewControllerDelegate {
     func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController, didUpdate voiceShortcut: INVoiceShortcut?, error: Error?) {
         controller.dismiss(animated: true) {
-            
             
         }
     }
@@ -117,7 +113,6 @@ extension siriSetupViewController : INUIAddVoiceShortcutViewControllerDelegate, 
             print("Dismissed")
         }
         
-        
     }
     
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
@@ -126,6 +121,5 @@ extension siriSetupViewController : INUIAddVoiceShortcutViewControllerDelegate, 
         }
         
     }
-    
     
 }

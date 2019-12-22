@@ -18,8 +18,8 @@ class NewsHandler: NSObject {
     let news = NewsAPI(apiKey: "1aad99aecdcf44f8bce4f9b62316966a")
     let savedData = LocalDataHandler()
 
-    func getArticles(completion: @escaping () -> ()){
-        news.getTopHeadlines(country: .us, pageSize: 1, page: 1){ result in
+    func getArticles(completion: @escaping () -> Void) {
+        news.getTopHeadlines(country: .us, pageSize: 1, page: 1) { result in
             switch result {
             case .success(let articles):
                 self.articles = articles
@@ -29,7 +29,7 @@ class NewsHandler: NSObject {
                 
             }
             print("DEBUG NEWS: ARTICLE SIZE: \(self.articles.count)")
-            for article in self.articles{
+            for article in self.articles {
                 print("DEBUG NEWS: Article : TITLE = \(article.title), SOURCE = \(article.source.name), URL = \(article.url)")
             }
             self.summary = self.articles[0].title
@@ -38,27 +38,25 @@ class NewsHandler: NSObject {
             
         }
     }
-    func getHeadlineTitle(_ index: Int) -> String{ //This is going to take an integer of what we want to find and then pull the EDITED title from the array
+    func getHeadlineTitle(_ index: Int) -> String { //This is going to take an integer of what we want to find and then pull the EDITED title from the array
         var headlineTitle = articles[index].title //This is going to be
         //var headlineTitle = "Stock - Lower as Wall Street Awaits Fed's Decision on Rates, FedEx Sinks - TheStreet.com"
         headlineTitle.removeFromLast("-")
         return headlineTitle
     }
-    func getHeadlineSource(_ index: Int) -> String{
+    func getHeadlineSource(_ index: Int) -> String {
         return articles[index].source.name
     }
-    func getHeadlineURL(_ index: Int) -> URL{
+    func getHeadlineURL(_ index: Int) -> URL {
         return articles[index].url
     }
-    func getSummary() -> String{
+    func getSummary() -> String {
         print("DEBUG NEWS: GET SUMMARY")
         return summary
     }
-    func getImageURL(_ index:Int) -> URL{
+    func getImageURL(_ index: Int) -> URL {
         return articles[index].urlToImage ?? URL(fileURLWithPath: "") //The default is going to return an empty string so we can just placehold our own image there...
     }
-    
-    
 
 }
 

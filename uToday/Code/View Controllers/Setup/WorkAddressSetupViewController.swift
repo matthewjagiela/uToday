@@ -8,13 +8,12 @@
 
 import UIKit
 
-class WorkAddressSetupViewController: UIViewController,UITextFieldDelegate {
+class WorkAddressSetupViewController: UIViewController, UITextFieldDelegate {
     let data = LocalDataHandler()
     @IBOutlet var streetAddress: UITextField!
     @IBOutlet var city: UITextField!
     @IBOutlet var stateField: UITextField!
     @IBOutlet var zipField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +26,6 @@ class WorkAddressSetupViewController: UIViewController,UITextFieldDelegate {
         zipField.delegate = self
         streetAddress.becomeFirstResponder() //this is going to make it so the keyboard shows up and the user can just enter info
         
-        
-        
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
     }
@@ -38,19 +35,15 @@ class WorkAddressSetupViewController: UIViewController,UITextFieldDelegate {
         } else { //This is the last field... If everything is fine then we can say that we can move on... Otherwise we need to do some error correction...
             
             //Testing for completion:
-            if(streetAddress.text == ""){
+            if streetAddress.text?.isEmpty ?? true {
                 streetAddress.backgroundColor = UIColor.red
-            }
-            else if(city.text == ""){
+            } else if city.text?.isEmpty ?? true {
                 city.backgroundColor = .red
-            }
-            else if(stateField.text == ""){
+            } else if stateField.text?.isEmpty ?? true {
                 stateField.backgroundColor = .red
-            }
-            else if(zipField.text == ""){
+            } else if zipField.text?.isEmpty ?? true {
                 zipField.backgroundColor = .red
-            }
-            else{ //All Fields valid... Go on to the next step and save the data
+            } else { //All Fields valid... Go on to the next step and save the data
                 
                 data.setWorkAddress(address: "\(streetAddress.text!),\(city.text!),\(stateField.text!),\(zipField.text!)")
                 
@@ -58,14 +51,11 @@ class WorkAddressSetupViewController: UIViewController,UITextFieldDelegate {
 
             }
             
-            
         }
         // Do not add a line break
         return false
         
     }
-    
-    
 
     /*
     // MARK: - Navigation

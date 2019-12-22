@@ -15,7 +15,6 @@ class NewsTableViewController: UITableViewController {
     let news = NewsHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,14 +31,14 @@ class NewsTableViewController: UITableViewController {
         super.viewWillAppear(true)
         theming()
     }
-    func theming(){
+    func theming() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.hidesBackButton = false
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.shadowImage = nil
         
         navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController?.navigationBar.tintColor = .black
         tabBarController?.tabBar.isHidden = true
@@ -54,22 +53,21 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(reloaded){return news.articles.count}
-        else{ return 0}
+        if reloaded {
+            return news.articles.count
+            
+        } else { return 0 }
     }
-
-    
+    //swiftlint:disable force_cast
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
-        cell.articleImage.sd_setImage(with: news.getImageURL(indexPath.row), placeholderImage: UIImage(named:"newsBlack.png"))
+        cell.articleImage.sd_setImage(with: news.getImageURL(indexPath.row), placeholderImage: UIImage(named: "newsBlack.png"))
         cell.aritcleTitle.text = news.getHeadlineTitle(indexPath.row)
         cell.articleSource.text = news.getHeadlineSource(indexPath.row)
-        
-        
 
         return cell
     }
- 
+    //swiftlint:enable force_cast
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //When selecting an article we want to have it open in a webview so they can read the entire thing... 
         let viewController = SFSafariViewController(url: news.getHeadlineURL(indexPath.row))
         present(viewController, animated: true)

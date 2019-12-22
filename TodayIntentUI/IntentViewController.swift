@@ -23,7 +23,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, MKMapVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
         
     }
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -53,6 +52,5 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, MKMapVi
     var desiredSize: CGSize {
         return self.extensionContext!.hostedViewMaximumAllowedSize
     }
-    
     
 }

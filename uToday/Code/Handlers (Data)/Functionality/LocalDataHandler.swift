@@ -17,97 +17,93 @@ class LocalDataHandler: NSObject {
  
     }
     
-    
     //Setters:
     //Startup Setters:
-    func setFirstName(_ name: String){
+    func setFirstName(_ name: String) {
         defaults.set(name, forKey: "firstName")
     }
     //Weather Setters:
-    func setWeatherFeelsLikeTemperature(temperature: Int){
+    func setWeatherFeelsLikeTemperature(temperature: Int) {
         defaults.set(temperature, forKey: "weatherFeelsTemperature")
     }
-    func setWeatherHighTemperature(temperature: Int){
+    func setWeatherHighTemperature(temperature: Int) {
         defaults.set(temperature, forKey: "weatherHighTemperature")
     }
-    func setWeatherDaySummary(summary: String){
+    func setWeatherDaySummary(summary: String) {
         defaults.set(summary, forKey: "weatherDailySummary")
     }
-    func setWeatherCurrentCondition(condition:String){
+    func setWeatherCurrentCondition(condition: String) {
         defaults.set(condition, forKey: "weatherCondition")
     }
-    func setWeatherTemperature(temperature:Int){
+    func setWeatherTemperature(temperature: Int) {
         defaults.set(temperature, forKey: "weatherTemperature")
     }
-    func setWeatherLowTemperature(temperature:Int){
+    func setWeatherLowTemperature(temperature: Int) {
         defaults.set(temperature, forKey: "weatherLowTemperature")
     }
-    func setWeatherIcon(icon: String){
+    func setWeatherIcon(icon: String) {
         defaults.set(icon, forKey: "weatherImagePointer")
     }
     //Traffic Information:
-    func setWorkAddress(address: String){
-        defaults.set(address, forKey:"workAddress")
+    func setWorkAddress(address: String) {
+        defaults.set(address, forKey: "workAddress")
     }
-    func setHomeAddress(address: String){
+    func setHomeAddress(address: String) {
         defaults.set(address, forKey: "homeAddress")
     }
-    func setupDone(){
+    func setupDone() {
       defaults.set(true, forKey: "setup")
     }
-    func setTrafficSummary(summary: String){
+    func setTrafficSummary(summary: String) {
         defaults.set(summary, forKey: "trafficSummary")
     }
-    func setNewsSummary(summary: String){
+    func setNewsSummary(summary: String) {
         defaults.set(summary, forKey: "newsSummary")
     }
     
     //Getters:
     //Setup Getters:
-    func getFirstName() -> String{ //Get the users first name... If for some reason it is nill it will become Matthew.
+    func getFirstName() -> String { //Get the users first name... If for some reason it is nill it will become Matthew.
         return defaults.string(forKey: "firstName") ?? "Matthew"
     }
     //Weather:
-    func getWeatherFeelsLikeTemperature() ->Int{
+    func getWeatherFeelsLikeTemperature() -> Int {
         return defaults.integer(forKey: "weatherFeelsTemperature")
     }
-    func getWeatherHighTemperature() ->Int{
+    func getWeatherHighTemperature() -> Int {
         return defaults.integer(forKey: "weatherHighTemperature")
     }
-    func getWeatherDaySummary() -> String{
+    func getWeatherDaySummary() -> String {
         return defaults.string(forKey: "weatherDailySummary")!
     }
-    func getWeatherCurrentCondition() ->String{
+    func getWeatherCurrentCondition() -> String {
         return defaults.string(forKey: "weatherCondition")!
     }
-    func getWeatherTemperature() -> Int{
+    func getWeatherTemperature() -> Int {
         return defaults.integer(forKey: "weatherTemperature")
     }
-    func getWeatherLowTemperature() ->Int{
+    func getWeatherLowTemperature() -> Int {
         return defaults.integer(forKey: "weatherLowTemperature")
     }
-    func getWeatherIcon() -> String{
+    func getWeatherIcon() -> String {
         return defaults.string(forKey: "weatherImagePointer")!
     }
     //Traffic Information:
-    func getWorkAddress() -> String{
+    func getWorkAddress() -> String {
         return defaults.string(forKey: "workAddress") ?? "305 Sherman Ave, Hamden, CT, 06518" //If for some reason they did not set one up in the beginning it will default to QU Campus
         //return "275 Mount Carmel Ave, Hamden, CT, 06518" //Testing use only.
     }
-    func getHomeAddress() -> String{
+    func getHomeAddress() -> String {
         return defaults.string(forKey: "homeAddress") ?? "305 Sherman Ave, Hamden, CT, 06518"
     }
-    func setupIsDone() -> Bool{
+    func setupIsDone() -> Bool {
         return defaults.bool(forKey: "setup")
     }
-    func getTrafficSummary() -> String{
+    func getTrafficSummary() -> String {
         return defaults.string(forKey: "trafficSummary")!
     }
-    func getNewsSummary() ->String{
+    func getNewsSummary() -> String {
         return defaults.string(forKey: "newsSummary")!
     }
-    
-    
-    
 
 }

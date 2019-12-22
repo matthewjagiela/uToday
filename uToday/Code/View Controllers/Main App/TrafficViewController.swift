@@ -41,7 +41,7 @@ class TrafficViewController: UIViewController, MKMapViewDelegate {
         renderer.lineWidth = 3
         return renderer
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
