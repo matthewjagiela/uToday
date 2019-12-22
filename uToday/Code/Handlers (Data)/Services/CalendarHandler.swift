@@ -23,11 +23,15 @@ class CalendarHandler: NSObject {
         let eventPredicate = self.eventStore.predicateForEvents(withStart: now, end: endDate!, calendars: nil) //The time frame we are looking for
         
         events = self.eventStore.events(matching: eventPredicate) //All of the events from now till end of day
+        
+        //LOGGING:
+        /**
         for event in events { //DEBUG: For each event tell us about it
             
             print("DEBUG: CALENDAR: \(event.title) DATE: \(event.startDate), \(event.calendar.cgColor)")
             print("DEBUG: CALENDAR EVENT: \(event.isAllDay)")
         }
+ **/
         
     }
     
@@ -47,7 +51,6 @@ class CalendarHandler: NSObject {
         if events.isEmpty {
             return "You have no more appointments today!"
         } else {
-            
             for event in events where !event.isAllDay {
                 return "Your next event is \(event.title ?? "") at \(getEventStartDate(event))"
             }
