@@ -56,7 +56,7 @@ class WeatherViewController: UIViewController {
         
     }
     func theming() { //The notorious matthew jagiela theming method...
-        if(weather.isSunUp()) {
+        if weather.isSunUp() {
             print("WEATHER CONTROLLER DEBUG: sun is up")
             navigationController?.navigationBar.prefersLargeTitles = false
             navigationController?.navigationItem.hidesBackButton = false
@@ -96,7 +96,7 @@ class WeatherViewController: UIViewController {
         LowTemperature.text = "Low Temp: \(weather.getDailyLow())"
         currentMessage.text = "Currently: \(weather.getCurrentCondition())"
         todaysWeather.text = "Today: \(weather.getSummary())"
-        if(weather.isSunUp()) {backgroundImage.image = UIImage(named: "Day Weather BG.png")} else {backgroundImage.image = UIImage(named: "Night Background.png")}
+        if weather.isSunUp() {backgroundImage.image = UIImage(named: "Day Weather BG.png")} else {backgroundImage.image = UIImage(named: "Night Background.png")}
         location.lookupLocation {
             self.locationLabel.text = self.location.getCity()
             

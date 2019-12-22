@@ -31,7 +31,7 @@ class TrafficHandler: NSObject {
     }
     func lookupLocation(completion: @escaping () -> Void) {
         CLGeocoder().reverseGeocodeLocation(locationManager.location!) { (placemarks, error) in
-            if((error) != nil) { print(error?.localizedDescription)} else {
+            if (error) != nil { print(error?.localizedDescription)} else {
                 let pm = placemarks![0] as CLPlacemark
                 self.city = pm.locality!
                 self.state = pm.administrativeArea!
@@ -48,11 +48,11 @@ class TrafficHandler: NSObject {
     }
     
     func getETA(completion: @escaping() -> Void) {
-        if(CLLocationManager.authorizationStatus() == .authorizedAlways) {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
             let address = savedData.getWorkAddress()
             print("DEBUG: TRAFFIC ADDRESS: \(address) ")
             let geoCoder = CLGeocoder()
-            geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            geoCoder.geocodeAddressString(address) { (placemarks, _) in
                 print("DEBUG: \(String(describing: placemarks?.first?.location?.coordinate.latitude)) \(String(describing: placemarks?.first?.location?.coordinate.longitude))" )
                 self.destinationLocation = (placemarks?.first?.location)!
                 let userlocation = self.locationManager.location! //This is our location...
@@ -106,8 +106,8 @@ class TrafficHandler: NSObject {
     func getSummary() -> String {
         let (h, m, s) = secondsToHoursMinutesSeconds(seconds: timeSeconds)
         print("DEBUG: SECONDS \(timeSeconds)")
-        if(h == 0) { //No hours
-            if(m == 0) {
+        if h == 0 { //No hours
+            if m == 0 {
                 return "You are already at work!"
             } else { return "It will take \(m) Minutes and \(s) Seconds to get to work" }
         } else {

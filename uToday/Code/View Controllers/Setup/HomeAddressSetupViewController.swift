@@ -32,13 +32,13 @@ class HomeAddressSetupViewController: UIViewController, UITextFieldDelegate {
         } else { //This is the last field... If everything is fine then we can say that we can move on... Otherwise we need to do some error correction...
             
             //Testing for completion:
-            if(streetAddress.text == "") {
+            if streetAddress.text == "" {
                 streetAddress.backgroundColor = UIColor.red
-            } else if(city.text == "") {
+            } else if city.text == "" {
                 city.backgroundColor = .red
-            } else if(stateField.text == "") {
+            } else if stateField.text == "" {
                 stateField.backgroundColor = .red
-            } else if(zipField.text == "") {
+            } else if zipField.text == "" {
                 zipField.backgroundColor = .red
             } else { //All Fields valid... Go on to the next step and save the data
                 

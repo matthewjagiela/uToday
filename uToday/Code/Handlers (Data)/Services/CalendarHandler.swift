@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 class CalendarHandler: NSObject {
     let eventStore = EKEventStore()
-    var events = Array<EKEvent>()
+    var events = [EKEvent]()
     override init() {
         print("Init")
         let now = Date()
@@ -51,7 +51,7 @@ class CalendarHandler: NSObject {
             
             for i in 0 ... events.count - 1 {
                 
-                if(!events[i].isAllDay) {
+                if !events[i].isAllDay {
                     index = i
                     break
                 }
@@ -61,7 +61,7 @@ class CalendarHandler: NSObject {
         }
         
     }
-    func getEvents() -> Array<EKEvent> { //This is going to return all of the events out of every calendar for the day...
+    func getEvents() -> [EKEvent] { //This is going to return all of the events out of every calendar for the day...
         return events
     }
     func getEventName(_ index: Int) -> String {

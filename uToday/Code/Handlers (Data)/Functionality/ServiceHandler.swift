@@ -48,21 +48,21 @@ class ServiceHandler: NSObject {
         weather.getData {
             print("Weather done")
             completedSteps += 1
-            if(completedSteps == 3) {
+            if completedSteps == 3 {
                 completion()
             }
         }
         traffic.getETA {
             print("Traffic Done")
             completedSteps += 1
-            if(completedSteps == 3) {
+            if completedSteps == 3 {
                 completion()
             }
         }
         news.getArticles {
             print("Headlines fetched")
             completedSteps += 1
-            if(completedSteps == 3) {completion()}
+            if completedSteps == 3 {completion()}
         }
         
     }

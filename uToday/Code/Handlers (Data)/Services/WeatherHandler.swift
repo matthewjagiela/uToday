@@ -38,7 +38,7 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     func getData(completion: @escaping () -> Void) {
        
         print("getData")
-        if (CLLocationManager.authorizationStatus() == .authorizedAlways) { //The application has actually been authorized to use locations
+        if CLLocationManager.authorizationStatus() == .authorizedAlways { //The application has actually been authorized to use locations
             userLocation = locationManager.location ?? CLLocation(latitude: 41.420007, longitude: -72.893671) //This is the actual user location
             print("The latitude of the current location is: \(userLocation.coordinate.latitude)") //Used for testing
             print("The longitude of the current location is \(userLocation.coordinate.longitude)") //Used for testing
@@ -117,21 +117,21 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     }
     func getWeatherImage() -> UIImage { //ALRIGHT sooooo.... This is going to determine the image we want to show based on the weather conditions and time.
         print("Icon To Find: \(iconToFind)")
-        if(iconToFind == "rain") {
+        if iconToFind == "rain" {
             currentConditionImg = UIImage(named: "rainy.png")!
         }
-        if(iconToFind == "partly-cloudy-day") {
+        if iconToFind == "partly-cloudy-day" {
             print("IF = partly cloudy day")
             currentConditionImg = UIImage(named: "partlyCloudy.png")!
-        } else if(iconToFind == "partly-cloudy-night") {
+        } else if iconToFind == "partly-cloudy-night" {
             currentConditionImg = UIImage(named: "NightlyCloudy.png")!
-        } else if(iconToFind == "cloudy" || iconToFind == "fog") {
+        } else if iconToFind == "cloudy" || iconToFind == "fog" {
             currentConditionImg = UIImage(named: "cloud.png")!
-        } else if(iconToFind == "clear-day") {
+        } else if iconToFind == "clear-day" {
             currentConditionImg = UIImage(named: "sun.png")!
-        } else if(iconToFind == "clear-night") {
+        } else if iconToFind == "clear-night" {
             currentConditionImg = UIImage(named: "night.png")!
-        } else if(iconToFind == "snow" || iconToFind == "sleet" || iconToFind == "hail") {
+        } else if iconToFind == "snow" || iconToFind == "sleet" || iconToFind == "hail" {
             currentConditionImg = UIImage(named: "snowy.png")!
         }
         
@@ -140,21 +140,21 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
     }
     func getWeatherImage(image: String) -> UIImage { //ALRIGHT sooooo.... This is going to determine the image we want to show based on the weather conditions and time.
         print("Icon To Find: \(iconToFind)")
-        if(image == "rain") {
+        if image == "rain" {
             currentConditionImg = UIImage(named: "rainy.png")!
         }
-        if(image == "partly-cloudy-day") {
+        if image == "partly-cloudy-day" {
             print("IF = partly cloudy day")
             currentConditionImg = UIImage(named: "partlyCloudy.png")!
-        } else if(image == "partly-cloudy-night") {
+        } else if image == "partly-cloudy-night" {
             currentConditionImg = UIImage(named: "NightlyCloudy.png")!
-        } else if(image == "cloudy" || iconToFind == "fog") {
+        } else if image == "cloudy" || iconToFind == "fog" {
             currentConditionImg = UIImage(named: "cloud.png")!
-        } else if(image == "clear-day") {
+        } else if image == "clear-day" {
             currentConditionImg = UIImage(named: "sun.png")!
-        } else if(image == "clear-night") {
+        } else if image == "clear-night" {
             currentConditionImg = UIImage(named: "night.png")!
-        } else if(image == "snow" || iconToFind == "sleet" || iconToFind == "hail") {
+        } else if image == "snow" || iconToFind == "sleet" || iconToFind == "hail" {
             currentConditionImg = UIImage(named: "snowy.png")!
         }
         

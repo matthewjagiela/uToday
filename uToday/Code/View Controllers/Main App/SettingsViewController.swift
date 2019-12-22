@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func modifySiri(_ sender: Any) {
         let voice = VoiceShortcutsManager()
         voice.updateVoiceShortcuts {
-            if(voice.siriEnabled()) { //We have to edit the phrase
+            if voice.siriEnabled() { //We have to edit the phrase
                 let editViewController = INUIEditVoiceShortcutViewController(voiceShortcut: voice.voiceShortcut()!)
                 editViewController.delegate = self
                 self.present(editViewController, animated: true, completion: nil)
@@ -60,16 +60,16 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        
         print("CURRENT TEXT BOX \(currentTextBox)")
-        if(textField.tag == 0) { //Name Field Save The Data
+        if textField.tag == 0 { //Name Field Save The Data
             data.setFirstName(textField.text ?? "Matthew")
-        } else if(currentTextBox == 5) { //Save and reset
-            if(streetBox.text == "") {
+        } else if currentTextBox == 5 { //Save and reset
+            if streetBox.text == "" {
                 streetBox.backgroundColor = UIColor.red
-            } else if(cityBox.text == "") {
+            } else if cityBox.text == "" {
                 cityBox.backgroundColor = .red
-            } else if(stateBox.text == "") {
+            } else if stateBox.text == "" {
                 stateBox.backgroundColor = .red
-            } else if(zipBox.text == "") {
+            } else if zipBox.text == "" {
                 zipBox.backgroundColor = .red
             } else { //All Fields valid... Go on to the next step and save the data
                 print("SAVING")
