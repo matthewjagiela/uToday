@@ -63,13 +63,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         if textField.tag == 0 { //Name Field Save The Data
             data.setFirstName(textField.text ?? "Matthew")
         } else if currentTextBox == 5 { //Save and reset
-            if streetBox.text == "" {
+            if streetBox.text?.isEmpty ?? true {
                 streetBox.backgroundColor = UIColor.red
-            } else if cityBox.text == "" {
+            } else if cityBox.text?.isEmpty ?? true {
                 cityBox.backgroundColor = .red
-            } else if stateBox.text == "" {
+            } else if stateBox.text?.isEmpty ?? true {
                 stateBox.backgroundColor = .red
-            } else if zipBox.text == "" {
+            } else if zipBox.text?.isEmpty ?? true {
                 zipBox.backgroundColor = .red
             } else { //All Fields valid... Go on to the next step and save the data
                 print("SAVING")
