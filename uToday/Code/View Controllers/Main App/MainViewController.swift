@@ -97,7 +97,7 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //We only want one per section... This is going to make it so we have the space between modules and no duplicates
         return 1
     }
-    
+    //swiftlint:disable force_cast
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
         let cell = tableView.dequeueReusableCell(withIdentifier: "module", for: indexPath) as! ModuleTableViewCell
 
@@ -120,6 +120,7 @@ class MainViewController: UITableViewController {
 
         return cell
     }
+    //swiftlint:enable force_cast
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         services.setService(services.getServices(indexPath.section))
         

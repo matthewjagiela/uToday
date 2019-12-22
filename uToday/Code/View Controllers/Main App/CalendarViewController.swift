@@ -54,7 +54,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //We only want one per section... This is going to make it so we have the space between modules and no duplicates
         return 1
     }
-    
+    //swiftlint:disable force_cast
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //This is the actual module
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! CalendarTableViewCell
         print("Cell \(indexPath.section)")
@@ -66,7 +66,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-
+    //swiftlint:enable force_cast
     /*
     // MARK: - Navigation
 

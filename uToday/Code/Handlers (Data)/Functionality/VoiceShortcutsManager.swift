@@ -38,7 +38,7 @@ public class VoiceShortcutsManager {
     }
     public func siriEnabled() -> Bool { //Tell me if siri is enabled or not...
         
-        if(voiceShortcuts.count > 0) {
+        if !voiceShortcuts.isEmpty {
             return true
         } else {
             return false

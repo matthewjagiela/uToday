@@ -53,9 +53,12 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(reloaded) {return news.articles.count} else { return 0}
+        if reloaded {
+            return news.articles.count
+            
+        } else { return 0 }
     }
-    
+    //swiftlint:disable force_cast
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
         cell.articleImage.sd_setImage(with: news.getImageURL(indexPath.row), placeholderImage: UIImage(named: "newsBlack.png"))
@@ -64,7 +67,7 @@ class NewsTableViewController: UITableViewController {
 
         return cell
     }
- 
+    //swiftlint:enable force_cast
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //When selecting an article we want to have it open in a webview so they can read the entire thing... 
         let viewController = SFSafariViewController(url: news.getHeadlineURL(indexPath.row))
         present(viewController, animated: true)

@@ -34,7 +34,7 @@ class CalendarHandler: NSObject {
     func requestCalenderAccess() -> Bool {
         var isGranted = false
         eventStore.requestAccess(to: .event) { (granted, _) in
-            if(granted) {
+            if granted {
                 isGranted = true
             }
         }
@@ -44,7 +44,7 @@ class CalendarHandler: NSObject {
         return events[0].calendar.cgColor
     }
     func getSummary() -> String {
-        if(events.count == 0) {
+        if events.isEmpty {
             return "You have no more appointments today!"
         } else {
             var index = 0

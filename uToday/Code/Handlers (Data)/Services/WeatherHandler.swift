@@ -56,26 +56,27 @@ class WeatherHandler: NSObject, CLLocationManagerDelegate {
             print("WeatherURL:  \(String(describing: weatherURL))") //Testing to make sure the URL is valid
             
             Alamofire.request(weatherURL!).responseJSON { (response) in //So this is going to go to the API and get the data
-                self.apiDict = response.result.value as! [String: Any] //This is the entire data set from the API
+                self.apiDict = response.result.value as? [String: Any] ?? [String: Any]() //This is the entire data set from the API
                 
-                currentConditions = self.apiDict["currently"] as! [String: Any]
-                dailyWeatherDict = self.apiDict["daily"] as! [String: Any]
-                dailyWeather = dailyWeatherDict["data"] as! NSArray
-                todaysWeather = dailyWeather.object(at: 0) as! [String: Any]
+                currentConditions = self.apiDict["currently"] as? [String: Any] ?? [String: Any]()
+                dailyWeatherDict = self.apiDict["daily"] as? [String: Any] ?? [String: Any]()
+                dailyWeather = dailyWeatherDict["data"] as? NSArray ?? NSArray()
+                todaysWeather = dailyWeather.object(at: 0) as? [String: Any] ?? [String: Any]()
                 //Testing to make sure the variables are filled
-                print("High: \(todaysWeather["apparentTemperatureHigh"] as! Double)")
-                print("Summary: \(todaysWeather["summary"]as! String)")
-                print("the current temp is: \(currentConditions["apparentTemperature"] as! Double)")
+                //Logging:
+                print("High: \(todaysWeather["apparentTemperatureHigh"] as? Double ?? -1000.0)")
+                print("Summary: \(todaysWeather["summary"] as? String ?? "Unknown")")
+                print("the current temp is: \(currentConditions["apparentTemperature"] as? Double ?? -1000.0)")
                 print("Weather grabbed from the URL: \(String(describing: weatherURL))")
                 
                 //This is going to set all the variables that we need to return later.
-                self.iconToFind = currentConditions["icon"] as! String
-                self.feelsLikeTemperature = Int(round(currentConditions["apparentTemperature"] as! Double))
-                self.highTemperature = Int(round(todaysWeather["apparentTemperatureHigh"] as! Double))
-                self.daySummary = todaysWeather["summary"] as! String
-                self.currentCondition = currentConditions["summary"] as! String
-                self.temperature = Int(round(currentConditions["temperature"] as! Double))
-                self.dayLowTemperature = Int(round(todaysWeather["apparentTemperatureLow"] as! Double))
+                self.iconToFind = currentConditions["icon"] as? String ??  ""
+                self.feelsLikeTemperature = Int(round(currentConditions["apparentTemperature"] as? Double ?? 0.0))
+                self.highTemperature = Int(round(todaysWeather["apparentTemperatureHigh"] as? Double ?? 0.0))
+                self.daySummary = todaysWeather["summary"] as? String ?? "Error loading"
+                self.currentCondition = currentConditions["summary"] as? String ?? "Sorry... An Unexpected error has occured"
+                self.temperature = Int(round(currentConditions["temperature"] as? Double ?? 0.0))
+                self.dayLowTemperature = Int(round(todaysWeather["apparentTemperatureLow"] as? Double ?? 0.0))
                 //This is going to make sure all of the variables have something in it
                 //self.getWeatherImage()
                 self.saveAllData()

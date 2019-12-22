@@ -51,7 +51,7 @@ class siriSetupViewController: UIViewController {
         let shortcut = INShortcut(intent: intent)! //This is going to actually make the shortcut based on all of our class files and definitions that the user is going to want. This includes the GUI file.
         let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
         viewController.modalPresentationStyle = .formSheet
-        viewController.delegate = (self as! INUIAddVoiceShortcutViewControllerDelegate)
+        viewController.delegate = (self as INUIAddVoiceShortcutViewControllerDelegate)
         
         present(viewController, animated: true, completion: nil)
         
