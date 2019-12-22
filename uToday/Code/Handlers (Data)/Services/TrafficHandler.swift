@@ -99,9 +99,11 @@ class TrafficHandler: NSObject {
         return destinationAnnotation
     }
     //Conversion Method:
+    //swiftlint:disable large_tuple
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
+    //swiftlint:enable large_tuple
     //Summary for the module page:
     func getSummary() -> String {
         let (h, m, s) = secondsToHoursMinutesSeconds(seconds: timeSeconds)
